@@ -8,6 +8,6 @@
     },
     "dependencies": {
         "@jderjs/hono": "workspace:~",
-        "hono": "4.5.0"
+        "hono": "4.6.5"
     }
 }
