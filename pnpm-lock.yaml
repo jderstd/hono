@@ -64,8 +64,8 @@ importers:
   package:
     dependencies:
       '@jderjs/core':
-        specifier: ~0.1.0
-        version: 0.1.0
+        specifier: ~0.1.1
+        version: 0.1.1
       ts-vista:
         specifier: ~0.2.0
         version: 0.2.0
@@ -336,8 +336,8 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@jderjs/core@0.1.0':
-    resolution: {integrity: sha512-oz0WndKb6yC75PjVo2JM/VILytJy1PphcOg123Zsr0UikVV8/cJMKVfuarS6MSP4yQ7TFYi2A+bJFky1PU4sog==}
+  '@jderjs/core@0.1.1':
+    resolution: {integrity: sha512-malAfiFkjqbViCeoCxqU2ohjZ/ZWHUnK5AA5It0/QWRJKmLv9BllU2c1bYNTyBoBu6Y48IBRQYntvIrE6+BEXg==}
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -1335,7 +1335,7 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@jderjs/core@0.1.0': {}
+  '@jderjs/core@0.1.1': {}
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
