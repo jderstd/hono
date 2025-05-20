@@ -6,7 +6,7 @@
 function createJsonResponse(options?): Response;
 ```
 
-Defined in: package/src/response/json.ts:93
+Defined in: [package/src/response/json.ts:93](https://github.com/jder-std/hono/blob/74d7763c44e1d14d82209dadd03223da473b2ce4/package/src/response/json.ts#L93)
 
 Create a JSON response.
 

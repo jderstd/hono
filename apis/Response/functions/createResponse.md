@@ -6,7 +6,7 @@
 function createResponse(options?): Response;
 ```
 
-Defined in: package/src/response/index.ts:86
+Defined in: [package/src/response/index.ts:86](https://github.com/jder-std/hono/blob/74d7763c44e1d14d82209dadd03223da473b2ce4/package/src/response/index.ts#L86)
 
 Create a response.
 
