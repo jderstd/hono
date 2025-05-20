@@ -1,0 +1,6 @@
+{
+    "extends": "@apst/tsconfig/lib",
+    "compilerOptions": {
+        "emitDecoratorMetadata": false
+    }
+}

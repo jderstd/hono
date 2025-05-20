@@ -1,0 +1,60 @@
+{
+    "name": "@jderjs/hono",
+    "version": "0.1.0",
+    "description": "A response builder for Hono",
+    "keywords": [
+        "jder",
+        "hono",
+        "response",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/jder-std/hono",
+    "bugs": "https://github.com/jder-std/hono/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jder-std/hono.git",
+        "directory": "package"
+    },
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "exports": {
+        "./response": {
+            "types": "./dist/response.d.ts",
+            "import": "./dist/response.mjs",
+            "require": "./dist/response.js"
+        },
+        "./body-limit": {
+            "types": "./dist/body-limit.d.ts",
+            "import": "./dist/body-limit.mjs",
+            "require": "./dist/body-limit.js"
+        },
+        "./ip-limit": {
+            "types": "./dist/ip-limit.d.ts",
+            "import": "./dist/ip-limit.mjs",
+            "require": "./dist/ip-limit.js"
+        },
+        "./time-limit": {
+            "types": "./dist/time-limit.d.ts",
+            "import": "./dist/time-limit.mjs",
+            "require": "./dist/time-limit.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/response.js",
+    "module": "./dist/response.mjs",
+    "types": "./dist/response.d.ts",
+    "files": ["dist"],
+    "dependencies": {
+        "@jderjs/core": "~0.1.0",
+        "ts-vista": "~0.2.0"
+    },
+    "devDependencies": {
+        "hono": "4.5.0"
+    },
+    "peerDependencies": {
+        "hono": "^4.5.0"
+    }
+}
