@@ -40,10 +40,6 @@ const route = (context: Context): Response => {
         context,
     });
 };
-
-// {
-//     "success": true,
-// }
 ```
 
 ## Request IP Restriction

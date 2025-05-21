@@ -35,10 +35,14 @@ import { createJsonResponse } from "@jderjs/hono";
 const route = (): Response => {
     return createJsonResponse();
 }
+```
 
-// {
-//     "success": true,
-// }
+And the response will be shown as below:
+
+```json
+{
+    "success": true
+}
 ```
 
 ## Documentation
