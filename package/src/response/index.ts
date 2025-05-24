@@ -9,24 +9,11 @@ import type { StatusCode } from "hono/utils/http-status";
 import type { Format, Omit } from "ts-vista";
 
 import { createResponseStruct } from "@jderjs/core/internal";
+import { isContext } from "#/response/json";
 
 /** Options of `createResponse` function. */
 type CreateResponseOptions = Format<
     {
-        /**
-         * For merging context.
-         *
-         * Both `c` and `ctx` available as alias of `context`.
-         */
-        context?: Context;
-        /**
-         * Alias of `context`.
-         */
-        ctx?: Context;
-        /**
-         * Alias of `context`.
-         */
-        c?: Context;
         /**
          * Status code of the response.
          * By default, it is `200` for success and `400` for failure.
@@ -66,7 +53,7 @@ type CreateResponseOptions = Format<
  * };
  * ```
  *
- * Example for merging context response:
+ * Example for merging context into the response:
  *
  * ```ts
  * import type { Context } from "hono";
@@ -74,33 +61,31 @@ type CreateResponseOptions = Format<
  * import { setCookie } from "hono/cookie";
  * import { createResponse } from "@jderjs/hono";
  *
- * const route = (context: Context): Response => {
- *     setCookie(context, "key", "value");
+ * const route = (c: Context): Response => {
+ *     setCookie(c, "key", "value");
  *
- *     return createResponse({
- *         context,
- *     });
+ *     return createResponse(c);
  * }
  * ```
  */
-const createResponse = (options?: CreateResponseOptions): Response => {
-    const c: Context | undefined =
-        options?.c ?? options?.context ?? options?.ctx;
+const createResponse = (
+    contextOrOptions?: Context | CreateResponseOptions,
+    options?: CreateResponseOptions,
+): Response => {
+    const { status, headers, body } = isContext(contextOrOptions)
+        ? createResponseStruct(options)
+        : createResponseStruct(contextOrOptions);
 
-    const { status, headers, body } = createResponseStruct(options);
+    if (isContext(contextOrOptions)) {
+        const c: Context = contextOrOptions;
 
-    if (c) {
         c.status(status as StatusCode);
 
-        for (const [key, value] of headers) {
-            c.header(key, value);
-        }
+        for (const [key, value] of headers) c.header(key, value);
 
-        if (body) {
-            return c.body(body as string | ArrayBuffer | ReadableStream);
-        }
-
-        return c.body(null);
+        return body
+            ? c.body(body as string | ArrayBuffer | ReadableStream)
+            : c.body(null);
     }
 
     return new Response(body, {

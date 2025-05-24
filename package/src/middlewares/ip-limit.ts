@@ -69,9 +69,8 @@ const ipLimit = (options: IpLimitOptions): MiddlewareHandler => {
             denyList: options.denyList,
             allowList: options.allowList,
         },
-        ({ addr }, context: Context): Response => {
-            return createJsonResponse({
-                context,
+        ({ addr }, c: Context): Response => {
+            return createJsonResponse(c, {
                 success: false,
                 status: 403,
                 error: {

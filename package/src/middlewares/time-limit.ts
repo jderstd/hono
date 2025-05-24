@@ -38,10 +38,9 @@ type TimeLimitOptions = {
  * ```
  */
 const timeLimit = (options: TimeLimitOptions): MiddlewareHandler => {
-    return timeout(options.max, (context: Context): HTTPException => {
+    return timeout(options.max, (c: Context): HTTPException => {
         return new HTTPException(408, {
-            res: createJsonResponse({
-                context,
+            res: createJsonResponse(c, {
                 success: false,
                 status: 408,
                 error: {

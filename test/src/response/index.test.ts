@@ -25,11 +25,9 @@ const app = new Hono()
             },
         });
     })
-    .get("/cookie", (context: Context): Response => {
-        setCookie(context, "key", "value");
-        return createJsonResponse({
-            context,
-        });
+    .get("/cookie", (c: Context): Response => {
+        setCookie(c, "key", "value");
+        return createJsonResponse(c);
     });
 
 const client = testClient(app);

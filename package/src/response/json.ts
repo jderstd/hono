@@ -5,23 +5,12 @@ import type { Format, Omit } from "ts-vista";
 
 import { createJsonResponseStruct } from "@jderjs/core/internal";
 
+/** Check if the argument is a Hono context. */
+const isContext = (arg: any): arg is Context => arg?.req !== undefined;
+
 /** Options of `createJsonResponse` function. */
 type CreateJsonResponseOptions = Format<
     {
-        /**
-         * For merging context.
-         *
-         * Both `c` and `ctx` available as alias of `context`.
-         */
-        context?: Context;
-        /**
-         * Alias of `context`.
-         */
-        ctx?: Context;
-        /**
-         * Alias of `context`.
-         */
-        c?: Context;
         /**
          * Status code of the response.
          * By default, it is `200` for success and `400` for failure.
@@ -81,27 +70,26 @@ type CreateJsonResponseOptions = Format<
  * import { setCookie } from "hono/cookie";
  * import { createJsonResponse } from "@jderjs/hono";
  *
- * const route = (context: Context): Response => {
- *     setCookie(context, "key", "value");
- *
- *     return createJsonResponse({
- *         context,
- *     });
+ * const route = (c: Context): Response => {
+ *     setCookie(c, "key", "value");
+ *     return createJsonResponse(c);
  * }
  * ```
  */
-const createJsonResponse = (options?: CreateJsonResponseOptions): Response => {
-    const { status, headers, json } = createJsonResponseStruct(options);
+const createJsonResponse = (
+    contextOrOptions?: Context | CreateJsonResponseOptions,
+    options?: CreateJsonResponseOptions,
+): Response => {
+    const { status, headers, json } = isContext(contextOrOptions)
+        ? createJsonResponseStruct(options)
+        : createJsonResponseStruct(contextOrOptions);
 
-    const c: Context | undefined =
-        options?.c ?? options?.context ?? options?.ctx;
+    if (isContext(contextOrOptions)) {
+        const c: Context = contextOrOptions;
 
-    if (c) {
         c.status(status as StatusCode);
 
-        for (const [key, value] of headers) {
-            c.header(key, value);
-        }
+        for (const [key, value] of headers) c.header(key, value);
 
         return c.json(json);
     }
@@ -113,4 +101,4 @@ const createJsonResponse = (options?: CreateJsonResponseOptions): Response => {
 };
 
 export type { CreateJsonResponseOptions };
-export { createJsonResponse };
+export { isContext, createJsonResponse };

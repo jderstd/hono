@@ -39,9 +39,8 @@ type BodyLimitOptions = {
 const bodyLimit = (options: BodyLimitOptions): MiddlewareHandler => {
     return _bodyLimit({
         maxSize: options.max,
-        onError: (context: Context): Response => {
-            return createJsonResponse({
-                context,
+        onError: (c: Context): Response => {
+            return createJsonResponse(c, {
                 success: false,
                 status: 413,
                 error: {

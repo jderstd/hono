@@ -30,15 +30,15 @@ bun add @jderjs/hono
 For core response functions,
 please refer to the [Core Documentation](https://github.com/jder-std/core.js/blob/main/docs/README.md).
 
-This package extends the response functions by adding the option to add context to the response.
+This package extends the response functions by adding the context to the response.
 
 ```ts
+import type { Context } from "hono";
+
 import { createJsonResponse } from "@jderjs/hono";
 
-const route = (context: Context): Response => {
-    return createJsonResponse({
-        context,
-    });
+const route = (c: Context): Response => {
+    return createJsonResponse(c);
 };
 ```
 
