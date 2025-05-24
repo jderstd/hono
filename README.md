@@ -4,27 +4,6 @@ A response builder for Hono.
 
 This package includes different response builders based on the JSON response structure specified in [JSON Data Error Response (JDER)](https://github.com/jder-std/spec). With the builders, various kinds of responses can be created easily instead of sending plain text responses.
 
-## Installation
-
-Install this package as a dependency in the project:
-
-```sh
-# npm
-npm i @jderjs/hono
-
-# Yarn
-yarn add @jderjs/hono
-
-# pnpm
-pnpm add @jderjs/hono
-
-# Deno
-deno add npm:@jderjs/hono
-
-# Bun
-bun add @jderjs/hono
-```
-
 ## Quick Start
 
 To create a JSON response, use the following code:
@@ -47,13 +26,19 @@ And the response will be shown as below:
 
 ## Documentation
 
-For the documentation,
-please refer to the [Documentation](./docs/README.md).
+For Hono,
+please refer to the [Hono Documentation](./docs/hono/README.md).
+
+For Zod validator,
+please refer to the [Zod Validator Documentation](./docs/hono-zod-validator/README.md).
 
 ## APIs
 
-For the package APIs, 
-please refer to the [APIs](./apis/README.md).
+For Hono package APIs, 
+please refer to the [Hono APIs](./apis/hono/README.md).
+
+For Zod validator package APIs, 
+please refer to the [Zod Validator APIs](./apis/hono-zod-validator/README.md).
 
 ## License
 

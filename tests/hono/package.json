@@ -1,0 +1,13 @@
+{
+    "name": "test-hono",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "vitest run",
+        "": ""
+    },
+    "dependencies": {
+        "@jderjs/hono": "workspace:~",
+        "hono": "4.5.0"
+    }
+}

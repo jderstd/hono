@@ -10,6 +10,7 @@ updates:
           - dependency-name: "@apst/biome"
           - dependency-name: "@apst/tsconfig"
           - dependency-name: "@biomejs/biome"
+          - dependency-name: "npm-run-all2"
           - dependency-name: "tsup"
           - dependency-name: "typedoc"
           - dependency-name: "typedoc-plugin-markdown"
