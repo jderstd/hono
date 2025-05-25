@@ -6,7 +6,7 @@
 type TimeLimitOptions = object;
 ```
 
-Defined in: packages/hono/src/middlewares/time-limit.ts:14
+Defined in: [packages/hono/src/middlewares/time-limit.ts:14](https://github.com/jder-std/hono/blob/b7adb5479e2132232836f49b324da0bc45309321/packages/hono/src/middlewares/time-limit.ts#L14)
 
 Options for `timeLimit` middleware.
 
@@ -18,6 +18,6 @@ Options for `timeLimit` middleware.
 max: number;
 ```
 
-Defined in: packages/hono/src/middlewares/time-limit.ts:16
+Defined in: [packages/hono/src/middlewares/time-limit.ts:16](https://github.com/jder-std/hono/blob/b7adb5479e2132232836f49b324da0bc45309321/packages/hono/src/middlewares/time-limit.ts#L16)
 
 Maximum time in milliseconds.

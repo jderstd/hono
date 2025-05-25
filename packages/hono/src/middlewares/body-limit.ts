@@ -18,6 +18,19 @@ type BodyLimitOptions = {
 /**
  * Body limit middleware.
  *
+ * Following error will be returned if the body size is over the limit:
+ *
+ * ```jsonc
+ * // Status: 413
+ * {
+ *     "success": false,
+ *     "error": {
+ *         "code": "too_large",
+ *         "field": "body"
+ *     }
+ * }
+ * ```
+ *
  * For more information, please refer to
  * [Body Limit](https://hono.dev/docs/middleware/builtin/body-limit).
  *

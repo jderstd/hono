@@ -9,9 +9,23 @@ function zValidator<T, Target>(target, schema): MiddlewareHandler<Env, string, {
 }>;
 ```
 
-Defined in: packages/hono-zod-validator/src/index.ts:52
+Defined in: [packages/hono-zod-validator/src/index.ts:66](https://github.com/jder-std/hono/blob/b7adb5479e2132232836f49b324da0bc45309321/packages/hono-zod-validator/src/index.ts#L66)
 
 Validate the request with Zod.
+
+Following error may returned if the request is invalid:
+
+```jsonc
+// Status: 400
+{
+    "success": false,
+    "error": {
+        "code": "invalid",
+        "field": "xxx",
+        "message": "Expected string, received number"
+    }
+}
+```
 
 ### Example
 

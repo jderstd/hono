@@ -6,9 +6,35 @@
 function ipLimit(options): MiddlewareHandler;
 ```
 
-Defined in: packages/hono/src/middlewares/ip-limit.ts:65
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:91](https://github.com/jder-std/hono/blob/b7adb5479e2132232836f49b324da0bc45309321/packages/hono/src/middlewares/ip-limit.ts#L91)
 
 IP limit middleware.
+
+Following error will be returned if the IP address is not allowed:
+
+```jsonc
+// Status: 403
+{
+    "success": false,
+    "error": {
+        "code": "forbidden"
+    }
+}
+```
+
+When `verbose` is `true`, the error will be like:
+
+```jsonc
+// Status: 403
+{
+    "success": false,
+    "error": {
+        "code": "forbidden",
+        "field": "ip",
+        "message": "Forbidden IP address: x.x.x.x"
+    }
+}
+```
 
 For more information, please refer to
 [IP Restriction](https://hono.dev/docs/middleware/builtin/ip-restriction).

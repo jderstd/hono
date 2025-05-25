@@ -6,9 +6,22 @@
 function bodyLimit(options): MiddlewareHandler;
 ```
 
-Defined in: packages/hono/src/middlewares/body-limit.ts:39
+Defined in: [packages/hono/src/middlewares/body-limit.ts:52](https://github.com/jder-std/hono/blob/b7adb5479e2132232836f49b324da0bc45309321/packages/hono/src/middlewares/body-limit.ts#L52)
 
 Body limit middleware.
+
+Following error will be returned if the body size is over the limit:
+
+```jsonc
+// Status: 413
+{
+    "success": false,
+    "error": {
+        "code": "too_large",
+        "field": "body"
+    }
+}
+```
 
 For more information, please refer to
 [Body Limit](https://hono.dev/docs/middleware/builtin/body-limit).

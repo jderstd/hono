@@ -19,6 +19,18 @@ type TimeLimitOptions = {
 /**
  * Time limit middleware.
  *
+ * Following error will be returned if the request takes longer than the limit:
+ *
+ * ```jsonc
+ * // Status: 408
+ * {
+ *     "success": false,
+ *     "error": {
+ *         "code": "timeout"
+ *     }
+ * }
+ * ```
+ *
  * For more information, please refer to
  * [Timeout](https://hono.dev/docs/middleware/builtin/timeout).
  *

@@ -8,6 +8,20 @@ import { HTTPException } from "hono/http-exception";
 /**
  * Validate the request with Zod.
  *
+ * Following error may returned if the request is invalid:
+ *
+ * ```jsonc
+ * // Status: 400
+ * {
+ *     "success": false,
+ *     "error": {
+ *         "code": "invalid",
+ *         "field": "xxx",
+ *         "message": "Expected string, received number"
+ *     }
+ * }
+ * ```
+ *
  * ### Example
  *
  * ```ts
