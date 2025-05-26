@@ -11,6 +11,7 @@ import type {
     NetAddrInfo,
 } from "hono/conninfo";
 import type { IPRestrictionRule } from "hono/ip-restriction";
+import type { Format } from "ts-vista";
 
 import { ipRestriction } from "hono/ip-restriction";
 
@@ -18,10 +19,8 @@ import { createJsonResponse } from "#/response";
 
 type GetIPAddr = GetConnInfo | ((c: Context) => string);
 
-/** Options for `ipLimit` middleware. */
-type IpLimitOptions = {
-    /** Function to get IP address. */
-    getConnInfo: GetIPAddr;
+/** Base options for `ipLimit` middleware. */
+type IpLimitBaseOptions = {
     /** Allowed IP addresses. */
     allowList?: IPRestrictionRule[];
     /** Denied IP addresses. */
@@ -32,6 +31,14 @@ type IpLimitOptions = {
      */
     verbose?: boolean;
 };
+
+/** Options for `ipLimit` middleware. */
+type IpLimitOptions = Format<
+    {
+        /** Function to get IP address. */
+        getConnInfo: GetIPAddr;
+    } & IpLimitBaseOptions
+>;
 
 /**
  * IP limit middleware.
@@ -88,12 +95,42 @@ type IpLimitOptions = {
  * );
  * ```
  */
-const ipLimit = (options: IpLimitOptions): MiddlewareHandler => {
+function ipLimit(options: IpLimitOptions): MiddlewareHandler;
+
+/**
+ * IP limit middleware for compatibility with `hono/ip-restriction`.
+ *
+ * This is functionally equivalent to:
+ *
+ * ```ts
+ * ipLimit({ getConnInfo, ...options });
+ * ```
+ *
+ * And it behaves the same as the main `ipLimit` function.
+ */
+function ipLimit(
+    getConnInfo: GetIPAddr,
+    options?: IpLimitBaseOptions,
+): MiddlewareHandler;
+
+function ipLimit(
+    getConnInfoOrOptions: GetIPAddr | IpLimitOptions,
+    options?: IpLimitBaseOptions,
+): MiddlewareHandler {
+    const getConnInfo: GetIPAddr =
+        typeof getConnInfoOrOptions === "function"
+            ? getConnInfoOrOptions
+            : getConnInfoOrOptions.getConnInfo;
+    const { denyList, allowList, verbose }: IpLimitBaseOptions =
+        (typeof getConnInfoOrOptions === "function"
+            ? options
+            : getConnInfoOrOptions) ?? {};
+
     return ipRestriction(
-        options.getConnInfo,
+        getConnInfo,
         {
-            denyList: options.denyList,
-            allowList: options.allowList,
+            denyList,
+            allowList,
         },
         ({ addr }, c: Context): Response => {
             return createJsonResponse(c, {
@@ -101,7 +138,7 @@ const ipLimit = (options: IpLimitOptions): MiddlewareHandler => {
                 status: 403,
                 error: {
                     code: "forbidden",
-                    ...(options.verbose
+                    ...(verbose
                         ? {
                               field: "ip",
                               message: `Forbidden IP address: ${addr}`,
@@ -111,7 +148,7 @@ const ipLimit = (options: IpLimitOptions): MiddlewareHandler => {
             });
         },
     );
-};
+}
 
 export type {
     AddressType,
@@ -121,5 +158,5 @@ export type {
     GetIPAddr,
     IPRestrictionRule,
 };
-export type { IpLimitOptions };
+export type { IpLimitBaseOptions, IpLimitOptions };
 export { ipLimit };
