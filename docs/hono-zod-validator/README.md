@@ -29,6 +29,8 @@ bun add @jderjs/hono-zod-validator
 
 A Zod validator middleware is available for Hono.
 
+Assume that the request body is JSON. Validate it with Zod and send a JSON response when the request is invalid.
+
 First, define a Zod schema:
 
 ```ts
@@ -38,6 +40,8 @@ const json = z.object({
     name: z.string(),
     age: z.number(),
 });
+
+type Json = z.infer<typeof json>;
 ```
 
 Then, import it into the Zod validator middleware:
@@ -55,12 +59,25 @@ import { Hono } from "hono";
 
 const app: Hono = new Hono();
 
+type RouteContext = Context<
+    Env,
+    "/",
+    {
+        in: {
+            json: Json;
+        },
+        out: {
+            json: Json;
+        },
+    },
+>;
+
 app.post(
     "/",
     zValidator("json", json),
-    (c) => {
-        const body = c.req.valid("json");
-        // ...
+    (c: RouteContext): Response => {
+        const body: Json = c.req.valid("json");
+        return c.json(body);
     }
 );
 ```
@@ -98,8 +115,8 @@ app.post(
     "/",
     zValidator("json", json),
     (c: RouteContext): Response => {
-        const body = c.req.valid("json");
-        // ...
+        const body: Json = c.req.valid("json");
+        return c.json(body);
     }
 );
 ```
