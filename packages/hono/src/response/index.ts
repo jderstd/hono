@@ -1,6 +1,6 @@
 /**
  * Response module
- * @module Response
+ * @module response
  */
 
 import type { CreateResponseStructOptions } from "@jderjs/core/internal";

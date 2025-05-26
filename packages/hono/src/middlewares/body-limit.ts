@@ -1,6 +1,6 @@
 /**
  * Body limit module
- * @module body-limit
+ * @module middlewares/body-limit
  */
 
 import type { Context, MiddlewareHandler } from "hono";

@@ -1,6 +1,6 @@
 /**
  * Time limit module
- * @module time-limit
+ * @module middlewares/time-limit
  */
 
 import type { Context, MiddlewareHandler } from "hono";
