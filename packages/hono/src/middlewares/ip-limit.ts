@@ -1,6 +1,6 @@
 /**
  * IP limit module
- * @module ip-limit
+ * @module middlewares/ip-limit
  */
 
 import type { Context, MiddlewareHandler } from "hono";
