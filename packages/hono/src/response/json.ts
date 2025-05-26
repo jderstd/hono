@@ -9,14 +9,14 @@ import { createJsonResponseStruct } from "@jderjs/core/internal";
 const isContext = (arg: any): arg is Context => arg?.req !== undefined;
 
 /** Options of `createJsonResponse` function. */
-type CreateJsonResponseOptions = Format<
+type CreateJsonResponseOptions<D = unknown> = Format<
     {
         /**
          * Status code of the response.
          * By default, it is `200` for success and `400` for failure.
          */
         status?: StatusCode;
-    } & Omit<CreateJsonResponseStructOptions, "status">
+    } & Omit<CreateJsonResponseStructOptions<D>, "status">
 >;
 
 /**
@@ -76,9 +76,9 @@ type CreateJsonResponseOptions = Format<
  * }
  * ```
  */
-const createJsonResponse = (
-    contextOrOptions?: Context | CreateJsonResponseOptions,
-    options?: CreateJsonResponseOptions,
+const createJsonResponse = <D = unknown>(
+    contextOrOptions?: Context | CreateJsonResponseOptions<D>,
+    options?: CreateJsonResponseOptions<D>,
 ): Response => {
     const { status, headers, json } = isContext(contextOrOptions)
         ? createJsonResponseStruct(options)
