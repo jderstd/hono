@@ -18,7 +18,7 @@ import { createJsonResponse } from "#/response";
 
 type GetIPAddr = GetConnInfo | ((c: Context) => string);
 
-/** Options for `bodyLimit` middleware. */
+/** Options for `ipLimit` middleware. */
 type IpLimitOptions = {
     /** Function to get IP address. */
     getConnInfo: GetIPAddr;
