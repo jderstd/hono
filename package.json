@@ -20,7 +20,7 @@
         "@apst/biome": "~0.1.0",
         "@apst/tsconfig": "~0.1.0",
         "@biomejs/biome": "^1.9.4",
-        "npm-run-all2": "^8.0.3",
+        "npm-run-all2": "^8.0.4",
         "tsup": "^8.5.0",
         "typedoc": "~0.28.4",
         "typedoc-plugin-markdown": "^4.6.3",
