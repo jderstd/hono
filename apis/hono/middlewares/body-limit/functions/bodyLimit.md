@@ -6,7 +6,7 @@
 function bodyLimit(options): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/body-limit.ts:52](https://github.com/jder-std/hono/blob/7823dd7a59aeab0be6398df9a9afa170aec0fb84/packages/hono/src/middlewares/body-limit.ts#L52)
+Defined in: [packages/hono/src/middlewares/body-limit.ts:52](https://github.com/jder-std/hono/blob/2842c6d10ee2eb6a69808b60fa37fe11e9b4b2af/packages/hono/src/middlewares/body-limit.ts#L52)
 
 Body limit middleware.
 
