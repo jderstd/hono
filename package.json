@@ -22,7 +22,7 @@
         "@biomejs/biome": "^1.9.4",
         "npm-run-all2": "^8.0.4",
         "tsup": "^8.5.0",
-        "typedoc": "~0.28.4",
+        "typedoc": "~0.28.5",
         "typedoc-plugin-markdown": "^4.6.3",
         "typescript": "^5.8.3",
         "vite": "^6.3.5",
