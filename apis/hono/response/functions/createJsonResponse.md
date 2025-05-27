@@ -6,7 +6,7 @@
 function createJsonResponse<D>(contextOrOptions?, options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json.ts:79](https://github.com/jder-std/hono/blob/7823dd7a59aeab0be6398df9a9afa170aec0fb84/packages/hono/src/response/json.ts#L79)
+Defined in: [packages/hono/src/response/json.ts:79](https://github.com/jder-std/hono/blob/2842c6d10ee2eb6a69808b60fa37fe11e9b4b2af/packages/hono/src/response/json.ts#L79)
 
 Create a JSON response.
 

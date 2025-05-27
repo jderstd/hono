@@ -17,6 +17,7 @@ IP limit module
 | [AddressType](type-aliases/AddressType.md) | - |
 | [GetConnInfo](type-aliases/GetConnInfo.md) | Helper type |
 | [GetIPAddr](type-aliases/GetIPAddr.md) | - |
+| [IpLimitBaseOptions](type-aliases/IpLimitBaseOptions.md) | Base options for `ipLimit` middleware. |
 | [IpLimitOptions](type-aliases/IpLimitOptions.md) | Options for `ipLimit` middleware. |
 | [IPRestrictionRule](type-aliases/IPRestrictionRule.md) | - |
 | [NetAddrInfo](type-aliases/NetAddrInfo.md) | - |

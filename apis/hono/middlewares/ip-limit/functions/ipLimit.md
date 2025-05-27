@@ -2,11 +2,13 @@
 
 # Function: ipLimit()
 
+## Call Signature
+
 ```ts
 function ipLimit(options): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:91](https://github.com/jder-std/hono/blob/7823dd7a59aeab0be6398df9a9afa170aec0fb84/packages/hono/src/middlewares/ip-limit.ts#L91)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:98](https://github.com/jder-std/hono/blob/2842c6d10ee2eb6a69808b60fa37fe11e9b4b2af/packages/hono/src/middlewares/ip-limit.ts#L98)
 
 IP limit middleware.
 
@@ -62,12 +64,67 @@ app.use(
 );
 ```
 
-## Parameters
+### Parameters
 
-### options
+#### options
 
-[`IpLimitOptions`](../type-aliases/IpLimitOptions.md)
+##### allowList?
 
-## Returns
+[`IPRestrictionRule`](../type-aliases/IPRestrictionRule.md)[]
+
+Allowed IP addresses.
+
+##### denyList?
+
+[`IPRestrictionRule`](../type-aliases/IPRestrictionRule.md)[]
+
+Denied IP addresses.
+
+##### getConnInfo
+
+[`GetIPAddr`](../type-aliases/GetIPAddr.md)
+
+Function to get IP address.
+
+##### verbose?
+
+`boolean`
+
+Whether show more information.
+By default, it's `false`.
+
+### Returns
+
+`MiddlewareHandler`
+
+## Call Signature
+
+```ts
+function ipLimit(getConnInfo, options?): MiddlewareHandler;
+```
+
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:111](https://github.com/jder-std/hono/blob/2842c6d10ee2eb6a69808b60fa37fe11e9b4b2af/packages/hono/src/middlewares/ip-limit.ts#L111)
+
+IP limit middleware for compatibility with `hono/ip-restriction`.
+
+This is functionally equivalent to:
+
+```ts
+ipLimit({ getConnInfo, ...options });
+```
+
+And it behaves the same as the main `ipLimit` function.
+
+### Parameters
+
+#### getConnInfo
+
+[`GetIPAddr`](../type-aliases/GetIPAddr.md)
+
+#### options?
+
+[`IpLimitBaseOptions`](../type-aliases/IpLimitBaseOptions.md)
+
+### Returns
 
 `MiddlewareHandler`
