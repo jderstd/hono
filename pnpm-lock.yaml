@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@apst/biome':
-        specifier: ~0.1.0
-        version: 0.1.0(@biomejs/biome@1.9.4)
+        specifier: ~0.2.0
+        version: 0.2.0(@biomejs/biome@1.9.4)
       '@apst/tsconfig':
         specifier: ~0.1.1
         version: 0.1.1(typescript@5.8.3)
@@ -150,8 +150,8 @@ importers:
 
 packages:
 
-  '@apst/biome@0.1.0':
-    resolution: {integrity: sha512-iLf7Rnd4EgQEf7D7MQLALw/+hyJWCh6GFUCeS0jd83omIkfb8n2xA0R1fqQ+qaxCRqWiqhBZW3I6oSZpv9WDow==}
+  '@apst/biome@0.2.0':
+    resolution: {integrity: sha512-qYuD6IyHzbBrg4yImH/ot5orqOZTDgYmxNZXfg5bRUI4BDEZFXzV8tUhD6wJ8GXYgtvzKZKYzVFCnqN5ietqUA==}
     peerDependencies:
       '@biomejs/biome': '>=1.9.0'
     peerDependenciesMeta:
@@ -1299,7 +1299,7 @@ packages:
 
 snapshots:
 
-  '@apst/biome@0.1.0(@biomejs/biome@1.9.4)':
+  '@apst/biome@0.2.0(@biomejs/biome@1.9.4)':
     optionalDependencies:
       '@biomejs/biome': 1.9.4
 
