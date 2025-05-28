@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@apst/biome':
-        specifier: ~0.2.0
-        version: 0.2.0(@biomejs/biome@1.9.4)
+        specifier: ~0.2.1
+        version: 0.2.1(@biomejs/biome@1.9.4)
       '@apst/tsconfig':
-        specifier: ~0.1.1
-        version: 0.1.1(typescript@5.8.3)
+        specifier: ~0.1.2
+        version: 0.1.2(typescript@5.8.3)
       '@biomejs/biome':
         specifier: ^1.9.4
         version: 1.9.4
@@ -101,8 +101,8 @@ importers:
         specifier: ~0.1.2
         version: 0.1.2
       ts-vista:
-        specifier: ~0.2.0
-        version: 0.2.0
+        specifier: ~0.2.1
+        version: 0.2.1
     devDependencies:
       hono:
         specifier: 4.5.0
@@ -150,16 +150,16 @@ importers:
 
 packages:
 
-  '@apst/biome@0.2.0':
-    resolution: {integrity: sha512-qYuD6IyHzbBrg4yImH/ot5orqOZTDgYmxNZXfg5bRUI4BDEZFXzV8tUhD6wJ8GXYgtvzKZKYzVFCnqN5ietqUA==}
+  '@apst/biome@0.2.1':
+    resolution: {integrity: sha512-xovUdOD7TgslUMMcVFI7gd6MpfW7Q3NQja1MXGdYakF6p4eR6Qn1QTVW1C+xRep8z6LfLi6PWHHZDJT56eGmfA==}
     peerDependencies:
       '@biomejs/biome': '>=1.9.0'
     peerDependenciesMeta:
       '@biomejs/biome':
         optional: true
 
-  '@apst/tsconfig@0.1.1':
-    resolution: {integrity: sha512-IqjxEwFV5pOAIE53CLKkGobs+CYsUv34yOLXd/kVn79oENxZPQdbKhY3vQTNxtMGjh2kk+OvdNYgcEIzwLA6uQ==}
+  '@apst/tsconfig@0.1.2':
+    resolution: {integrity: sha512-Hmdovl3h6r+66QYHVgIiQv9YmT0zBdKEBDORhD7nqI8wfS6GN30pA1ghEquIqfeDrKwCBsETyb1JLpRbbB6wiA==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -1120,8 +1120,8 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
-  ts-vista@0.2.0:
-    resolution: {integrity: sha512-1uSNTawRQ/0clp5iT6jZHNpsTaAnUC+eNi/CtsMcJily9Lyx/ucs99celkwJclyRY+0D4qfSEDWZFiiDUsv93w==}
+  ts-vista@0.2.1:
+    resolution: {integrity: sha512-zIwTKJVCMRIzgqbb6h4g4RRWFdzGABxqOrTIQXxoq+HIhPQ612N/KxVeiNB4t4ZVxGqg8eLU/gi8vcTR2aDU2Q==}
 
   tsconfck@3.1.5:
     resolution: {integrity: sha512-CLDfGgUp7XPswWnezWwsCRxNmgQjhYq3VXHM0/XIRxhVrKw0M1if9agzryh1QS3nxjCROvV+xWxoJO1YctzzWg==}
@@ -1299,11 +1299,11 @@ packages:
 
 snapshots:
 
-  '@apst/biome@0.2.0(@biomejs/biome@1.9.4)':
+  '@apst/biome@0.2.1(@biomejs/biome@1.9.4)':
     optionalDependencies:
       '@biomejs/biome': 1.9.4
 
-  '@apst/tsconfig@0.1.1(typescript@5.8.3)':
+  '@apst/tsconfig@0.1.2(typescript@5.8.3)':
     optionalDependencies:
       typescript: 5.8.3
 
@@ -2088,7 +2088,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-vista@0.2.0: {}
+  ts-vista@0.2.1: {}
 
   tsconfck@3.1.5(typescript@5.8.3):
     optionalDependencies:

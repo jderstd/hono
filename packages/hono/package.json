@@ -46,10 +46,12 @@
     "main": "./dist/response.js",
     "module": "./dist/response.mjs",
     "types": "./dist/response.d.ts",
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "dependencies": {
         "@jderjs/core": "~0.1.2",
-        "ts-vista": "~0.2.0"
+        "ts-vista": "~0.2.1"
     },
     "devDependencies": {
         "hono": "4.5.0"
