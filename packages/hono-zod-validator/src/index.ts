@@ -1,9 +1,14 @@
 import type { ValidationTargets } from "hono";
-import type { ZodIssue, ZodSchema } from "zod";
+import type * as v3 from "zod";
+import type * as v4 from "zod/v4/core";
 
 import { zValidator as zv } from "@hono/zod-validator";
 import { createJsonResponse } from "@jderjs/hono/response";
 import { HTTPException } from "hono/http-exception";
+
+type ZodSchema = any extends v4.$ZodType
+    ? v3.ZodType
+    : v3.ZodType | v4.$ZodType;
 
 /**
  * Validate the request with Zod.
@@ -72,7 +77,8 @@ const zValidator = <
 ) => {
     return zv(target, schema, (result, c) => {
         if (!result.success) {
-            const err: ZodIssue | undefined = result.error.issues[0];
+            const err: v4.$ZodIssue | v3.ZodIssue | undefined =
+                result.error.issues[0];
 
             throw new HTTPException(400, {
                 res: createJsonResponse(c, {

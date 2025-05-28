@@ -5,7 +5,7 @@ import { createJsonResponse } from "@jderjs/hono/response";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 const json = z.object({
     name: z.string(),
