@@ -79,8 +79,8 @@ importers:
         specifier: 4.5.0
         version: 4.5.0
       zod:
-        specifier: 3.19.1
-        version: 3.19.1
+        specifier: 3.25.6
+        version: 3.25.6
     devDependencies:
       '@hono/vite-build':
         specifier: ^1.6.1
@@ -111,8 +111,8 @@ importers:
   packages/hono-zod-validator:
     dependencies:
       '@hono/zod-validator':
-        specifier: ~0.5.0
-        version: 0.5.0(hono@4.5.0)(zod@3.19.1)
+        specifier: ~0.6.0
+        version: 0.6.0(hono@4.5.0)(zod@3.25.6)
       '@jderjs/hono':
         specifier: workspace:~
         version: link:../hono
@@ -121,8 +121,8 @@ importers:
         specifier: 4.5.0
         version: 4.5.0
       zod:
-        specifier: 3.19.1
-        version: 3.19.1
+        specifier: 3.25.6
+        version: 3.25.6
 
   tests/hono:
     dependencies:
@@ -145,8 +145,8 @@ importers:
         specifier: 4.5.0
         version: 4.5.0
       zod:
-        specifier: 3.19.1
-        version: 3.19.1
+        specifier: 3.25.6
+        version: 3.25.6
 
 packages:
 
@@ -397,8 +397,8 @@ packages:
       wrangler:
         optional: true
 
-  '@hono/zod-validator@0.5.0':
-    resolution: {integrity: sha512-ds5bW6DCgAnNHP33E3ieSbaZFd5dkV52ZjyaXtGoR06APFrCtzAsKZxTHwOrJNBdXsi0e5wNwo5L4nVEVnJUdg==}
+  '@hono/zod-validator@0.6.0':
+    resolution: {integrity: sha512-3aVk+cvuOE/9D6H2ugaG1kt14NT9rFyZzwRW6+aaPhMufMSiyKNvb/7pscZ/U302F8cTPD2TSTJiOUmx6TPqGg==}
     peerDependencies:
       hono: '>=3.9.0'
       zod: ^3.19.1
@@ -1294,8 +1294,8 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
-  zod@3.19.1:
-    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
+  zod@3.25.6:
+    resolution: {integrity: sha512-kA1wikWvfsP+z3L6mzUJJRQz1Y28BR0Bu/MTWeYbfaFJ8c+OLOt1Bb8d4V3Mk1480H+poPYG6BjS/I4kJ1U8WA==}
 
 snapshots:
 
@@ -1439,10 +1439,10 @@ snapshots:
       hono: 4.5.0
       minimatch: 9.0.5
 
-  '@hono/zod-validator@0.5.0(hono@4.5.0)(zod@3.19.1)':
+  '@hono/zod-validator@0.6.0(hono@4.5.0)(zod@3.25.6)':
     dependencies:
       hono: 4.5.0
-      zod: 3.19.1
+      zod: 3.25.6
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2262,4 +2262,4 @@ snapshots:
 
   yaml@2.8.0: {}
 
-  zod@3.19.1: {}
+  zod@3.25.6: {}

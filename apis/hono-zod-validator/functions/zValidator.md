@@ -4,12 +4,12 @@
 
 ```ts
 function zValidator<T, Target>(target, schema): MiddlewareHandler<Env, string, {
-  in: HasUndefined<input<T>> extends true ? { [K in keyof ValidationTargets]?: input<T> extends ValidationTargets[K] ? input<input<T>> : { [K2 in string | number | symbol]?: ValidationTargets[K][K2] } } : { [K in keyof ValidationTargets]: input<T> extends ValidationTargets[K] ? input<input<T>> : { [K2 in string | number | symbol]: ValidationTargets[K][K2] } };
-  out: { [K in keyof ValidationTargets]: output<T> };
+  in: HasUndefined<zInput<T>> extends true ? { [K in keyof ValidationTargets]?: zInput<T> extends ValidationTargets[K] ? ValidationTargets[K] & zInput<T> : { [K2 in string | number | symbol]?: ValidationTargets[K][K2] } } : { [K in keyof ValidationTargets]: zInput<T> extends ValidationTargets[K] ? ValidationTargets[K] & zInput<T> : { [K2 in string | number | symbol]: ValidationTargets[K][K2] } };
+  out: { [K in keyof ValidationTargets]: zOutput<T> };
 }>;
 ```
 
-Defined in: [packages/hono-zod-validator/src/index.ts:66](https://github.com/jder-std/hono/blob/2842c6d10ee2eb6a69808b60fa37fe11e9b4b2af/packages/hono-zod-validator/src/index.ts#L66)
+Defined in: [packages/hono-zod-validator/src/index.ts:71](https://github.com/jder-std/hono/blob/1465159f14b3ecf8a286fdcee5879be8360c4c0d/packages/hono-zod-validator/src/index.ts#L71)
 
 Validate the request with Zod.
 
@@ -72,7 +72,10 @@ app.post(
 
 ### T
 
-`T` *extends* `ZodType`\<`any`, `ZodTypeDef`, `any`\>
+`T` *extends* 
+  \| `ZodType`\<`any`, `ZodTypeDef`, `any`\>
+  \| `ZodType`\<`any`, `ZodTypeDef`, `any`\>
+  \| `$ZodType`\<`unknown`, `unknown`\>
 
 ### Target
 
@@ -91,6 +94,6 @@ app.post(
 ## Returns
 
 `MiddlewareHandler`\<`Env`, `string`, \{
-  `in`: `HasUndefined`\<`input`\<`T`\>\> *extends* `true` ? \{ \[K in keyof ValidationTargets\]?: input\<T\> extends ValidationTargets\[K\] ? input\<input\<T\>\> : \{ \[K2 in string \| number \| symbol\]?: ValidationTargets\[K\]\[K2\] \} \} : \{ \[K in keyof ValidationTargets\]: input\<T\> extends ValidationTargets\[K\] ? input\<input\<T\>\> : \{ \[K2 in string \| number \| symbol\]: ValidationTargets\[K\]\[K2\] \} \};
-  `out`: `{ [K in keyof ValidationTargets]: output<T> }`;
+  `in`: `HasUndefined`\<`zInput`\<`T`\>\> *extends* `true` ? \{ \[K in keyof ValidationTargets\]?: zInput\<T\> extends ValidationTargets\[K\] ? ValidationTargets\[K\] & zInput\<T\> : \{ \[K2 in string \| number \| symbol\]?: ValidationTargets\[K\]\[K2\] \} \} : \{ \[K in keyof ValidationTargets\]: zInput\<T\> extends ValidationTargets\[K\] ? ValidationTargets\[K\] & zInput\<T\> : \{ \[K2 in string \| number \| symbol\]: ValidationTargets\[K\]\[K2\] \} \};
+  `out`: `{ [K in keyof ValidationTargets]: zOutput<T> }`;
 \}\>

@@ -13,7 +13,7 @@
         "@jderjs/hono": "workspace:~",
         "@jderjs/hono-zod-validator": "workspace:~",
         "hono": "4.5.0",
-        "zod": "3.19.1"
+        "zod": "3.25.6"
     },
     "devDependencies": {
         "@hono/vite-build": "^1.6.1",
