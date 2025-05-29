@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@apst/biome':
-        specifier: ~0.2.1
+        specifier: ~0.2.2
         version: 0.2.2(@biomejs/biome@1.9.4)
       '@apst/tsconfig':
         specifier: ~0.1.3
