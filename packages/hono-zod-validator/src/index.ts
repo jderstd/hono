@@ -6,9 +6,7 @@ import { zValidator as zv } from "@hono/zod-validator";
 import { createJsonResponse } from "@jderjs/hono/response";
 import { HTTPException } from "hono/http-exception";
 
-type ZodSchema = any extends v4.$ZodType
-    ? v3.ZodType
-    : v3.ZodType | v4.$ZodType;
+type ZodSchema = v3.ZodType | v4.$ZodType;
 
 /**
  * Validate the request with Zod.

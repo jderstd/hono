@@ -111,12 +111,12 @@ importers:
   packages/hono-zod-validator:
     dependencies:
       '@hono/zod-validator':
-        specifier: ~0.6.0
-        version: 0.6.0(hono@4.5.0)(zod@3.25.6)
-      '@jderjs/hono':
-        specifier: workspace:~
-        version: link:../hono
+        specifier: ~0.7.0
+        version: 0.7.0(hono@4.5.0)(zod@3.25.6)
     devDependencies:
+      '@jderjs/hono':
+        specifier: ~0.2.0
+        version: 0.2.0(hono@4.5.0)
       hono:
         specifier: 4.5.0
         version: 4.5.0
@@ -397,11 +397,11 @@ packages:
       wrangler:
         optional: true
 
-  '@hono/zod-validator@0.6.0':
-    resolution: {integrity: sha512-3aVk+cvuOE/9D6H2ugaG1kt14NT9rFyZzwRW6+aaPhMufMSiyKNvb/7pscZ/U302F8cTPD2TSTJiOUmx6TPqGg==}
+  '@hono/zod-validator@0.7.0':
+    resolution: {integrity: sha512-qe2ZE6sHFE98dcUrbYMtS3bAV8hqcCOflykvZga2S7XhmNSZzT+dIz4OuMILsjLHkJw9JMn912/dB7dQOmuPvg==}
     peerDependencies:
       hono: '>=3.9.0'
-      zod: ^3.19.1
+      zod: ^3.25.0
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -409,6 +409,11 @@ packages:
 
   '@jderjs/core@0.1.2':
     resolution: {integrity: sha512-IbaZEqnT/b9SX15PGg1hlr3JsTPc8cNLvxm4vQzssSA/jD+2H0SNSVoD6M4MFTfrcmuPleWWY4yWYRNSGP1asA==}
+
+  '@jderjs/hono@0.2.0':
+    resolution: {integrity: sha512-HGD6cRSWxBXJXR2xO0ujEa/wlH8IXBhfiEJQQCEla95V7sxeJcS//0p43Hyi6UlegiEUPaTxZgOMeVo8xwf6Sw==}
+    peerDependencies:
+      hono: ^4.5.0
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -1439,7 +1444,7 @@ snapshots:
       hono: 4.5.0
       minimatch: 9.0.5
 
-  '@hono/zod-validator@0.6.0(hono@4.5.0)(zod@3.25.6)':
+  '@hono/zod-validator@0.7.0(hono@4.5.0)(zod@3.25.6)':
     dependencies:
       hono: 4.5.0
       zod: 3.25.6
@@ -1454,6 +1459,12 @@ snapshots:
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
   '@jderjs/core@0.1.2': {}
+
+  '@jderjs/hono@0.2.0(hono@4.5.0)':
+    dependencies:
+      '@jderjs/core': 0.1.2
+      hono: 4.5.0
+      ts-vista: 0.2.2
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:

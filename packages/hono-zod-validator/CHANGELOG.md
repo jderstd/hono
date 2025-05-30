@@ -1,3 +1,11 @@
+## 0.3.0 (2025-05-30)
+
+### What's Changed
+
+- Move `@jderjs/hono` to peer dependency
+- Update `@hono/zod-validator`
+- Fix the types
+
 ## 0.2.0 (2025-05-28)
 
 ### What's New
