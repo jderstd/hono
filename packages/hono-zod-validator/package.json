@@ -1,6 +1,6 @@
 {
     "name": "@jderjs/hono-zod-validator",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "A Zod validator for Hono",
     "keywords": [
         "jder",
@@ -34,14 +34,15 @@
     "types": "./dist/index.d.ts",
     "files": ["dist"],
     "dependencies": {
-        "@hono/zod-validator": "~0.6.0",
-        "@jderjs/hono": "workspace:~"
+        "@hono/zod-validator": "~0.7.0"
     },
     "devDependencies": {
+        "@jderjs/hono": "~0.2.0",
         "hono": "4.5.0",
         "zod": "3.25.6"
     },
     "peerDependencies": {
+        "@jderjs/hono": "~0.2.0",
         "hono": "^4.5.0",
         "zod": "^3.25.6"
     }

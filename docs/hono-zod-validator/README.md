@@ -8,6 +8,8 @@ A Zod validator for Hono.
 
 Install this package as a dependency in the project:
 
+> This package requires `hono`, `zod`, and `@jderjs/hono` to be installed.
+
 ```sh
 # npm
 npm i @jderjs/hono-zod-validator

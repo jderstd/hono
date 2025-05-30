@@ -8,6 +8,8 @@ A response builder for Hono.
 
 Install this package as a dependency in the project:
 
+> This package requires `hono` to be installed.
+
 ```sh
 # npm
 npm i @jderjs/hono
