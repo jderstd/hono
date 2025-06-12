@@ -9,6 +9,7 @@
 
 - `max` param in `bodyLimit` defaults to `BODY_LIMIT_MAX_DEFAULT`
 - `max` param in `timeLimit` defaults to `TIME_LIMIT_MAX_DEFAULT`
+- Updates in types of `createResponse` and `createJsonResponse`
 
 ## 0.2.0 (2025-05-27)
 

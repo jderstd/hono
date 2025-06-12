@@ -48,7 +48,7 @@
     "types": "./dist/response.d.ts",
     "files": ["dist"],
     "dependencies": {
-        "@jderjs/core": "~0.1.2",
+        "@jderjs/core": "~0.1.3",
         "ts-vista": "~0.2.1"
     },
     "devDependencies": {
