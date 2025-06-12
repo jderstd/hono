@@ -10,10 +10,17 @@ import { timeout } from "hono/timeout";
 
 import { createJsonResponse } from "#/response/json";
 
+/** Default maximum body size in bytes. */
+const TIME_LIMIT_MAX_DEFAULT = 5000 as const;
+
 /** Options for `timeLimit` middleware. */
 type TimeLimitOptions = {
-    /** Maximum time in milliseconds. */
-    max: number;
+    /**
+     * Maximum time in milliseconds.
+     *
+     * By default, it is `TIME_LIMIT_MAX_DEFAULT`.
+     */
+    max?: number;
 };
 
 /**
@@ -34,7 +41,9 @@ type TimeLimitOptions = {
  * For more information, please refer to
  * [Timeout](https://hono.dev/docs/middleware/builtin/timeout).
  *
- * ### Example
+ * ### Examples
+ *
+ * A example of using `timeLimit` middleware:
  *
  * ```ts
  * import { Hono } from "hono";
@@ -42,15 +51,24 @@ type TimeLimitOptions = {
  *
  * const app: Hono = new Hono();
  *
- * app.use(
- *     timeLimit({
- *         max: 10 * 1000, // 10s
- *     })
- * );
+ * app.use(timeLimit());
+ * ```
+ *
+ * A example of using `timeLimit` middleware with options:
+ *
+ * ```ts
+ * import { Hono } from "hono";
+ * import { timeLimit } from "@jderjs/hono/time-limit";
+ *
+ * const app: Hono = new Hono();
+ *
+ * app.use(timeLimit({
+ *     max: 10 * 1000, // 10s
+ * }));
  * ```
  */
-const timeLimit = (options: TimeLimitOptions): MiddlewareHandler => {
-    return timeout(options.max, (c: Context): HTTPException => {
+const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
+    return timeout(options?.max ?? 5 * 1000, (c: Context): HTTPException => {
         return new HTTPException(408, {
             res: createJsonResponse(c, {
                 success: false,
@@ -64,4 +82,4 @@ const timeLimit = (options: TimeLimitOptions): MiddlewareHandler => {
 };
 
 export type { TimeLimitOptions };
-export { timeLimit };
+export { timeLimit, TIME_LIMIT_MAX_DEFAULT };

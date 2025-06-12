@@ -112,8 +112,8 @@ importers:
         version: 0.7.0(hono@4.5.0)(zod@3.25.6)
     devDependencies:
       '@jderjs/hono':
-        specifier: ~0.2.0
-        version: 0.2.0(hono@4.5.0)
+        specifier: workspace:~
+        version: link:../hono
       hono:
         specifier: 4.5.0
         version: 4.5.0
@@ -412,11 +412,6 @@ packages:
 
   '@jderjs/core@0.1.2':
     resolution: {integrity: sha512-IbaZEqnT/b9SX15PGg1hlr3JsTPc8cNLvxm4vQzssSA/jD+2H0SNSVoD6M4MFTfrcmuPleWWY4yWYRNSGP1asA==}
-
-  '@jderjs/hono@0.2.0':
-    resolution: {integrity: sha512-HGD6cRSWxBXJXR2xO0ujEa/wlH8IXBhfiEJQQCEla95V7sxeJcS//0p43Hyi6UlegiEUPaTxZgOMeVo8xwf6Sw==}
-    peerDependencies:
-      hono: ^4.5.0
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -1345,12 +1340,6 @@ snapshots:
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
   '@jderjs/core@0.1.2': {}
-
-  '@jderjs/hono@0.2.0(hono@4.5.0)':
-    dependencies:
-      '@jderjs/core': 0.1.2
-      hono: 4.5.0
-      ts-vista: 0.2.2
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:

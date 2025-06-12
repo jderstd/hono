@@ -1,3 +1,9 @@
+## 0.3.1
+
+### What's Changed
+
+- Update `@jderjs/hono`
+
 ## 0.3.0 (2025-05-30)
 
 ### What's Changed
