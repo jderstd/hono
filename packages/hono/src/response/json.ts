@@ -61,25 +61,69 @@ type CreateJsonResponseOptions<D = unknown> = Format<
  *     });
  * };
  * ```
+ */
+function createJsonResponse<D = unknown>(
+    options?: CreateJsonResponseOptions<D>,
+): Response;
+
+/**
+ * Create a JSON response with context.
  *
- * Example for merging context response:
+ * ### Examples
+ *
+ * Example for creating a successful JSON response without data:
  *
  * ```ts
  * import type { Context } from "hono";
  *
- * import { setCookie } from "hono/cookie";
  * import { createJsonResponse } from "@jderjs/hono";
  *
  * const route = (c: Context): Response => {
- *     setCookie(c, "key", "value");
  *     return createJsonResponse(c);
+ * };
+ * ```
+ *
+ * Example for creating a successful JSON response with data:
+ *
+ * ```ts
+ * import type { Context } from "hono";
+ *
+ * import { createJsonResponse } from "@jderjs/hono";
+ *
+ * const route = (c: Context): Response => {
+ *     return createJsonResponse(c, {
+ *         data: "Hello, World!",
+ *     });
  * }
  * ```
+ *
+ * Example for creating a failed JSON response:
+ *
+ * ```ts
+ * import type { Context } from "hono";
+ *
+ * import { createJsonResponse } from "@jderjs/hono";
+ *
+ * const route = (c: Context): Response => {
+ *     return createJsonResponse(c, {
+ *         success: false,
+ *         error: {
+ *             code: "server",
+ *             message: "Internal server error",
+ *         },
+ *     });
+ * };
+ * ```
  */
-const createJsonResponse = <D = unknown>(
+function createJsonResponse<D = unknown>(
+    context?: Context,
+    options?: CreateJsonResponseOptions<D>,
+): Response;
+
+function createJsonResponse<D = unknown>(
     contextOrOptions?: Context | CreateJsonResponseOptions<D>,
     options?: CreateJsonResponseOptions<D>,
-): Response => {
+): Response {
     const { status, headers, json } = isContext(contextOrOptions)
         ? createJsonResponseStruct(options)
         : createJsonResponseStruct(contextOrOptions);
@@ -98,7 +142,7 @@ const createJsonResponse = <D = unknown>(
         status,
         headers,
     });
-};
+}
 
 export type { CreateJsonResponseOptions };
 export { isContext, createJsonResponse };

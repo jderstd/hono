@@ -12,14 +12,14 @@ import { createResponseStruct } from "@jderjs/core/internal";
 import { isContext } from "#/response/json";
 
 /** Options of `createResponse` function. */
-type CreateResponseOptions = Format<
+type CreateResponseOptions<B extends BodyInit = BodyInit> = Format<
     {
         /**
          * Status code of the response.
          * By default, it is `200` for success and `400` for failure.
          */
         status?: StatusCode;
-    } & Omit<CreateResponseStructOptions, "status">
+    } & Omit<CreateResponseStructOptions<B>, "status">
 >;
 
 /**
@@ -52,26 +52,55 @@ type CreateResponseOptions = Format<
  *     });
  * };
  * ```
+ */
+function createResponse<B extends BodyInit = BodyInit>(
+    options?: CreateResponseOptions<B>,
+): Response;
+
+/**
+ * Create a response with context.
  *
- * Example for merging context into the response:
+ * ### Examples
+ *
+ * Example for creating a basic response:
  *
  * ```ts
  * import type { Context } from "hono";
  *
- * import { setCookie } from "hono/cookie";
  * import { createResponse } from "@jderjs/hono";
  *
  * const route = (c: Context): Response => {
- *     setCookie(c, "key", "value");
- *
  *     return createResponse(c);
- * }
+ * };
+ * ```
+ *
+ * Example for creating a response with status, headers, and body:
+ *
+ * ```ts
+ * import type { Context } from "hono";
+ *
+ * import { createResponse } from "@jderjs/hono";
+ *
+ * const route = (c: Context): Response => {
+ *     return createResponse(c, {
+ *         status: 404,
+ *         headers: [
+ *             ["Content-Type", "text/plain"],
+ *         ],
+ *         body: "Not Found",
+ *     });
+ * };
  * ```
  */
-const createResponse = (
-    contextOrOptions?: Context | CreateResponseOptions,
-    options?: CreateResponseOptions,
-): Response => {
+function createResponse<B extends BodyInit = BodyInit>(
+    context?: Context,
+    options?: CreateResponseOptions<B>,
+): Response;
+
+function createResponse<B extends BodyInit = BodyInit>(
+    contextOrOptions?: Context | CreateResponseOptions<B>,
+    options?: CreateResponseOptions<B>,
+): Response {
     const { status, headers, body } = isContext(contextOrOptions)
         ? createResponseStruct(options)
         : createResponseStruct(contextOrOptions);
@@ -92,7 +121,7 @@ const createResponse = (
         status,
         headers,
     });
-};
+}
 
 export type { CreateResponseOptions };
 export { createResponse };
