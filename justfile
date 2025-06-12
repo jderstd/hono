@@ -62,7 +62,7 @@ test-all:
 
 # Generate APIs documentation
 api:
-    ccd ./{{hono}} && ../../{{typedoc}}
+    cd ./{{hono}} && ../../{{typedoc}}
     cd ./{{validator}} && ../../{{typedoc}}
 
 # Clean builds

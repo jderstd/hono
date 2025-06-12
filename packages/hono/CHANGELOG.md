@@ -1,3 +1,15 @@
+## 0.3.0
+
+### What's New
+
+- Export `BODY_LIMIT_MAX_DEFAULT`
+- Export `TIME_LIMIT_MAX_DEFAULT`
+
+### What's Changed
+
+- `max` param in `bodyLimit` defaults to `BODY_LIMIT_MAX_DEFAULT`
+- `max` param in `timeLimit` defaults to `TIME_LIMIT_MAX_DEFAULT`
+
 ## 0.2.0 (2025-05-27)
 
 ### Breaking Changes
