@@ -10,7 +10,7 @@ import { timeout } from "hono/timeout";
 
 import { createJsonResponse } from "#/response/json";
 
-/** Default maximum body size in bytes. */
+/** Default maximum time in milliseconds. */
 const TIME_LIMIT_MAX_DEFAULT = 5000 as const;
 
 /** Options for `timeLimit` middleware. */
