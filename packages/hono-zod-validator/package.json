@@ -42,7 +42,7 @@
         "zod": "3.25.6"
     },
     "peerDependencies": {
-        "@jderjs/hono": "workspace:~",
+        "@jderjs/hono": "~0.2.0 || ~0.3.0",
         "hono": "^4.5.0",
         "zod": "^3.25.6"
     }
