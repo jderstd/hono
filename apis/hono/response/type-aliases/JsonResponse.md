@@ -6,7 +6,7 @@
 type JsonResponse<D> = object;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.2/node\_modules/@jderjs/core/dist/index-CZbF0ThU.d.ts:71
+Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:71
 
 JSON response.
 
@@ -24,7 +24,7 @@ JSON response.
 optional data: D;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.2/node\_modules/@jderjs/core/dist/index-CZbF0ThU.d.ts:75
+Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:75
 
 Data for the response when `success` is `true`.
 
@@ -36,7 +36,7 @@ Data for the response when `success` is `true`.
 optional error: JsonResponseError;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.2/node\_modules/@jderjs/core/dist/index-CZbF0ThU.d.ts:77
+Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:77
 
 Error for the response when `success` is `false`.
 
@@ -48,6 +48,6 @@ Error for the response when `success` is `false`.
 success: boolean;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.2/node\_modules/@jderjs/core/dist/index-CZbF0ThU.d.ts:73
+Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:73
 
 Whether the response is successful.
