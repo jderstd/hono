@@ -10,6 +10,12 @@ Body limit module
 | ------ | ------ |
 | [BodyLimitOptions](type-aliases/BodyLimitOptions.md) | Options for `bodyLimit` middleware. |
 
+## Variables
+
+| Variable | Description |
+| ------ | ------ |
+| [BODY\_LIMIT\_MAX\_DEFAULT](variables/BODY_LIMIT_MAX_DEFAULT.md) | Default maximum body size in bytes. |
+
 ## Functions
 
 | Function | Description |

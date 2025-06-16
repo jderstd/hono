@@ -49,7 +49,7 @@
     "files": ["dist"],
     "dependencies": {
         "@jderjs/core": "~0.1.3",
-        "ts-vista": "~0.2.1"
+        "ts-vista": "~0.2.2"
     },
     "devDependencies": {
         "hono": "4.5.0"

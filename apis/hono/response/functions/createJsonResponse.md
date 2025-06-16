@@ -2,11 +2,13 @@
 
 # Function: createJsonResponse()
 
+## Call Signature
+
 ```ts
-function createJsonResponse<D>(contextOrOptions?, options?): Response;
+function createJsonResponse<D>(options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json.ts:79](https://github.com/jder-std/hono/blob/b92633c59fa9113163147663f444d9cb8b0bae4a/packages/hono/src/response/json.ts#L79)
+Defined in: [packages/hono/src/response/json/index.ts:65](https://github.com/jder-std/hono/blob/8c7789aedbc9936c4862cd649747186bca01fdb1/packages/hono/src/response/json/index.ts#L65)
 
 Create a JSON response.
 
@@ -50,37 +52,95 @@ const route = (): Response => {
 };
 ```
 
-Example for merging context response:
+### Type Parameters
+
+#### D
+
+`D` = `unknown`
+
+### Parameters
+
+#### options?
+
+[`CreateJsonResponseOptions`](../type-aliases/CreateJsonResponseOptions.md)\<`D`\>
+
+### Returns
+
+`Response`
+
+## Call Signature
+
+```ts
+function createJsonResponse<D>(context?, options?): Response;
+```
+
+Defined in: [packages/hono/src/response/json/index.ts:118](https://github.com/jder-std/hono/blob/8c7789aedbc9936c4862cd649747186bca01fdb1/packages/hono/src/response/json/index.ts#L118)
+
+Create a JSON response with context.
+
+### Examples
+
+Example for creating a successful JSON response without data:
 
 ```ts
 import type { Context } from "hono";
 
-import { setCookie } from "hono/cookie";
 import { createJsonResponse } from "@jderjs/hono";
 
 const route = (c: Context): Response => {
-    setCookie(c, "key", "value");
     return createJsonResponse(c);
+};
+```
+
+Example for creating a successful JSON response with data:
+
+```ts
+import type { Context } from "hono";
+
+import { createJsonResponse } from "@jderjs/hono";
+
+const route = (c: Context): Response => {
+    return createJsonResponse(c, {
+        data: "Hello, World!",
+    });
 }
 ```
 
-## Type Parameters
+Example for creating a failed JSON response:
 
-### D
+```ts
+import type { Context } from "hono";
+
+import { createJsonResponse } from "@jderjs/hono";
+
+const route = (c: Context): Response => {
+    return createJsonResponse(c, {
+        success: false,
+        error: {
+            code: "server",
+            message: "Internal server error",
+        },
+    });
+};
+```
+
+### Type Parameters
+
+#### D
 
 `D` = `unknown`
 
-## Parameters
+### Parameters
 
-### contextOrOptions?
+#### context?
 
 `Context`\<`any`, `any`, \{
-\}\> | [`CreateJsonResponseOptions`](../type-aliases/CreateJsonResponseOptions.md)\<`D`\>
+\}\>
 
-### options?
+#### options?
 
 [`CreateJsonResponseOptions`](../type-aliases/CreateJsonResponseOptions.md)\<`D`\>
 
-## Returns
+### Returns
 
 `Response`
