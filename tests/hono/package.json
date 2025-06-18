@@ -9,6 +9,6 @@
     "dependencies": {
         "@jderjs/hono": "workspace:~",
         "hono": "4.5.0",
-        "vitest": "^3.2.3"
+        "vitest": "^3.2.4"
     }
 }
