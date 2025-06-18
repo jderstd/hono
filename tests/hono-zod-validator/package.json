@@ -10,7 +10,7 @@
         "@jderjs/hono": "workspace:~",
         "@jderjs/hono-zod-validator": "workspace:~",
         "hono": "4.5.0",
-        "vitest": "^3.2.3",
+        "vitest": "^3.2.4",
         "zod": "3.25.6"
     }
 }
