@@ -51,7 +51,9 @@ describe("IP limit test", (): void => {
 
     it("should be forbidden", async (): Promise<void> => {
         const res = await createClient({
-            allowList: ["1.1.1.1"],
+            allowList: [
+                "1.1.1.1",
+            ],
         }).index.$get();
 
         expect(res.status).toBe(403);
@@ -66,7 +68,9 @@ describe("IP limit test", (): void => {
 
     it("should be forbidden with verbose", async (): Promise<void> => {
         const res = await createClient({
-            allowList: ["1.1.1.1"],
+            allowList: [
+                "1.1.1.1",
+            ],
             verbose: true,
         }).index.$get();
 

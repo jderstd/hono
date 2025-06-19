@@ -4,6 +4,7 @@ import type { StatusCode } from "hono/utils/http-status";
 import type { Format, Omit } from "ts-vista";
 
 import { createResponseStruct } from "@jderjs/core/internal";
+
 import { isContext } from "#/response/json";
 
 /** Options of `createResponse` function. */

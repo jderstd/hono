@@ -8,6 +8,11 @@ const app: Hono = new Hono();
 
 app.route("/", router);
 
-app.use("*", serveStatic({ root: PUBLIC }));
+app.use(
+    "*",
+    serveStatic({
+        root: PUBLIC,
+    }),
+);
 
 export default app;
