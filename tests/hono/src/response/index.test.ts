@@ -74,7 +74,9 @@ describe("createJsonResponse test", (): void => {
 
         expect(res.status).toBe(200);
 
-        expect(res.headers.getSetCookie()).toStrictEqual(["key=value; Path=/"]);
+        expect(res.headers.getSetCookie()).toStrictEqual([
+            "key=value; Path=/",
+        ]);
 
         expect(await res.json()).toStrictEqual({
             success: true,

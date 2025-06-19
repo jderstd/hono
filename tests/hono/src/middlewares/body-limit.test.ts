@@ -63,9 +63,14 @@ describe("Body limit test", (): void => {
         const data = new FormData();
         data.append(
             "file",
-            new Blob(["a".repeat(9 * 1024 * 1024)], {
-                type: "text/plain",
-            }),
+            new Blob(
+                [
+                    "a".repeat(9 * 1024 * 1024),
+                ],
+                {
+                    type: "text/plain",
+                },
+            ),
             "text.txt",
         );
 
@@ -93,9 +98,14 @@ describe("Body limit test", (): void => {
         const data = new FormData();
         data.append(
             "file",
-            new Blob(["a".repeat(10 * 1024 * 1024)], {
-                type: "text/plain",
-            }),
+            new Blob(
+                [
+                    "a".repeat(10 * 1024 * 1024),
+                ],
+                {
+                    type: "text/plain",
+                },
+            ),
             "text.txt",
         );
 

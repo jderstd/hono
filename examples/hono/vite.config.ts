@@ -1,11 +1,8 @@
-import { defineConfig } from "vite";
-
-import tsconfigPaths from "vite-tsconfig-paths";
-
+import build from "@hono/vite-build/node";
 import devServer from "@hono/vite-dev-server";
 import adapter from "@hono/vite-dev-server/node";
-
-import build from "@hono/vite-build/node";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
     plugins: [
