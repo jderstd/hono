@@ -11,7 +11,7 @@ import { timeout } from "hono/timeout";
 import { createJsonResponse } from "#/response/json";
 
 /** Default maximum time in milliseconds. */
-const TIME_LIMIT_MAX_DEFAULT = 5000 as const;
+const TIME_LIMIT_MAX_DEFAULT = (5 * 1000) as 5000;
 
 /** Options for `timeLimit` middleware. */
 type TimeLimitOptions = {
