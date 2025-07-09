@@ -10,7 +10,7 @@ import { bodyLimit as _bodyLimit } from "hono/body-limit";
 import { createJsonResponse } from "#/response/json";
 
 /** Default maximum body size in bytes. */
-const BODY_LIMIT_MAX_DEFAULT = 10485760 as const;
+const BODY_LIMIT_MAX_DEFAULT = (10 * 1024 * 1024) as 10485760;
 
 /** Options for `bodyLimit` middleware. */
 type BodyLimitOptions = {
