@@ -20,7 +20,10 @@
         "directory": "packages/hono-zod-validator"
     },
     "license": "MIT",
-    "author": "Alpheus Tang",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
