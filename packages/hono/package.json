@@ -19,7 +19,10 @@
         "directory": "packages/hono"
     },
     "license": "MIT",
-    "author": "Alpheus Tang",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
     "exports": {
         "./response": {
             "types": "./dist/response.d.ts",
