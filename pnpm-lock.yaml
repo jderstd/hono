@@ -33,8 +33,8 @@ importers:
   examples/hono:
     dependencies:
       '@hono/node-server':
-        specifier: ^1.16.0
-        version: 1.16.0(hono@4.5.0)
+        specifier: ^1.17.1
+        version: 1.17.1(hono@4.5.0)
       '@jderjs/hono':
         specifier: workspace:~
         version: link:../../packages/hono
@@ -61,8 +61,8 @@ importers:
   examples/hono-zod-validator:
     dependencies:
       '@hono/node-server':
-        specifier: ^1.16.0
-        version: 1.16.0(hono@4.5.0)
+        specifier: ^1.17.1
+        version: 1.17.1(hono@4.5.0)
       '@jderjs/hono':
         specifier: workspace:~
         version: link:../../packages/hono
@@ -531,8 +531,8 @@ packages:
   '@gerrit0/mini-shiki@3.7.0':
     resolution: {integrity: sha512-7iY9wg4FWXmeoFJpUL2u+tsmh0d0jcEJHAIzVxl3TG4KL493JNnisdLAILZ77zcD+z3J0keEXZ+lFzUgzQzPDg==}
 
-  '@hono/node-server@1.16.0':
-    resolution: {integrity: sha512-9LwRb5XOrTFapOABiQjGC50wRVlzUvWZsDHINCnkBniP+Q+LQf4waN0nzk9t+2kqcTsnGnieSmqpHsr6kH2bdw==}
+  '@hono/node-server@1.17.1':
+    resolution: {integrity: sha512-SY79W/C+2b1MyAzmIcV32Q47vO1b5XwLRwj8S9N6Jr5n1QCkIfAIH6umOSgqWZ4/v67hg6qq8Ha5vZonVidGsg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1651,7 +1651,7 @@ snapshots:
       '@shikijs/types': 3.7.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.16.0(hono@4.5.0)':
+  '@hono/node-server@1.17.1(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
 
@@ -1661,7 +1661,7 @@ snapshots:
 
   '@hono/vite-dev-server@0.20.0(hono@4.5.0)':
     dependencies:
-      '@hono/node-server': 1.16.0(hono@4.5.0)
+      '@hono/node-server': 1.17.1(hono@4.5.0)
       hono: 4.5.0
       minimatch: 9.0.5
 
