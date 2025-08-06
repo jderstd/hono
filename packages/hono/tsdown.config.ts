@@ -1,6 +1,6 @@
-import type { Options } from "tsup";
+import type { Options } from "tsdown";
 
-import { defineConfig } from "tsup";
+import { defineConfig } from "tsdown";
 
 const options: Options = {
     entry: {
@@ -9,11 +9,20 @@ const options: Options = {
         "ip-limit": "./src/middlewares/ip-limit.ts",
         "time-limit": "./src/middlewares/time-limit.ts",
     },
-    sourcemap: true,
-    clean: true,
+    dts: false,
     outDir: "./dist",
+    clean: true,
     platform: "neutral",
-    tsconfig: "./tsconfig.json",
+    treeshake: true,
+    sourcemap: true,
+    minify: false,
+    shims: true,
+    unbundle: false,
+    inputOptions: {
+        experimental: {
+            attachDebugInfo: "none",
+        },
+    },
 };
 
 export default defineConfig([
@@ -23,7 +32,7 @@ export default defineConfig([
     },
     {
         ...options,
-        format: "cjs",
         dts: true,
+        format: "cjs",
     },
 ]);
