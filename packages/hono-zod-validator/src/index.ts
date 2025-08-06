@@ -80,8 +80,6 @@ const zValidator = <
 
             throw new HTTPException(400, {
                 res: createJsonResponse(c, {
-                    success: false,
-                    status: 400,
                     error: {
                         code: "invalid",
                         ...(err && {

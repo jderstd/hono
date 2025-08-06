@@ -1,9 +1,9 @@
-import type { CreateResponseStructOptions } from "@jderjs/core/internal";
+import type { CreateResponseStructOptions } from "@jderjs/core/response/common/struct";
 import type { Context } from "hono";
 import type { StatusCode } from "hono/utils/http-status";
 import type { Format, Omit } from "ts-vista";
 
-import { createResponseStruct } from "@jderjs/core/internal";
+import { createResponseStruct } from "@jderjs/core/response/common/struct";
 
 import { isContext } from "#/response/json";
 

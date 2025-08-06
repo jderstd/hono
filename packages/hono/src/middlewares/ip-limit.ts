@@ -134,7 +134,6 @@ function ipLimit(
         },
         ({ addr }, c: Context): Response => {
             return createJsonResponse(c, {
-                success: false,
                 status: 403,
                 error: {
                     code: "forbidden",
