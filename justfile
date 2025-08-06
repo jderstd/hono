@@ -67,16 +67,16 @@ api:
 
 # Publish hono package as dry-run
 publish-try-hono:
-    cd ./{{hono}} && pnpm publish --dry-run
+    cd ./{{hono}} && pnpm publish --no-git-checks --dry-run
 
 # Publish zod-validator package as dry-run
 publish-try-zv:
-    cd ./{{validator}} && pnpm publish --dry-run
+    cd ./{{validator}} && pnpm publish --no-git-checks --dry-run
 
 # Publish all packages as dry-run
 publish-try:
-    just publish-dev-try-hono
-    just publish-dev-try-zv
+    just publish-try-hono
+    just publish-try-zv
 
 # Publish hono package
 publish-hono:
