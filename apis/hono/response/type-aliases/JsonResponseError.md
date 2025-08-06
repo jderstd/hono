@@ -6,7 +6,7 @@
 type JsonResponseError = object;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:62
+Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:4
 
 JSON response error.
 
@@ -18,7 +18,7 @@ JSON response error.
 code: string;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:64
+Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:6
 
 Error code.
 
@@ -30,7 +30,7 @@ Error code.
 optional field: string;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:66
+Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:8
 
 Field of the error.
 
@@ -42,6 +42,6 @@ Field of the error.
 optional message: string;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.1.3/node\_modules/@jderjs/core/dist/index-DWBTvjFz.d.ts:68
+Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:10
 
 Message of the error.
