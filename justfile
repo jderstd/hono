@@ -65,6 +65,32 @@ api:
     cd ./{{hono}} && ../../{{typedoc}}
     cd ./{{validator}} && ../../{{typedoc}}
 
+# Publish hono package as dry-run
+publish-try-hono:
+    cd ./{{hono}} && pnpm publish --dry-run
+
+# Publish zod-validator package as dry-run
+publish-try-zv:
+    cd ./{{validator}} && pnpm publish --dry-run
+
+# Publish all packages as dry-run
+publish-try:
+    just publish-dev-try-hono
+    just publish-dev-try-zv
+
+# Publish hono package
+publish-hono:
+    cd ./{{hono}} && pnpm publish
+
+# Publish zod-validator package
+publish-zv:
+    cd ./{{validator}} && pnpm publish
+
+# Publish all packages
+publish:
+    just publish-hono
+    just publish-zv
+
 # Clean builds
 clean:
     rm -rf ./{{hono}}/dist
