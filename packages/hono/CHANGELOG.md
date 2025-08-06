@@ -1,3 +1,9 @@
+## Next
+
+### What's Changed
+
+- Update `@jderjs/core`
+
 ## 0.3.0 (2025-06-16)
 
 ### What's New

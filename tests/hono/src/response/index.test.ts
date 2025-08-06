@@ -19,7 +19,6 @@ const app = new Hono()
     })
     .get("/failure", (): Response => {
         return createJsonResponse({
-            success: false,
             error: {
                 code: "server",
             },

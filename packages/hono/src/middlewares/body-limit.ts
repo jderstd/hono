@@ -72,7 +72,6 @@ const bodyLimit = (options?: BodyLimitOptions): MiddlewareHandler => {
         maxSize: options?.max ?? BODY_LIMIT_MAX_DEFAULT,
         onError: (c: Context): Response => {
             return createJsonResponse(c, {
-                success: false,
                 status: 413,
                 error: {
                     code: "too_large",

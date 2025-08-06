@@ -71,7 +71,6 @@ const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
     return timeout(options?.max ?? 5 * 1000, (c: Context): HTTPException => {
         return new HTTPException(408, {
             res: createJsonResponse(c, {
-                success: false,
                 status: 408,
                 error: {
                     code: "timeout",
