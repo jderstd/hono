@@ -4,7 +4,7 @@ set windows-shell := ["powershell"]
 node_bin := "./node_modules/.bin/"
 tsc := node_bin + "tsc"
 biome := node_bin + "biome"
-tsup := node_bin + "tsup"
+tsdown := node_bin + "tsdown"
 vitest := node_bin + "vitest"
 typedoc := node_bin + "typedoc"
 
@@ -43,8 +43,8 @@ fmt:
 
 # Build package
 build:
-    cd ./{{hono}} && ../../{{tsup}}
-    cd ./{{validator}} && ../../{{tsup}}
+    cd ./{{hono}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{validator}} && ../../{{tsdown}} -c tsdown.config.ts
 
 # Run tests
 test:
