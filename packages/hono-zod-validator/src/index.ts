@@ -81,12 +81,9 @@ const zValidator = <
             throw new HTTPException(400, {
                 res: createJsonResponse(c, {
                     error: {
-                        code: "invalid",
+                        code: "parse",
                         ...(err && {
-                            field:
-                                typeof err.path[0] === "string"
-                                    ? err.path[0]
-                                    : String(err.path[0]),
+                            field: err.path.join("."),
                             message: err.message,
                         }),
                     },
