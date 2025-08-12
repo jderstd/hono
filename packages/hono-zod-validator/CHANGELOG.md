@@ -1,3 +1,10 @@
+## Next
+
+### Breaking Changes
+
+- error code changed from `invalid` to `parse`
+- error field contains the whole path array join by `.`
+
 ## 0.3.2 (2025-08-06)
 
 ### What's Changed
