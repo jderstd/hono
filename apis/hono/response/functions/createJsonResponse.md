@@ -8,7 +8,7 @@
 function createJsonResponse<D>(options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:65](https://github.com/jder-std/hono/blob/206880bc1e845cf7bddf84d4b8c9af705bc6e006/packages/hono/src/response/json/index.ts#L65)
+Defined in: [packages/hono/src/response/json/index.ts:66](https://github.com/jder-std/hono/blob/f2f73ec679525d06b67f906feb4542e6a1926d67/packages/hono/src/response/json/index.ts#L66)
 
 Create a JSON response.
 
@@ -43,11 +43,12 @@ import { createJsonResponse } from "@jderjs/hono";
 
 const route = (): Response => {
     return createJsonResponse({
-        success: false,
-        error: {
-            code: "server",
-            message: "Internal server error",
-        },
+        errors: [
+            {
+                code: "server",
+                message: "Internal server error",
+            },
+        ],
     });
 };
 ```
@@ -74,7 +75,7 @@ const route = (): Response => {
 function createJsonResponse<D>(context?, options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:118](https://github.com/jder-std/hono/blob/206880bc1e845cf7bddf84d4b8c9af705bc6e006/packages/hono/src/response/json/index.ts#L118)
+Defined in: [packages/hono/src/response/json/index.ts:120](https://github.com/jder-std/hono/blob/f2f73ec679525d06b67f906feb4542e6a1926d67/packages/hono/src/response/json/index.ts#L120)
 
 Create a JSON response with context.
 
@@ -115,11 +116,12 @@ import { createJsonResponse } from "@jderjs/hono";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c, {
-        success: false,
-        error: {
-            code: "server",
-            message: "Internal server error",
-        },
+        errors: [
+            {
+                code: "server",
+                message: "Internal server error",
+            },
+        ],
     });
 };
 ```

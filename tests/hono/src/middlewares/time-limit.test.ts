@@ -1,3 +1,5 @@
+import type { JsonResponse } from "@jderjs/hono/response";
+
 import { createJsonResponse } from "@jderjs/hono/response";
 import { timeLimit } from "@jderjs/hono/time-limit";
 import { Hono } from "hono";
@@ -28,7 +30,7 @@ describe("Time limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
-        });
+        } satisfies JsonResponse);
     });
 
     it("should timeout", async (): Promise<void> => {
@@ -38,9 +40,11 @@ describe("Time limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
-            error: {
-                code: "timeout",
-            },
-        });
+            errors: [
+                {
+                    code: "timeout",
+                },
+            ],
+        } satisfies JsonResponse);
     });
 });

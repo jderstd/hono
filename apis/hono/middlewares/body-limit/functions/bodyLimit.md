@@ -6,7 +6,7 @@
 function bodyLimit(options?): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/body-limit.ts:70](https://github.com/jder-std/hono/blob/206880bc1e845cf7bddf84d4b8c9af705bc6e006/packages/hono/src/middlewares/body-limit.ts#L70)
+Defined in: [packages/hono/src/middlewares/body-limit.ts:75](https://github.com/jder-std/hono/blob/f2f73ec679525d06b67f906feb4542e6a1926d67/packages/hono/src/middlewares/body-limit.ts#L75)
 
 Body limit middleware.
 
@@ -16,10 +16,15 @@ Following error will be returned if the body size is over the limit:
 // Status: 413
 {
     "success": false,
-    "error": {
-        "code": "too_large",
-        "field": "body"
-    }
+    "errors": [
+        {
+            "code": "too_large",
+            "path": [
+                "request",
+                "body"
+            ]
+        }
+    ]
 }
 ```
 

@@ -8,7 +8,7 @@
 function ipLimit(options): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:98](https://github.com/jder-std/hono/blob/206880bc1e845cf7bddf84d4b8c9af705bc6e006/packages/hono/src/middlewares/ip-limit.ts#L98)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:105](https://github.com/jder-std/hono/blob/f2f73ec679525d06b67f906feb4542e6a1926d67/packages/hono/src/middlewares/ip-limit.ts#L105)
 
 IP limit middleware.
 
@@ -18,9 +18,11 @@ Following error will be returned if the IP address is not allowed:
 // Status: 403
 {
     "success": false,
-    "error": {
-        "code": "forbidden"
-    }
+    "errors": [
+        {
+            "code": "forbidden"
+        }
+    ]
 }
 ```
 
@@ -30,11 +32,16 @@ When `verbose` is `true`, the error will be like:
 // Status: 403
 {
     "success": false,
-    "error": {
-        "code": "forbidden",
-        "field": "ip",
-        "message": "Forbidden IP address: x.x.x.x"
-    }
+    "errors": [
+        {
+            "code": "forbidden",
+            "path": [
+                "request",
+                "ip"
+            ],
+            "message": "Forbidden IP address: x.x.x.x"
+        }
+    ]
 }
 ```
 
@@ -103,7 +110,7 @@ By default, it's `false`.
 function ipLimit(getConnInfo, options?): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:111](https://github.com/jder-std/hono/blob/206880bc1e845cf7bddf84d4b8c9af705bc6e006/packages/hono/src/middlewares/ip-limit.ts#L111)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:118](https://github.com/jder-std/hono/blob/f2f73ec679525d06b67f906feb4542e6a1926d67/packages/hono/src/middlewares/ip-limit.ts#L118)
 
 IP limit middleware for compatibility with `hono/ip-restriction`.
 

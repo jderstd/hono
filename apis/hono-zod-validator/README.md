@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @jderjs/hono-zod-validator v0.3.2
+# @jderjs/hono-zod-validator v0.4.0
 
 ## Functions
 

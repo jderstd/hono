@@ -1,5 +1,6 @@
+import type { JsonResponseError } from "@jderjs/hono/response";
 import type { ValidationTargets } from "hono";
-import type * as v3 from "zod";
+import type * as v3 from "zod/v3";
 import type * as v4 from "zod/v4/core";
 
 import { zValidator as zv } from "@hono/zod-validator";
@@ -74,22 +75,29 @@ const zValidator = <
     schema: T,
 ) => {
     return zv(target, schema, (result, c) => {
-        if (!result.success) {
-            const err: v4.$ZodIssue | v3.ZodIssue | undefined =
-                result.error.issues[0];
+        if (result.success) return void 0;
 
-            throw new HTTPException(400, {
-                res: createJsonResponse(c, {
-                    error: {
-                        code: "parse",
-                        ...(err && {
-                            field: err.path.join("."),
-                            message: err.message,
-                        }),
-                    },
-                }),
+        const errors: JsonResponseError[] = [];
+
+        const errs: v4.$ZodIssue[] | v3.ZodIssue[] = result.error.issues;
+
+        for (let i: number = 0; i < errs.length; i++) {
+            const err: v4.$ZodIssue | v3.ZodIssue | undefined = errs[i];
+
+            if (!err) continue;
+
+            errors.push({
+                code: `parse.${err.code}`,
+                path: err.path.map((p): string => String(p)),
+                message: err.message,
             });
         }
+
+        throw new HTTPException(400, {
+            res: createJsonResponse(c, {
+                errors,
+            }),
+        });
     });
 };
 

@@ -53,11 +53,12 @@ type CreateJsonResponseOptions<D = unknown> = Format<
  *
  * const route = (): Response => {
  *     return createJsonResponse({
- *         success: false,
- *         error: {
- *             code: "server",
- *             message: "Internal server error",
- *         },
+ *         errors: [
+ *             {
+ *                 code: "server",
+ *                 message: "Internal server error",
+ *             },
+ *         ],
  *     });
  * };
  * ```
@@ -106,11 +107,12 @@ function createJsonResponse<D = unknown>(
  *
  * const route = (c: Context): Response => {
  *     return createJsonResponse(c, {
- *         success: false,
- *         error: {
- *             code: "server",
- *             message: "Internal server error",
- *         },
+ *         errors: [
+ *             {
+ *                 code: "server",
+ *                 message: "Internal server error",
+ *             },
+ *         ],
  *     });
  * };
  * ```

@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @jderjs/hono v0.3.1
+# @jderjs/hono v0.4.0
 
 ## Modules
 

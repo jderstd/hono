@@ -93,9 +93,11 @@ describe("Zod validator header test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.error?.code).toBe("parse");
+        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
 
-        expect(result.error?.field).toBe("X-Test");
+        expect(result.errors?.[0]?.path).toStrictEqual([
+            "X-Test",
+        ]);
     });
 });
 
@@ -146,9 +148,11 @@ describe("Zod validator query test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.error?.code).toBe("parse");
+        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
 
-        expect(result.error?.field).toBe("name");
+        expect(result.errors?.[0]?.path).toStrictEqual([
+            "name",
+        ]);
     });
 });
 
@@ -187,9 +191,11 @@ describe("Zod validator json test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.error?.code).toBe("parse");
+        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
 
-        expect(result.error?.field).toBe("age");
+        expect(result.errors?.[0]?.path).toStrictEqual([
+            "age",
+        ]);
     });
 
     it("should not work with empty name", async (): Promise<void> => {
@@ -206,9 +212,11 @@ describe("Zod validator json test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.error?.code).toBe("parse");
+        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
 
-        expect(result.error?.field).toBe("name");
+        expect(result.errors?.[0]?.path).toStrictEqual([
+            "name",
+        ]);
     });
 
     it("should not work with name in number", async (): Promise<void> => {
@@ -226,8 +234,10 @@ describe("Zod validator json test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.error?.code).toBe("parse");
+        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
 
-        expect(result.error?.field).toBe("name");
+        expect(result.errors?.[0]?.path).toStrictEqual([
+            "name",
+        ]);
     });
 });

@@ -6,7 +6,7 @@
 type JsonResponse<D> = object;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:13
+Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:13
 
 JSON response.
 
@@ -24,21 +24,21 @@ JSON response.
 optional data: D;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:17
+Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:17
 
-Data for the response when `success` is `true`.
+Requested information for the response when `success` is `true`.
 
 ***
 
-### error?
+### errors?
 
 ```ts
-optional error: JsonResponseError;
+optional errors: JsonResponseError[];
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:19
+Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:19
 
-Error for the response when `success` is `false`.
+A list of errors for the response when `success` is `false`.
 
 ***
 
@@ -48,6 +48,6 @@ Error for the response when `success` is `false`.
 success: boolean;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.2.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:15
+Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:15
 
-Whether the response is successful.
+Indicates whether the response is successful or not.

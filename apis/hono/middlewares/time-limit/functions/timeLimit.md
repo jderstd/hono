@@ -6,7 +6,7 @@
 function timeLimit(options?): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/time-limit.ts:70](https://github.com/jder-std/hono/blob/206880bc1e845cf7bddf84d4b8c9af705bc6e006/packages/hono/src/middlewares/time-limit.ts#L70)
+Defined in: [packages/hono/src/middlewares/time-limit.ts:72](https://github.com/jder-std/hono/blob/f2f73ec679525d06b67f906feb4542e6a1926d67/packages/hono/src/middlewares/time-limit.ts#L72)
 
 Time limit middleware.
 
@@ -16,9 +16,11 @@ Following error will be returned if the request takes longer than the limit:
 // Status: 408
 {
     "success": false,
-    "error": {
-        "code": "timeout"
-    }
+    "errors": [
+        {
+            "code": "timeout"
+        }
+    ]
 }
 ```
 
