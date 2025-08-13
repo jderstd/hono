@@ -18,11 +18,13 @@ type ZodSchema = v3.ZodType | v4.$ZodType;
  * // Status: 400
  * {
  *     "success": false,
- *     "error": {
- *         "code": "invalid",
- *         "field": "xxx",
- *         "message": "Expected string, received number"
- *     }
+ *     "errors": [
+ *         {
+ *             "code": "parse.xxx",
+ *             "path": ["xxx"],
+ *             "message": "xxx"
+ *         }
+ *     ]
  * }
  * ```
  *
