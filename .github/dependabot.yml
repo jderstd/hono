@@ -14,7 +14,7 @@ updates:
           - dependency-name: "@hono/vite-build"
           - dependency-name: "@hono/vite-dev-server"
           - dependency-name: "@types/node"
-          - dependency-name: "tsup"
+          - dependency-name: "tsdown"
           - dependency-name: "typedoc"
           - dependency-name: "typedoc-plugin-markdown"
           - dependency-name: "typescript"

@@ -1,9 +1,13 @@
-## Next
+## 0.4.0
 
 ### Breaking Changes
 
-- error code changed from `invalid` to `parse`
-- error field contains the whole path array join by `.`
+- Support new standard
+- error code changed from `invalid` to `parse.xxx`
+
+### What's New
+
+- Add support for Zod 4
 
 ## 0.3.2 (2025-08-06)
 

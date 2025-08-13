@@ -49,9 +49,11 @@ type IpLimitOptions = Format<
  * // Status: 403
  * {
  *     "success": false,
- *     "error": {
- *         "code": "forbidden"
- *     }
+ *     "errors": [
+ *         {
+ *             "code": "forbidden"
+ *         }
+ *     ]
  * }
  * ```
  *
@@ -61,11 +63,16 @@ type IpLimitOptions = Format<
  * // Status: 403
  * {
  *     "success": false,
- *     "error": {
- *         "code": "forbidden",
- *         "field": "ip",
- *         "message": "Forbidden IP address: x.x.x.x"
- *     }
+ *     "errors": [
+ *         {
+ *             "code": "forbidden",
+ *             "path": [
+ *                 "request",
+ *                 "ip"
+ *             ],
+ *             "message": "Forbidden IP address: x.x.x.x"
+ *         }
+ *     ]
  * }
  * ```
  *
@@ -135,15 +142,20 @@ function ipLimit(
         ({ addr }, c: Context): Response => {
             return createJsonResponse(c, {
                 status: 403,
-                error: {
-                    code: "forbidden",
-                    ...(verbose
-                        ? {
-                              field: "ip",
-                              message: `Forbidden IP address: ${addr}`,
-                          }
-                        : {}),
-                },
+                errors: [
+                    {
+                        code: "forbidden",
+                        ...(verbose
+                            ? {
+                                  path: [
+                                      "request",
+                                      "ip",
+                                  ],
+                                  message: `Forbidden IP address: ${addr}`,
+                              }
+                            : {}),
+                    },
+                ],
             });
         },
     );

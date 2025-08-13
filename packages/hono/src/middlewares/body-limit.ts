@@ -31,10 +31,15 @@ type BodyLimitOptions = {
  * // Status: 413
  * {
  *     "success": false,
- *     "error": {
- *         "code": "too_large",
- *         "field": "body"
- *     }
+ *     "errors": [
+ *         {
+ *             "code": "too_large",
+ *             "path": [
+ *                 "request",
+ *                 "body"
+ *             ]
+ *         }
+ *     ]
  * }
  * ```
  *
@@ -73,10 +78,15 @@ const bodyLimit = (options?: BodyLimitOptions): MiddlewareHandler => {
         onError: (c: Context): Response => {
             return createJsonResponse(c, {
                 status: 413,
-                error: {
-                    code: "too_large",
-                    field: "body",
-                },
+                errors: [
+                    {
+                        code: "too_large",
+                        path: [
+                            "request",
+                            "body",
+                        ],
+                    },
+                ],
             });
         },
     });

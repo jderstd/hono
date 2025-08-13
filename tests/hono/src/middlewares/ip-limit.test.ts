@@ -3,6 +3,7 @@ import type {
     GetIPAddr,
     IPRestrictionRule,
 } from "@jderjs/hono/ip-limit";
+import type { JsonResponse } from "@jderjs/hono/response";
 
 import { ipLimit } from "@jderjs/hono/ip-limit";
 import { createJsonResponse } from "@jderjs/hono/response";
@@ -47,7 +48,7 @@ describe("IP limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
-        });
+        } satisfies JsonResponse);
     });
 
     it("should be forbidden", async (): Promise<void> => {
@@ -61,10 +62,12 @@ describe("IP limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
-            error: {
-                code: "forbidden",
-            },
-        });
+            errors: [
+                {
+                    code: "forbidden",
+                },
+            ],
+        } satisfies JsonResponse);
     });
 
     it("should be forbidden with verbose", async (): Promise<void> => {
@@ -79,11 +82,16 @@ describe("IP limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
-            error: {
-                code: "forbidden",
-                field: "ip",
-                message: "Forbidden IP address: 127.0.0.1",
-            },
-        });
+            errors: [
+                {
+                    code: "forbidden",
+                    path: [
+                        "request",
+                        "ip",
+                    ],
+                    message: "Forbidden IP address: 127.0.0.1",
+                },
+            ],
+        } satisfies JsonResponse);
     });
 });

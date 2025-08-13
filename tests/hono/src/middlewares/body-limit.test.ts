@@ -1,5 +1,5 @@
 import { bodyLimit } from "@jderjs/hono/body-limit";
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse, type JsonResponse } from "@jderjs/hono/response";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";
@@ -25,9 +25,11 @@ const app = new Hono()
                 return createJsonResponse({
                     success: false,
                     status: 400,
-                    error: {
-                        code: "invalid",
-                    },
+                    errors: [
+                        {
+                            code: "invalid",
+                        },
+                    ],
                 });
             }
 
@@ -56,7 +58,7 @@ describe("Body limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
-        });
+        } satisfies JsonResponse);
     });
 
     it("should not be limited", async (): Promise<void> => {
@@ -91,7 +93,7 @@ describe("Body limit test", (): void => {
                 name: "text.txt",
                 size: 9 * 1024 * 1024,
             },
-        });
+        } satisfies JsonResponse);
     });
 
     it("should be limited", async (): Promise<void> => {
@@ -122,10 +124,15 @@ describe("Body limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
-            error: {
-                code: "too_large",
-                field: "body",
-            },
-        });
+            errors: [
+                {
+                    code: "too_large",
+                    path: [
+                        "request",
+                        "body",
+                    ],
+                },
+            ],
+        } satisfies JsonResponse);
     });
 });

@@ -1,3 +1,34 @@
+## 0.4.0
+
+### Breaking Changes
+
+- Support new standard
+
+### Migrating from 0.3.X to 0.4.0
+
+```diff
+import { 
+    createJsonResponse,
+} from "@jderjs/hono";
+
+const route = (): Response => {
+    return createJsonResponse({
+-       error: {
+-           code: "parse",
+-           field: "title",
+-           message: "Invalid title",
+-       },
++       errors: [
++           {
++               code: "parse",
++               path: ["json", "title"],
++               message: "Invalid title",
++           }
++       ],
+    });
+}
+```
+
 ## 0.3.1 (2025-08-06)
 
 ### What's Changed

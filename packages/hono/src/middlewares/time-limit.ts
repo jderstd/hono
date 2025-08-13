@@ -32,9 +32,11 @@ type TimeLimitOptions = {
  * // Status: 408
  * {
  *     "success": false,
- *     "error": {
- *         "code": "timeout"
- *     }
+ *     "errors": [
+ *         {
+ *             "code": "timeout"
+ *         }
+ *     ]
  * }
  * ```
  *
@@ -72,9 +74,11 @@ const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
         return new HTTPException(408, {
             res: createJsonResponse(c, {
                 status: 408,
-                error: {
-                    code: "timeout",
-                },
+                errors: [
+                    {
+                        code: "timeout",
+                    },
+                ],
             }),
         });
     });

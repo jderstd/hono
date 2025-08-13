@@ -1,3 +1,4 @@
+import type { JsonResponse } from "@jderjs/hono/response";
 import type { Context } from "hono";
 
 import { createJsonResponse } from "@jderjs/hono/response";
@@ -19,9 +20,11 @@ const app = new Hono()
     })
     .get("/failure", (): Response => {
         return createJsonResponse({
-            error: {
-                code: "server",
-            },
+            errors: [
+                {
+                    code: "server",
+                },
+            ],
         });
     })
     .get("/cookie", (c: Context): Response => {
@@ -39,7 +42,7 @@ describe("createJsonResponse test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
-        });
+        } satisfies JsonResponse);
     });
 
     it("should work with success", async (): Promise<void> => {
@@ -52,7 +55,7 @@ describe("createJsonResponse test", (): void => {
             data: {
                 message: "Hello, World!",
             },
-        });
+        } satisfies JsonResponse);
     });
 
     it("should work with failure", async (): Promise<void> => {
@@ -62,10 +65,12 @@ describe("createJsonResponse test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
-            error: {
-                code: "server",
-            },
-        });
+            errors: [
+                {
+                    code: "server",
+                },
+            ],
+        } satisfies JsonResponse);
     });
 
     it("should work with cookie", async (): Promise<void> => {
@@ -79,6 +84,6 @@ describe("createJsonResponse test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
-        });
+        } satisfies JsonResponse);
     });
 });
