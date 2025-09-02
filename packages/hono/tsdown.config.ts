@@ -8,6 +8,8 @@ const options: Options = {
         "body-limit": "./src/middlewares/body-limit.ts",
         "ip-limit": "./src/middlewares/ip-limit.ts",
         "time-limit": "./src/middlewares/time-limit.ts",
+        "not-found": "./src/handlers/not-found.ts",
+        "on-error": "./src/handlers/on-error.ts",
     },
     dts: false,
     outDir: "./dist",
@@ -17,7 +19,7 @@ const options: Options = {
     sourcemap: true,
     minify: false,
     shims: true,
-    unbundle: false,
+    unbundle: true,
     inputOptions: {
         experimental: {
             attachDebugInfo: "none",

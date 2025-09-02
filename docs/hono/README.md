@@ -100,3 +100,29 @@ app.use(
     })
 );
 ```
+
+## Not Found Handler
+
+The `notFoundHandler` return JSON response when the content is not found.
+
+```ts
+import { Hono } from "hono";
+import { notFoundHandler } from "@jderjs/hono/not-found";
+
+const app: Hono = new Hono();
+
+app.notFound(notFoundHandler());
+```
+
+## On Error Handler
+
+The `onErrorHandler` return JSON response when an error occurs.
+
+```ts
+import { Hono } from "hono";
+import { onErrorHandler } from "@jderjs/hono/on-error";
+
+const app: Hono = new Hono();
+
+app.onError(onErrorHandler());
+```
