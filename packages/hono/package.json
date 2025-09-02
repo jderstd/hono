@@ -44,6 +44,16 @@
             "import": "./dist/time-limit.mjs",
             "require": "./dist/time-limit.js"
         },
+        "./not-found": {
+            "types": "./dist/not-found.d.ts",
+            "import": "./dist/not-found.mjs",
+            "require": "./dist/not-found.js"
+        },
+        "./on-error": {
+            "types": "./dist/on-error.d.ts",
+            "import": "./dist/on-error.mjs",
+            "require": "./dist/on-error.js"
+        },
         "./package.json": "./package.json"
     },
     "main": "./dist/response.js",

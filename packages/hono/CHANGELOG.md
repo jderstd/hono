@@ -1,3 +1,10 @@
+## 0.5.0
+
+### What's New
+
+- Add `notFoundHandler` function
+- Add `onErrorHandler` function
+
 ## 0.4.0 (2025-08-13)
 
 ### Breaking Changes
