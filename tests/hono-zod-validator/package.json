@@ -7,10 +7,10 @@
         "": ""
     },
     "dependencies": {
-        "@jderjs/hono": "workspace:~",
-        "@jderjs/hono-zod-validator": "workspace:~",
-        "hono": "4.5.0",
+        "@jderjs/hono": "workspace:*",
+        "@jderjs/hono-zod-validator": "workspace:*",
+        "hono": "catalog:dev",
         "vitest": "^3.2.4",
-        "zod": "3.25.6"
+        "zod": "catalog:dev"
     }
 }

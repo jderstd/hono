@@ -72,9 +72,9 @@
         "ts-vista": "~0.2.2"
     },
     "devDependencies": {
-        "hono": "4.5.0"
+        "hono": "catalog:dev"
     },
     "peerDependencies": {
-        "hono": "^4.5.0"
+        "hono": "catalog:peer"
     }
 }

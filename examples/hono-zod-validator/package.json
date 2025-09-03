@@ -10,10 +10,10 @@
     },
     "dependencies": {
         "@hono/node-server": "^1.19.1",
-        "@jderjs/hono": "workspace:~",
-        "@jderjs/hono-zod-validator": "workspace:~",
-        "hono": "4.5.0",
-        "zod": "3.25.6"
+        "@jderjs/hono": "workspace:*",
+        "@jderjs/hono-zod-validator": "workspace:*",
+        "hono": "catalog:dev",
+        "zod": "catalog:dev"
     },
     "devDependencies": {
         "@hono/vite-build": "^1.7.0",

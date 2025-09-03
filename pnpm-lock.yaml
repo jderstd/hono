@@ -4,6 +4,15 @@ settings:
   autoInstallPeers: false
   excludeLinksFromLockfile: false
 
+catalogs:
+  dev:
+    hono:
+      specifier: 4.5.0
+      version: 4.5.0
+    zod:
+      specifier: 3.25.6
+      version: 3.25.6
+
 importers:
 
   .:
@@ -36,10 +45,10 @@ importers:
         specifier: ^1.19.1
         version: 1.19.1(hono@4.5.0)
       '@jderjs/hono':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../../packages/hono
       hono:
-        specifier: 4.5.0
+        specifier: catalog:dev
         version: 4.5.0
     devDependencies:
       '@hono/vite-build':
@@ -64,16 +73,16 @@ importers:
         specifier: ^1.19.1
         version: 1.19.1(hono@4.5.0)
       '@jderjs/hono':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../../packages/hono
       '@jderjs/hono-zod-validator':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../../packages/hono-zod-validator
       hono:
-        specifier: 4.5.0
+        specifier: catalog:dev
         version: 4.5.0
       zod:
-        specifier: 3.25.6
+        specifier: catalog:dev
         version: 3.25.6
     devDependencies:
       '@hono/vite-build':
@@ -102,7 +111,7 @@ importers:
         version: 0.2.2
     devDependencies:
       hono:
-        specifier: 4.5.0
+        specifier: catalog:dev
         version: 4.5.0
 
   packages/hono-zod-validator:
@@ -112,22 +121,22 @@ importers:
         version: 0.7.0(hono@4.5.0)(zod@3.25.6)
     devDependencies:
       '@jderjs/hono':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../hono
       hono:
-        specifier: 4.5.0
+        specifier: catalog:dev
         version: 4.5.0
       zod:
-        specifier: 3.25.6
+        specifier: catalog:dev
         version: 3.25.6
 
   tests/hono:
     dependencies:
       '@jderjs/hono':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../../packages/hono
       hono:
-        specifier: 4.5.0
+        specifier: catalog:dev
         version: 4.5.0
       vitest:
         specifier: ^3.2.4
@@ -136,19 +145,19 @@ importers:
   tests/hono-zod-validator:
     dependencies:
       '@jderjs/hono':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../../packages/hono
       '@jderjs/hono-zod-validator':
-        specifier: workspace:~
+        specifier: workspace:*
         version: link:../../packages/hono-zod-validator
       hono:
-        specifier: 4.5.0
+        specifier: catalog:dev
         version: 4.5.0
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.3.0)(jiti@2.5.1)(yaml@2.8.1)
       zod:
-        specifier: 3.25.6
+        specifier: catalog:dev
         version: 3.25.6
 
 packages:
