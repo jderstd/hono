@@ -5,6 +5,7 @@ import { defineConfig } from "tsdown";
 const options: Options = {
     entry: {
         response: "./src/response/index.ts",
+        "response/error": "./src/response/error/index.ts",
         "body-limit": "./src/middlewares/body-limit.ts",
         "ip-limit": "./src/middlewares/ip-limit.ts",
         "time-limit": "./src/middlewares/time-limit.ts",

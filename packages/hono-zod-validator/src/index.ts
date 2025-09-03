@@ -5,6 +5,7 @@ import type * as v4 from "zod/v4/core";
 
 import { zValidator as zv } from "@hono/zod-validator";
 import { createJsonResponse } from "@jderjs/hono/response";
+import { ResponseErrorCode } from "@jderjs/hono/response/error";
 import { HTTPException } from "hono/http-exception";
 
 type ZodSchema = v3.ZodType | v4.$ZodType;
@@ -89,7 +90,7 @@ const zValidator = <
             if (!err) continue;
 
             errors.push({
-                code: `parse.${err.code}`,
+                code: ResponseErrorCode.Parse,
                 path: err.path.map((p): string => String(p)),
                 message: err.message,
             });

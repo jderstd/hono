@@ -1,5 +1,9 @@
 import { bodyLimit } from "@jderjs/hono/body-limit";
 import { createJsonResponse, type JsonResponse } from "@jderjs/hono/response";
+import {
+    getResponseErrorMessage,
+    ResponseErrorCode,
+} from "@jderjs/hono/response/error";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";
@@ -122,15 +126,18 @@ describe("Body limit test", (): void => {
 
         expect(res.status).toBe(413);
 
+        const code: ResponseErrorCode = ResponseErrorCode.TooLarge;
+
         expect(await res.json()).toStrictEqual({
             success: false,
             errors: [
                 {
-                    code: "too_large",
+                    code,
                     path: [
                         "request",
                         "body",
                     ],
+                    message: getResponseErrorMessage(code),
                 },
             ],
         } satisfies JsonResponse);

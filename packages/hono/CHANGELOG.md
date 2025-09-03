@@ -4,6 +4,8 @@
 
 - Add `notFoundHandler` function
 - Add `onErrorHandler` function
+- Add `ResponseErrorCode` enum (For internal)
+- Add `getResponseErrorMessage` function (For internal)
 
 ## 0.4.0 (2025-08-13)
 
