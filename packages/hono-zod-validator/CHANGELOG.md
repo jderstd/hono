@@ -4,6 +4,10 @@
 
 - Enforce all error codes to be `parse`
 
+### What's New
+
+- Export internal hook
+
 ## 0.4.0 (2025-08-13)
 
 ### Breaking Changes
