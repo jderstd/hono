@@ -10,8 +10,8 @@
     },
     "dependencies": {
         "@hono/node-server": "^1.19.1",
-        "@jderjs/hono": "workspace:~",
-        "hono": "4.5.0"
+        "@jderjs/hono": "workspace:*",
+        "hono": "catalog:dev"
     },
     "devDependencies": {
         "@hono/vite-build": "^1.7.0",

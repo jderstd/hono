@@ -7,8 +7,8 @@
         "": ""
     },
     "dependencies": {
-        "@jderjs/hono": "workspace:~",
-        "hono": "4.5.0",
+        "@jderjs/hono": "workspace:*",
+        "hono": "catalog:dev",
         "vitest": "^3.2.4"
     }
 }
