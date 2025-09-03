@@ -17,7 +17,7 @@ import { zValidatorHook } from "#/hook";
  *     "success": false,
  *     "errors": [
  *         {
- *             "code": "parse.xxx",
+ *             "code": "parse",
  *             "path": ["xxx"],
  *             "message": "xxx"
  *         }
