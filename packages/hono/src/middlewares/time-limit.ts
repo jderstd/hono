@@ -8,6 +8,7 @@ import type { Context, MiddlewareHandler } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { timeout } from "hono/timeout";
 
+import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
 import { createJsonResponse } from "#/response/json";
 
 /** Default maximum time in milliseconds. */
@@ -70,13 +71,16 @@ type TimeLimitOptions = {
  * ```
  */
 const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
+    const code: ResponseErrorCode = ResponseErrorCode.Timeout;
+
     return timeout(options?.max ?? 5 * 1000, (c: Context): HTTPException => {
         return new HTTPException(408, {
             res: createJsonResponse(c, {
                 status: 408,
                 errors: [
                     {
-                        code: "timeout",
+                        code,
+                        message: getResponseErrorMessage(code),
                     },
                 ],
             }),

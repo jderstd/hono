@@ -1,6 +1,7 @@
 import type { Context } from "hono";
 
 import { createJsonResponse } from "#/response";
+import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
 
 /**
  * Not found handler.
@@ -32,13 +33,15 @@ import { createJsonResponse } from "#/response";
  * ```
  */
 const notFoundHandler = (): ((c: Context) => Response) => {
+    const code: ResponseErrorCode = ResponseErrorCode.NotFound;
+
     return (c: Context): Response => {
         return createJsonResponse(c, {
             status: 404,
             errors: [
                 {
-                    code: "not_found",
-                    message: "Content not found",
+                    code,
+                    message: getResponseErrorMessage(code),
                 },
             ],
         });

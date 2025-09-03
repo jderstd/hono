@@ -1,3 +1,9 @@
+## 0.5.0
+
+### Breaking Changes
+
+- Enforce all error codes to be `parse`
+
 ## 0.4.0 (2025-08-13)
 
 ### Breaking Changes

@@ -5,6 +5,7 @@ import type { StatusCode } from "hono/utils/http-status";
 import { HTTPException } from "hono/http-exception";
 
 import { createJsonResponse } from "#/response";
+import { ResponseErrorCode } from "#/response/error";
 
 /** Options for `onErrorHandler` function. */
 type OnErrorHandlerOptions = {
@@ -77,7 +78,10 @@ const onErrorHandler = (
 
             const status: StatusCode = res.status as StatusCode;
 
-            const code: string = status >= 500 ? "server" : "bad_request";
+            const code: ResponseErrorCode =
+                status >= 500
+                    ? ResponseErrorCode.Server
+                    : ResponseErrorCode.BadRequest;
 
             return createJsonResponse(c, {
                 status: res.status as StatusCode,
@@ -96,7 +100,7 @@ const onErrorHandler = (
             status: 500,
             errors: [
                 {
-                    code: "server",
+                    code: ResponseErrorCode.Server,
                     ...(options?.verbose && {
                         message: err.message,
                     }),

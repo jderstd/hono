@@ -7,6 +7,10 @@ import type { JsonResponse } from "@jderjs/hono/response";
 
 import { ipLimit } from "@jderjs/hono/ip-limit";
 import { createJsonResponse } from "@jderjs/hono/response";
+import {
+    getResponseErrorMessage,
+    ResponseErrorCode,
+} from "@jderjs/hono/response/error";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";
@@ -64,7 +68,7 @@ describe("IP limit test", (): void => {
             success: false,
             errors: [
                 {
-                    code: "forbidden",
+                    code: ResponseErrorCode.Forbidden,
                 },
             ],
         } satisfies JsonResponse);
@@ -80,16 +84,18 @@ describe("IP limit test", (): void => {
 
         expect(res.status).toBe(403);
 
+        const code: ResponseErrorCode = ResponseErrorCode.Forbidden;
+
         expect(await res.json()).toStrictEqual({
             success: false,
             errors: [
                 {
-                    code: "forbidden",
+                    code,
                     path: [
                         "request",
                         "ip",
                     ],
-                    message: "Forbidden IP address: 127.0.0.1",
+                    message: `${getResponseErrorMessage(code)}: 127.0.0.1`,
                 },
             ],
         } satisfies JsonResponse);

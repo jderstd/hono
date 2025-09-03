@@ -7,6 +7,7 @@ import type { Context, MiddlewareHandler } from "hono";
 
 import { bodyLimit as _bodyLimit } from "hono/body-limit";
 
+import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
 import { createJsonResponse } from "#/response/json";
 
 /** Default maximum body size in bytes. */
@@ -73,6 +74,8 @@ type BodyLimitOptions = {
  * ```
  */
 const bodyLimit = (options?: BodyLimitOptions): MiddlewareHandler => {
+    const code: ResponseErrorCode = ResponseErrorCode.TooLarge;
+
     return _bodyLimit({
         maxSize: options?.max ?? BODY_LIMIT_MAX_DEFAULT,
         onError: (c: Context): Response => {
@@ -80,11 +83,12 @@ const bodyLimit = (options?: BodyLimitOptions): MiddlewareHandler => {
                 status: 413,
                 errors: [
                     {
-                        code: "too_large",
+                        code,
                         path: [
                             "request",
                             "body",
                         ],
+                        message: getResponseErrorMessage(code),
                     },
                 ],
             });

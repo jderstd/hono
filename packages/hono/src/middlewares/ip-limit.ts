@@ -16,6 +16,7 @@ import type { Format } from "ts-vista";
 import { ipRestriction } from "hono/ip-restriction";
 
 import { createJsonResponse } from "#/response";
+import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
 
 type GetIPAddr = GetConnInfo | ((c: Context) => string);
 
@@ -124,10 +125,13 @@ function ipLimit(
     getConnInfoOrOptions: GetIPAddr | IpLimitOptions,
     options?: IpLimitBaseOptions,
 ): MiddlewareHandler {
+    const code: ResponseErrorCode = ResponseErrorCode.Forbidden;
+
     const getConnInfo: GetIPAddr =
         typeof getConnInfoOrOptions === "function"
             ? getConnInfoOrOptions
             : getConnInfoOrOptions.getConnInfo;
+
     const { denyList, allowList, verbose }: IpLimitBaseOptions =
         (typeof getConnInfoOrOptions === "function"
             ? options
@@ -144,14 +148,14 @@ function ipLimit(
                 status: 403,
                 errors: [
                     {
-                        code: "forbidden",
+                        code,
                         ...(verbose
                             ? {
                                   path: [
                                       "request",
                                       "ip",
                                   ],
-                                  message: `Forbidden IP address: ${addr}`,
+                                  message: `${getResponseErrorMessage(code)}: ${addr}`,
                               }
                             : {}),
                     },

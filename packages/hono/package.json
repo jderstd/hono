@@ -29,6 +29,11 @@
             "import": "./dist/response.mjs",
             "require": "./dist/response.js"
         },
+        "./response/error": {
+            "types": "./dist/response/error.d.ts",
+            "import": "./dist/response/error.mjs",
+            "require": "./dist/response/error.js"
+        },
         "./body-limit": {
             "types": "./dist/body-limit.d.ts",
             "import": "./dist/body-limit.mjs",

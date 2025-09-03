@@ -93,7 +93,7 @@ describe("Zod validator header test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
+        expect(result.errors?.[0]?.code).toBe("parse");
 
         expect(result.errors?.[0]?.path).toStrictEqual([
             "X-Test",
@@ -148,7 +148,7 @@ describe("Zod validator query test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
+        expect(result.errors?.[0]?.code).toBe("parse");
 
         expect(result.errors?.[0]?.path).toStrictEqual([
             "name",
@@ -191,7 +191,7 @@ describe("Zod validator json test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
+        expect(result.errors?.[0]?.code).toBe("parse");
 
         expect(result.errors?.[0]?.path).toStrictEqual([
             "age",
@@ -212,7 +212,7 @@ describe("Zod validator json test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
+        expect(result.errors?.[0]?.code).toBe("parse");
 
         expect(result.errors?.[0]?.path).toStrictEqual([
             "name",
@@ -234,7 +234,7 @@ describe("Zod validator json test", (): void => {
 
         expect(result.success).toBe(false);
 
-        expect(result.errors?.[0]?.code).toBe("parse.invalid_type");
+        expect(result.errors?.[0]?.code).toBe("parse");
 
         expect(result.errors?.[0]?.path).toStrictEqual([
             "name",

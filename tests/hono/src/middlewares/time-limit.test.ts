@@ -1,6 +1,10 @@
 import type { JsonResponse } from "@jderjs/hono/response";
 
 import { createJsonResponse } from "@jderjs/hono/response";
+import {
+    getResponseErrorMessage,
+    ResponseErrorCode,
+} from "@jderjs/hono/response/error";
 import { timeLimit } from "@jderjs/hono/time-limit";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
@@ -38,11 +42,14 @@ describe("Time limit test", (): void => {
 
         expect(res.status).toBe(408);
 
+        const code: ResponseErrorCode = ResponseErrorCode.Timeout;
+
         expect(await res.json()).toStrictEqual({
             success: false,
             errors: [
                 {
-                    code: "timeout",
+                    code,
+                    message: getResponseErrorMessage(code),
                 },
             ],
         } satisfies JsonResponse);
