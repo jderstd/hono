@@ -30,6 +30,11 @@
             "import": "./dist/index.mjs",
             "require": "./dist/index.js"
         },
+        "./hook": {
+            "types": "./dist/hook.d.ts",
+            "import": "./dist/hook.mjs",
+            "require": "./dist/hook.js"
+        },
         "./package.json": "./package.json"
     },
     "main": "./dist/index.js",

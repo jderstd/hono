@@ -5,6 +5,7 @@ import { defineConfig } from "tsdown";
 const options: Options = {
     entry: {
         index: "./src/index.ts",
+        hook: "./src/hook.ts",
     },
     dts: false,
     outDir: "./dist",
@@ -14,7 +15,7 @@ const options: Options = {
     sourcemap: true,
     minify: false,
     shims: true,
-    unbundle: false,
+    unbundle: true,
     inputOptions: {
         experimental: {
             attachDebugInfo: "none",

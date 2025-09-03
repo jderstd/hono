@@ -1,14 +1,10 @@
-import type { JsonResponseError } from "@jderjs/hono/response";
 import type { ValidationTargets } from "hono";
-import type * as v3 from "zod/v3";
-import type * as v4 from "zod/v4/core";
+
+import type { ZodSchema } from "#/hook";
 
 import { zValidator as zv } from "@hono/zod-validator";
-import { createJsonResponse } from "@jderjs/hono/response";
-import { ResponseErrorCode } from "@jderjs/hono/response/error";
-import { HTTPException } from "hono/http-exception";
 
-type ZodSchema = v3.ZodType | v4.$ZodType;
+import { zValidatorHook } from "#/hook";
 
 /**
  * Validate the request with Zod.
@@ -77,31 +73,7 @@ const zValidator = <
     target: Target,
     schema: T,
 ) => {
-    return zv(target, schema, (result, c) => {
-        if (result.success) return void 0;
-
-        const errors: JsonResponseError[] = [];
-
-        const errs: v4.$ZodIssue[] | v3.ZodIssue[] = result.error.issues;
-
-        for (let i: number = 0; i < errs.length; i++) {
-            const err: v4.$ZodIssue | v3.ZodIssue | undefined = errs[i];
-
-            if (!err) continue;
-
-            errors.push({
-                code: ResponseErrorCode.Parse,
-                path: err.path.map((p): string => String(p)),
-                message: err.message,
-            });
-        }
-
-        throw new HTTPException(400, {
-            res: createJsonResponse(c, {
-                errors,
-            }),
-        });
-    });
+    return zv(target, schema, zValidatorHook);
 };
 
 export { zValidator };
