@@ -35,7 +35,8 @@ type TimeLimitOptions = {
  *     "success": false,
  *     "errors": [
  *         {
- *             "code": "timeout"
+ *             "code": "timeout",
+ *             "message": "Request timeout"
  *         }
  *     ]
  * }

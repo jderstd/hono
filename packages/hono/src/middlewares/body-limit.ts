@@ -38,7 +38,8 @@ type BodyLimitOptions = {
  *             "path": [
  *                 "request",
  *                 "body"
- *             ]
+ *             ],
+ *             "message": "Request body is too large"
  *         }
  *     ]
  * }
