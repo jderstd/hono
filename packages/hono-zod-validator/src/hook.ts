@@ -7,8 +7,10 @@ import { createJsonResponse } from "@jderjs/hono/response";
 import { ResponseErrorCode } from "@jderjs/hono/response/error";
 import { HTTPException } from "hono/http-exception";
 
+/** Zod schema for both v3 and v4. */
 type ZodSchema = v3.ZodType | v4.$ZodType;
 
+/** Zod error for both v3 and v4. */
 type ZodError<T extends ZodSchema> = T extends v4.$ZodType
     ? v4.$ZodError
     : v3.ZodError;
