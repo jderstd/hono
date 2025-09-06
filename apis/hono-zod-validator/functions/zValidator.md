@@ -9,7 +9,7 @@ function zValidator<T, Target>(target, schema): MiddlewareHandler<Env, string, {
 }>;
 ```
 
-Defined in: [packages/hono-zod-validator/src/index.ts:72](https://github.com/jder-std/hono/blob/01862dd14cf5ece98bd31b99c1c68a3917cc5868/packages/hono-zod-validator/src/index.ts#L72)
+Defined in: [packages/hono-zod-validator/src/index.ts:69](https://github.com/jder-std/hono/blob/872dc1d70f22f648234b4b8c3c6c018dd305b504/packages/hono-zod-validator/src/index.ts#L69)
 
 Validate the request with Zod.
 
@@ -21,7 +21,7 @@ Following error may returned if the request is invalid:
     "success": false,
     "errors": [
         {
-            "code": "parse.xxx",
+            "code": "parse",
             "path": ["xxx"],
             "message": "xxx"
         }

@@ -14,7 +14,7 @@ type NetAddrInfo = object &
 
 Defined in: node\_modules/.pnpm/hono@4.5.0/node\_modules/hono/dist/types/helper/conninfo/types.d.ts:3
 
-## Type declaration
+## Type Declaration
 
 ### address?
 
