@@ -8,7 +8,7 @@
 function createJsonResponse<D>(options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:66](https://github.com/jder-std/hono/blob/872dc1d70f22f648234b4b8c3c6c018dd305b504/packages/hono/src/response/json/index.ts#L66)
+Defined in: [packages/hono/src/response/json/index.ts:66](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/response/json/index.ts#L66)
 
 Create a JSON response.
 
@@ -17,7 +17,7 @@ Create a JSON response.
 Example for creating a successful JSON response without data:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (): Response => {
     return createJsonResponse();
@@ -27,7 +27,7 @@ const route = (): Response => {
 Example for creating a successful JSON response with data:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (): Response => {
     return createJsonResponse({
@@ -39,7 +39,7 @@ const route = (): Response => {
 Example for creating a failed JSON response:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (): Response => {
     return createJsonResponse({
@@ -75,7 +75,7 @@ const route = (): Response => {
 function createJsonResponse<D>(context?, options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:120](https://github.com/jder-std/hono/blob/872dc1d70f22f648234b4b8c3c6c018dd305b504/packages/hono/src/response/json/index.ts#L120)
+Defined in: [packages/hono/src/response/json/index.ts:120](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/response/json/index.ts#L120)
 
 Create a JSON response with context.
 
@@ -86,7 +86,7 @@ Example for creating a successful JSON response without data:
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c);
@@ -98,7 +98,7 @@ Example for creating a successful JSON response with data:
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c, {
@@ -112,7 +112,7 @@ Example for creating a failed JSON response:
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c, {

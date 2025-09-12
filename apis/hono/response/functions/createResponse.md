@@ -8,7 +8,7 @@
 function createResponse<B>(options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/common/index.ts:52](https://github.com/jder-std/hono/blob/872dc1d70f22f648234b4b8c3c6c018dd305b504/packages/hono/src/response/common/index.ts#L52)
+Defined in: [packages/hono/src/response/common/index.ts:52](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/response/common/index.ts#L52)
 
 Create a response.
 
@@ -17,7 +17,7 @@ Create a response.
 Example for creating a basic response:
 
 ```ts
-import { createResponse } from "@jderjs/hono";
+import { createResponse } from "@jderjs/hono/response";
 
 const route = (): Response => {
     return createResponse();
@@ -27,7 +27,7 @@ const route = (): Response => {
 Example for creating a response with status, headers, and body:
 
 ```ts
-import { createResponse } from "@jderjs/hono";
+import { createResponse } from "@jderjs/hono/response";
 
 const route = (): Response => {
     return createResponse({
@@ -79,7 +79,7 @@ By default, it is `200` for success and `400` for failure.
 function createResponse<B>(context?, options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/common/index.ts:91](https://github.com/jder-std/hono/blob/872dc1d70f22f648234b4b8c3c6c018dd305b504/packages/hono/src/response/common/index.ts#L91)
+Defined in: [packages/hono/src/response/common/index.ts:91](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/response/common/index.ts#L91)
 
 Create a response with context.
 
@@ -90,7 +90,7 @@ Example for creating a basic response:
 ```ts
 import type { Context } from "hono";
 
-import { createResponse } from "@jderjs/hono";
+import { createResponse } from "@jderjs/hono/response";
 
 const route = (c: Context): Response => {
     return createResponse(c);
@@ -102,7 +102,7 @@ Example for creating a response with status, headers, and body:
 ```ts
 import type { Context } from "hono";
 
-import { createResponse } from "@jderjs/hono";
+import { createResponse } from "@jderjs/hono/response";
 
 const route = (c: Context): Response => {
     return createResponse(c, {

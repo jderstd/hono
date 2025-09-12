@@ -6,4 +6,4 @@
 type GetIPAddr = GetConnInfo | (c) => string;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:21](https://github.com/jder-std/hono/blob/872dc1d70f22f648234b4b8c3c6c018dd305b504/packages/hono/src/middlewares/ip-limit.ts#L21)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:21](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/middlewares/ip-limit.ts#L21)
