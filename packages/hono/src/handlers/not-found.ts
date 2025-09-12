@@ -25,7 +25,7 @@ import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
  *
  * ```ts
  * import { Hono } from "hono";
- * import { notFoundHandler } from "@jderjs/hono";
+ * import { notFoundHandler } from "@jderjs/hono/not-found";
  *
  * const app: Hono = new Hono();
  *

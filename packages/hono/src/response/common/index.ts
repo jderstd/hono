@@ -26,7 +26,7 @@ type CreateResponseOptions<B extends BodyInit = BodyInit> = Format<
  * Example for creating a basic response:
  *
  * ```ts
- * import { createResponse } from "@jderjs/hono";
+ * import { createResponse } from "@jderjs/hono/response";
  *
  * const route = (): Response => {
  *     return createResponse();
@@ -36,7 +36,7 @@ type CreateResponseOptions<B extends BodyInit = BodyInit> = Format<
  * Example for creating a response with status, headers, and body:
  *
  * ```ts
- * import { createResponse } from "@jderjs/hono";
+ * import { createResponse } from "@jderjs/hono/response";
  *
  * const route = (): Response => {
  *     return createResponse({
@@ -63,7 +63,7 @@ function createResponse<B extends BodyInit = BodyInit>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createResponse } from "@jderjs/hono";
+ * import { createResponse } from "@jderjs/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createResponse(c);
@@ -75,7 +75,7 @@ function createResponse<B extends BodyInit = BodyInit>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createResponse } from "@jderjs/hono";
+ * import { createResponse } from "@jderjs/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createResponse(c, {
