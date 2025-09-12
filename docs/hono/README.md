@@ -37,7 +37,7 @@ This package extends the response functions by adding the context to the respons
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono";
+import { createJsonResponse } from "@jderjs/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c);

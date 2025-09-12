@@ -51,7 +51,7 @@ type OnErrorHandlerOptions = {
  *
  * ```ts
  * import { Hono } from "hono";
- * import { onErrorHandler } from "@jderjs/hono";
+ * import { onErrorHandler } from "@jderjs/hono/on-error";
  *
  * const app: Hono = new Hono();
  *
@@ -62,7 +62,7 @@ type OnErrorHandlerOptions = {
  *
  * ```ts
  * import { Hono } from "hono";
- * import { onErrorHandler } from "@jderjs/hono";
+ * import { onErrorHandler } from "@jderjs/hono/on-error";
  *
  * const app: Hono = new Hono();
  *
