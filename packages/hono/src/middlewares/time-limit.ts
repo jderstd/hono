@@ -4,6 +4,7 @@
  */
 
 import type { Context, MiddlewareHandler } from "hono";
+import type { StatusCode } from "hono/utils/http-status";
 
 import { HTTPException } from "hono/http-exception";
 import { timeout } from "hono/timeout";
@@ -30,7 +31,7 @@ type TimeLimitOptions = {
  * Following error will be returned if the request takes longer than the limit:
  *
  * ```jsonc
- * // Status: 408
+ * // Status: 504
  * {
  *     "success": false,
  *     "errors": [
@@ -72,12 +73,13 @@ type TimeLimitOptions = {
  * ```
  */
 const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
+    const status: StatusCode = 504;
     const code: ResponseErrorCode = ResponseErrorCode.Timeout;
 
     return timeout(options?.max ?? 5 * 1000, (c: Context): HTTPException => {
-        return new HTTPException(408, {
+        return new HTTPException(status, {
             res: createJsonResponse(c, {
-                status: 408,
+                status,
                 errors: [
                     {
                         code,

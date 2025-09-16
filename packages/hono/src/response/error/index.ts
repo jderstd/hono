@@ -58,7 +58,7 @@ const getResponseErrorMessage = (code: ResponseErrorCode): string => {
             return "Forbidden IP address";
         }
         case ResponseErrorCode.Timeout: {
-            return "Request timeout";
+            return "Gateway timeout";
         }
         case ResponseErrorCode.NotFound: {
             return "Content not found";

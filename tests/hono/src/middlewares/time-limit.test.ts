@@ -40,7 +40,7 @@ describe("Time limit test", (): void => {
     it("should timeout", async (): Promise<void> => {
         const res = await client.timeout.$get();
 
-        expect(res.status).toBe(408);
+        expect(res.status).toBe(504);
 
         const code: ResponseErrorCode = ResponseErrorCode.Timeout;
 
