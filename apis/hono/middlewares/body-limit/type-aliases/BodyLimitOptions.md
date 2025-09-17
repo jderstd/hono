@@ -6,7 +6,7 @@
 type BodyLimitOptions = object;
 ```
 
-Defined in: [packages/hono/src/middlewares/body-limit.ts:17](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/middlewares/body-limit.ts#L17)
+Defined in: [packages/hono/src/middlewares/body-limit.ts:17](https://github.com/jderstd/hono/blob/e5b2def5701d996fb4f30b7b1af1130fafe72afd/packages/hono/src/middlewares/body-limit.ts#L17)
 
 Options for `bodyLimit` middleware.
 
@@ -18,7 +18,7 @@ Options for `bodyLimit` middleware.
 optional max: number;
 ```
 
-Defined in: [packages/hono/src/middlewares/body-limit.ts:23](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/middlewares/body-limit.ts#L23)
+Defined in: [packages/hono/src/middlewares/body-limit.ts:23](https://github.com/jderstd/hono/blob/e5b2def5701d996fb4f30b7b1af1130fafe72afd/packages/hono/src/middlewares/body-limit.ts#L23)
 
 Maximum body size in bytes.
 

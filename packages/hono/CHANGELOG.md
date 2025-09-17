@@ -1,3 +1,14 @@
+## 0.6.0
+
+### Breaking Changes
+
+- Status code changed in `timeLimit` middleware:
+    - `408` -> `504`
+
+### What's Changed
+
+- Update documentation
+
 ## 0.5.0 (2025-09-06)
 
 ### What's New

@@ -30,7 +30,7 @@ bun add @jderjs/hono
 ## Functions
 
 For core response functions,
-please refer to the [Core Documentation](https://github.com/jder-std/core.js/blob/main/docs/README.md).
+please refer to the [Core Documentation](https://github.com/jderstd/core.js/blob/main/docs/README.md).
 
 This package extends the response functions by adding the context to the response.
 

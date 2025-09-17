@@ -1,6 +1,6 @@
 {
     "name": "@jderjs/hono",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "description": "A response builder for Hono",
     "keywords": [
         "jder",
@@ -11,11 +11,11 @@
         "js",
         "javascript"
     ],
-    "homepage": "https://github.com/jder-std/hono",
-    "bugs": "https://github.com/jder-std/hono/issues",
+    "homepage": "https://github.com/jderstd/hono",
+    "bugs": "https://github.com/jderstd/hono/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jder-std/hono.git",
+        "url": "https://github.com/jderstd/hono.git",
         "directory": "packages/hono"
     },
     "license": "MIT",

@@ -6,7 +6,7 @@
 type CreateResponseOptions<B> = Format<object & Omit<CreateResponseStructOptions<B>, "status">>;
 ```
 
-Defined in: [packages/hono/src/response/common/index.ts:11](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/response/common/index.ts#L11)
+Defined in: [packages/hono/src/response/common/index.ts:11](https://github.com/jderstd/hono/blob/e5b2def5701d996fb4f30b7b1af1130fafe72afd/packages/hono/src/response/common/index.ts#L11)
 
 Options of `createResponse` function.
 
