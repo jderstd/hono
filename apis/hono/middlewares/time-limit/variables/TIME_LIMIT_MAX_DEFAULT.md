@@ -6,6 +6,6 @@
 const TIME_LIMIT_MAX_DEFAULT: 5000;
 ```
 
-Defined in: [packages/hono/src/middlewares/time-limit.ts:15](https://github.com/jder-std/hono/blob/56d61bd209450892d9e6b8763edeae6b0994ecaf/packages/hono/src/middlewares/time-limit.ts#L15)
+Defined in: [packages/hono/src/middlewares/time-limit.ts:16](https://github.com/jderstd/hono/blob/e5b2def5701d996fb4f30b7b1af1130fafe72afd/packages/hono/src/middlewares/time-limit.ts#L16)
 
 Default maximum time in milliseconds.

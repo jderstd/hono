@@ -1,6 +1,6 @@
 {
     "name": "@jderjs/hono-zod-validator",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "description": "A Zod validator for Hono",
     "keywords": [
         "jder",
@@ -12,11 +12,11 @@
         "js",
         "javascript"
     ],
-    "homepage": "https://github.com/jder-std/hono",
-    "bugs": "https://github.com/jder-std/hono/issues",
+    "homepage": "https://github.com/jderstd/hono",
+    "bugs": "https://github.com/jderstd/hono/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jder-std/hono.git",
+        "url": "https://github.com/jderstd/hono.git",
         "directory": "packages/hono-zod-validator"
     },
     "license": "MIT",
@@ -52,7 +52,7 @@
         "zod": "catalog:dev"
     },
     "peerDependencies": {
-        "@jderjs/hono": "~0.5.0",
+        "@jderjs/hono": "~0.5.0 || ~0.6.0",
         "hono": "catalog:peer",
         "zod": "catalog:peer"
     }

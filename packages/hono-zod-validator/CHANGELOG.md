@@ -1,3 +1,10 @@
+## 0.5.1
+
+### What's Changed
+
+- Add support for `@jderjs/hono@0.6.0`
+- Update documentation
+
 ## 0.5.0 (2025-09-06)
 
 ### Breaking Changes
