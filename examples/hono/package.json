@@ -9,7 +9,7 @@
         "": ""
     },
     "dependencies": {
-        "@hono/node-server": "^1.19.2",
+        "@hono/node-server": "^1.19.3",
         "@jderjs/hono": "workspace:*",
         "hono": "catalog:dev"
     },
