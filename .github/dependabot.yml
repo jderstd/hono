@@ -21,3 +21,7 @@ updates:
           - dependency-name: "vite"
           - dependency-name: "vite-tsconfig-paths"
           - dependency-name: "vitest"
+      cooldown:
+          default-days: 1
+          include:
+              - "*"

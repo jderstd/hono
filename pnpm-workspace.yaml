@@ -10,3 +10,9 @@ catalogs:
     peer:
         hono: ^4.5.0
         zod: ^3.25.6 || ^4.0.0
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+    - "@apst/biome"
+    - "@apst/tsconfig"
