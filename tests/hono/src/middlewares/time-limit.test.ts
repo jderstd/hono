@@ -1,11 +1,11 @@
-import type { JsonResponse } from "@jderjs/hono/response";
+import type { JsonResponse } from "@jderstd/hono/response";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 import {
     getResponseErrorMessage,
     ResponseErrorCode,
-} from "@jderjs/hono/response/error";
-import { timeLimit } from "@jderjs/hono/time-limit";
+} from "@jderstd/hono/response/error";
+import { timeLimit } from "@jderstd/hono/time-limit";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";

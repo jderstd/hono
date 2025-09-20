@@ -1,9 +1,9 @@
-import type { CreateJsonResponseStructOptions } from "@jderjs/core/response/json/struct";
+import type { CreateJsonResponseStructOptions } from "@jderstd/core/response/json/struct";
 import type { Context } from "hono";
 import type { StatusCode } from "hono/utils/http-status";
 import type { Format, Omit } from "ts-vista";
 
-import { createJsonResponseStruct } from "@jderjs/core/response/json/struct";
+import { createJsonResponseStruct } from "@jderstd/core/response/json/struct";
 
 /** Check if the argument is a Hono context. */
 const isContext = (arg: any): arg is Context => arg?.req !== undefined;
@@ -27,7 +27,7 @@ type CreateJsonResponseOptions<D = unknown> = Format<
  * Example for creating a successful JSON response without data:
  *
  * ```ts
- * import { createJsonResponse } from "@jderjs/hono/response";
+ * import { createJsonResponse } from "@jderstd/hono/response";
  *
  * const route = (): Response => {
  *     return createJsonResponse();
@@ -37,7 +37,7 @@ type CreateJsonResponseOptions<D = unknown> = Format<
  * Example for creating a successful JSON response with data:
  *
  * ```ts
- * import { createJsonResponse } from "@jderjs/hono/response";
+ * import { createJsonResponse } from "@jderstd/hono/response";
  *
  * const route = (): Response => {
  *     return createJsonResponse({
@@ -49,7 +49,7 @@ type CreateJsonResponseOptions<D = unknown> = Format<
  * Example for creating a failed JSON response:
  *
  * ```ts
- * import { createJsonResponse } from "@jderjs/hono/response";
+ * import { createJsonResponse } from "@jderstd/hono/response";
  *
  * const route = (): Response => {
  *     return createJsonResponse({
@@ -77,7 +77,7 @@ function createJsonResponse<D = unknown>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createJsonResponse } from "@jderjs/hono/response";
+ * import { createJsonResponse } from "@jderstd/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createJsonResponse(c);
@@ -89,7 +89,7 @@ function createJsonResponse<D = unknown>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createJsonResponse } from "@jderjs/hono/response";
+ * import { createJsonResponse } from "@jderstd/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createJsonResponse(c, {
@@ -103,7 +103,7 @@ function createJsonResponse<D = unknown>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createJsonResponse } from "@jderjs/hono/response";
+ * import { createJsonResponse } from "@jderstd/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createJsonResponse(c, {

@@ -10,8 +10,8 @@
     },
     "dependencies": {
         "@hono/node-server": "^1.19.3",
-        "@jderjs/hono": "workspace:*",
-        "@jderjs/hono-zod-validator": "workspace:*",
+        "@jderstd/hono": "workspace:*",
+        "@jderstd/hono-zod-validator": "workspace:*",
         "hono": "catalog:dev",
         "zod": "catalog:dev"
     },

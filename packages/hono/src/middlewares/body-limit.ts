@@ -54,7 +54,7 @@ type BodyLimitOptions = {
  *
  * ```ts
  * import { Hono } from "hono";
- * import { bodyLimit } from "@jderjs/hono/body-limit";
+ * import { bodyLimit } from "@jderstd/hono/body-limit";
  *
  * const app: Hono = new Hono();
  *
@@ -65,7 +65,7 @@ type BodyLimitOptions = {
  *
  * ```ts
  * import { Hono } from "hono";
- * import { bodyLimit } from "@jderjs/hono/body-limit";
+ * import { bodyLimit } from "@jderstd/hono/body-limit";
  *
  * const app: Hono = new Hono();
  *

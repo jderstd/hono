@@ -7,8 +7,8 @@
         "": ""
     },
     "dependencies": {
-        "@jderjs/hono": "workspace:*",
-        "@jderjs/hono-zod-validator": "workspace:*",
+        "@jderstd/hono": "workspace:*",
+        "@jderstd/hono-zod-validator": "workspace:*",
         "hono": "catalog:dev",
         "vitest": "^3.2.4",
         "zod": "catalog:dev"

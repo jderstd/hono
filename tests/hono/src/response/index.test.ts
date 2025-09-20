@@ -1,7 +1,7 @@
-import type { JsonResponse } from "@jderjs/hono/response";
+import type { JsonResponse } from "@jderstd/hono/response";
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 import { Hono } from "hono";
 import { setCookie } from "hono/cookie";
 import { testClient } from "hono/testing";

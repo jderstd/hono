@@ -1,10 +1,10 @@
-import type { JsonResponseError } from "@jderjs/hono/response";
+import type { JsonResponseError } from "@jderstd/hono/response";
 import type { Context, Env, TypedResponse, ValidationTargets } from "hono";
 import type * as v3 from "zod/v3";
 import type * as v4 from "zod/v4/core";
 
-import { createJsonResponse } from "@jderjs/hono/response";
-import { ResponseErrorCode } from "@jderjs/hono/response/error";
+import { createJsonResponse } from "@jderstd/hono/response";
+import { ResponseErrorCode } from "@jderstd/hono/response/error";
 import { HTTPException } from "hono/http-exception";
 
 /** Zod schema for both v3 and v4. */

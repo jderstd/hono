@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / IpLimitOptions
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / IpLimitOptions
 
 # Type Alias: IpLimitOptions
 

@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/body-limit](../README.md) / BODY\_LIMIT\_MAX\_DEFAULT
+[@jderstd/hono](../../../README.md) / [middlewares/body-limit](../README.md) / BODY\_LIMIT\_MAX\_DEFAULT
 
 # Variable: BODY\_LIMIT\_MAX\_DEFAULT
 

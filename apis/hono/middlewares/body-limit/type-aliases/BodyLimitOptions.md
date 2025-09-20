@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/body-limit](../README.md) / BodyLimitOptions
+[@jderstd/hono](../../../README.md) / [middlewares/body-limit](../README.md) / BodyLimitOptions
 
 # Type Alias: BodyLimitOptions
 

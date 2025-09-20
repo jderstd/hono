@@ -1,4 +1,4 @@
-[@jderjs/hono-zod-validator](../README.md) / zValidator
+[@jderstd/hono-zod-validator](../README.md) / zValidator
 
 # Function: zValidator()
 
@@ -36,7 +36,7 @@ import type { Context, Env } from "hono";
 
 import { Hono } from "hono";
 import { z } from "zod";
-import { zValidator } from "@jderjs/hono-zod-validator";
+import { zValidator } from "@jderstd/hono-zod-validator";
 
 const app: Hono = new Hono();
 

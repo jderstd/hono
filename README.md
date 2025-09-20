@@ -9,7 +9,7 @@ This package includes different response builders based on the JSON response str
 To create a JSON response, use the following code:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (): Response => {
     return createJsonResponse();

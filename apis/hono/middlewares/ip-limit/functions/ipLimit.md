@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / ipLimit
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / ipLimit
 
 # Function: ipLimit()
 
@@ -55,7 +55,7 @@ For `getConnInfo`, please refer to
 
 ```ts
 import { Hono } from "hono";
-import { ipLimit } from "@jderjs/hono/ip-limit";
+import { ipLimit } from "@jderstd/hono/ip-limit";
 
 // getConnInfo helper for Node.js
 import { getConnInfo } from "@hono/node-server/conninfo";

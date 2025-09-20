@@ -1,9 +1,9 @@
-import type { CreateResponseStructOptions } from "@jderjs/core/response/common/struct";
+import type { CreateResponseStructOptions } from "@jderstd/core/response/common/struct";
 import type { Context } from "hono";
 import type { StatusCode } from "hono/utils/http-status";
 import type { Format, Omit } from "ts-vista";
 
-import { createResponseStruct } from "@jderjs/core/response/common/struct";
+import { createResponseStruct } from "@jderstd/core/response/common/struct";
 
 import { isContext } from "#/response/json";
 
@@ -26,7 +26,7 @@ type CreateResponseOptions<B extends BodyInit = BodyInit> = Format<
  * Example for creating a basic response:
  *
  * ```ts
- * import { createResponse } from "@jderjs/hono/response";
+ * import { createResponse } from "@jderstd/hono/response";
  *
  * const route = (): Response => {
  *     return createResponse();
@@ -36,7 +36,7 @@ type CreateResponseOptions<B extends BodyInit = BodyInit> = Format<
  * Example for creating a response with status, headers, and body:
  *
  * ```ts
- * import { createResponse } from "@jderjs/hono/response";
+ * import { createResponse } from "@jderstd/hono/response";
  *
  * const route = (): Response => {
  *     return createResponse({
@@ -63,7 +63,7 @@ function createResponse<B extends BodyInit = BodyInit>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createResponse } from "@jderjs/hono/response";
+ * import { createResponse } from "@jderstd/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createResponse(c);
@@ -75,7 +75,7 @@ function createResponse<B extends BodyInit = BodyInit>(
  * ```ts
  * import type { Context } from "hono";
  *
- * import { createResponse } from "@jderjs/hono/response";
+ * import { createResponse } from "@jderstd/hono/response";
  *
  * const route = (c: Context): Response => {
  *     return createResponse(c, {

@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / [response](../README.md) / createJsonResponse
+[@jderstd/hono](../../README.md) / [response](../README.md) / createJsonResponse
 
 # Function: createJsonResponse()
 
@@ -17,7 +17,7 @@ Create a JSON response.
 Example for creating a successful JSON response without data:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (): Response => {
     return createJsonResponse();
@@ -27,7 +27,7 @@ const route = (): Response => {
 Example for creating a successful JSON response with data:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (): Response => {
     return createJsonResponse({
@@ -39,7 +39,7 @@ const route = (): Response => {
 Example for creating a failed JSON response:
 
 ```ts
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (): Response => {
     return createJsonResponse({
@@ -86,7 +86,7 @@ Example for creating a successful JSON response without data:
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c);
@@ -98,7 +98,7 @@ Example for creating a successful JSON response with data:
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c, {
@@ -112,7 +112,7 @@ Example for creating a failed JSON response:
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c, {

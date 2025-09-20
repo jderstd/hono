@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / GetConnInfo
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / GetConnInfo
 
 # Type Alias: GetConnInfo()
 

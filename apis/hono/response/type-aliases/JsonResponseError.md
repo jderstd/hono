@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / [response](../README.md) / JsonResponseError
+[@jderstd/hono](../../README.md) / [response](../README.md) / JsonResponseError
 
 # Type Alias: JsonResponseError
 

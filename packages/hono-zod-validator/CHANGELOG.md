@@ -1,8 +1,11 @@
-## 0.5.1
+## 0.6.0
+
+### Breaking Changes
+
+- Rename package name from `@jderjs/hono-zod-validator` to `@jderstd/hono-zod-validator`
 
 ### What's Changed
 
-- Add support for `@jderjs/hono@0.6.0`
 - Update documentation
 
 ## 0.5.0 (2025-09-06)

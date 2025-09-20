@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / NetAddrInfo
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / NetAddrInfo
 
 # Type Alias: NetAddrInfo
 

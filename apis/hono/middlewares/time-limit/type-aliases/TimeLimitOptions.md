@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/time-limit](../README.md) / TimeLimitOptions
+[@jderstd/hono](../../../README.md) / [middlewares/time-limit](../README.md) / TimeLimitOptions
 
 # Type Alias: TimeLimitOptions
 

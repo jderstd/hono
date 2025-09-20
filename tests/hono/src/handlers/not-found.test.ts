@@ -1,7 +1,7 @@
-import type { JsonResponse } from "@jderjs/hono/response";
+import type { JsonResponse } from "@jderstd/hono/response";
 
-import { notFoundHandler } from "@jderjs/hono/not-found";
-import { createJsonResponse } from "@jderjs/hono/response";
+import { notFoundHandler } from "@jderstd/hono/not-found";
+import { createJsonResponse } from "@jderstd/hono/response";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";
