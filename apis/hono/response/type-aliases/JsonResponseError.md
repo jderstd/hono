@@ -6,7 +6,7 @@
 type JsonResponseError = object;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:4
+Defined in: node\_modules/.pnpm/@jderstd+core@0.4.0/node\_modules/@jderstd/core/dist/@types/response.d.ts:4
 
 JSON response error.
 
@@ -18,7 +18,7 @@ JSON response error.
 code: string;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:6
+Defined in: node\_modules/.pnpm/@jderstd+core@0.4.0/node\_modules/@jderstd/core/dist/@types/response.d.ts:6
 
 Code representing the error.
 
@@ -30,7 +30,7 @@ Code representing the error.
 optional message: string;
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:10
+Defined in: node\_modules/.pnpm/@jderstd+core@0.4.0/node\_modules/@jderstd/core/dist/@types/response.d.ts:10
 
 Detail of the error.
 
@@ -42,6 +42,6 @@ Detail of the error.
 optional path: string[];
 ```
 
-Defined in: node\_modules/.pnpm/@jderjs+core@0.3.0/node\_modules/@jderjs/core/dist/@types/response.d.ts:8
+Defined in: node\_modules/.pnpm/@jderstd+core@0.4.0/node\_modules/@jderstd/core/dist/@types/response.d.ts:8
 
 Indicates where the error occurred.

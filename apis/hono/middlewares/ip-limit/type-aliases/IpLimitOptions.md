@@ -6,6 +6,6 @@
 type IpLimitOptions = Format<object & IpLimitBaseOptions>;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:37](https://github.com/jderstd/hono/blob/e5b2def5701d996fb4f30b7b1af1130fafe72afd/packages/hono/src/middlewares/ip-limit.ts#L37)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:37](https://github.com/jderstd/hono/blob/0375d1964ace5bd38dea6e609d38e5f00aab5022/packages/hono/src/middlewares/ip-limit.ts#L37)
 
 Options for `ipLimit` middleware.
