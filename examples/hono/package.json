@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@hono/node-server": "^1.19.3",
-        "@jderjs/hono": "workspace:*",
+        "@jderstd/hono": "workspace:*",
         "hono": "catalog:dev"
     },
     "devDependencies": {

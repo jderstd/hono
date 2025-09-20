@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/time-limit](../README.md) / TIME\_LIMIT\_MAX\_DEFAULT
+[@jderstd/hono](../../../README.md) / [middlewares/time-limit](../README.md) / TIME\_LIMIT\_MAX\_DEFAULT
 
 # Variable: TIME\_LIMIT\_MAX\_DEFAULT
 

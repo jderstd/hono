@@ -87,7 +87,7 @@ type IpLimitOptions = Format<
  *
  * ```ts
  * import { Hono } from "hono";
- * import { ipLimit } from "@jderjs/hono/ip-limit";
+ * import { ipLimit } from "@jderstd/hono/ip-limit";
  *
  * // getConnInfo helper for Node.js
  * import { getConnInfo } from "@hono/node-server/conninfo";

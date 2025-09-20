@@ -1,9 +1,9 @@
-import { bodyLimit } from "@jderjs/hono/body-limit";
-import { createJsonResponse, type JsonResponse } from "@jderjs/hono/response";
+import { bodyLimit } from "@jderstd/hono/body-limit";
+import { createJsonResponse, type JsonResponse } from "@jderstd/hono/response";
 import {
     getResponseErrorMessage,
     ResponseErrorCode,
-} from "@jderjs/hono/response/error";
+} from "@jderstd/hono/response/error";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";

@@ -12,19 +12,19 @@ Install this package as a dependency in the project:
 
 ```sh
 # npm
-npm i @jderjs/hono
+npm i @jderstd/hono
 
 # Yarn
-yarn add @jderjs/hono
+yarn add @jderstd/hono
 
 # pnpm
-pnpm add @jderjs/hono
+pnpm add @jderstd/hono
 
 # Deno
-deno add npm:@jderjs/hono
+deno add npm:@jderstd/hono
 
 # Bun
-bun add @jderjs/hono
+bun add @jderstd/hono
 ```
 
 ## Functions
@@ -37,7 +37,7 @@ This package extends the response functions by adding the context to the respons
 ```ts
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 
 const route = (c: Context): Response => {
     return createJsonResponse(c);
@@ -54,7 +54,7 @@ See [ConnInfo helper](https://hono.dev/docs/helpers/conninfo) for more details.
 
 ```ts
 import { Hono } from "hono";
-import { ipLimit } from "@jderjs/hono/ip-limit";
+import { ipLimit } from "@jderstd/hono/ip-limit";
 import { getConnInfo } from "@hono/node-server/conninfo";
 
 const app: Hono = new Hono();
@@ -73,7 +73,7 @@ Use the `bodyLimit` middleware to restrict the maximum size of incoming request 
 
 ```ts
 import { Hono } from "hono";
-import { bodyLimit } from "@jderjs/hono/body-limit";
+import { bodyLimit } from "@jderstd/hono/body-limit";
 
 const app: Hono = new Hono();
 
@@ -90,7 +90,7 @@ The `timeLimit` middleware enforces a maximum processing time per request:
 
 ```ts
 import { Hono } from "hono";
-import { timeLimit } from "@jderjs/hono/time-limit";
+import { timeLimit } from "@jderstd/hono/time-limit";
 
 const app: Hono = new Hono();
 
@@ -107,7 +107,7 @@ The `notFoundHandler` return JSON response when the content is not found.
 
 ```ts
 import { Hono } from "hono";
-import { notFoundHandler } from "@jderjs/hono/not-found";
+import { notFoundHandler } from "@jderstd/hono/not-found";
 
 const app: Hono = new Hono();
 
@@ -120,7 +120,7 @@ The `onErrorHandler` return JSON response when an error occurs.
 
 ```ts
 import { Hono } from "hono";
-import { onErrorHandler } from "@jderjs/hono/on-error";
+import { onErrorHandler } from "@jderstd/hono/on-error";
 
 const app: Hono = new Hono();
 

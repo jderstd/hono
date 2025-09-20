@@ -1,4 +1,4 @@
-[@jderjs/hono](../README.md) / response
+[@jderstd/hono](../README.md) / response
 
 # response
 

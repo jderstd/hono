@@ -16,3 +16,5 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
     - "@apst/biome"
     - "@apst/tsconfig"
+    - "@jderstd/core"
+    - "ts-vista"

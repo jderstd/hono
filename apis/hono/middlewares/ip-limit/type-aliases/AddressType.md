@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / AddressType
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / AddressType
 
 # Type Alias: AddressType
 

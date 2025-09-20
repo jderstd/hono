@@ -1,10 +1,10 @@
 import { getConnInfo } from "@hono/node-server/conninfo";
 import { serveStatic } from "@hono/node-server/serve-static";
-import { bodyLimit } from "@jderjs/hono/body-limit";
-import { ipLimit } from "@jderjs/hono/ip-limit";
-import { notFoundHandler } from "@jderjs/hono/not-found";
-import { onErrorHandler } from "@jderjs/hono/on-error";
-import { timeLimit } from "@jderjs/hono/time-limit";
+import { bodyLimit } from "@jderstd/hono/body-limit";
+import { ipLimit } from "@jderstd/hono/ip-limit";
+import { notFoundHandler } from "@jderstd/hono/not-found";
+import { onErrorHandler } from "@jderstd/hono/on-error";
+import { timeLimit } from "@jderstd/hono/time-limit";
 import { Hono } from "hono";
 
 import { PUBLIC } from "#/configs";

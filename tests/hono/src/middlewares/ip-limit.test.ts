@@ -2,15 +2,15 @@ import type {
     ConnInfo,
     GetIPAddr,
     IPRestrictionRule,
-} from "@jderjs/hono/ip-limit";
-import type { JsonResponse } from "@jderjs/hono/response";
+} from "@jderstd/hono/ip-limit";
+import type { JsonResponse } from "@jderstd/hono/response";
 
-import { ipLimit } from "@jderjs/hono/ip-limit";
-import { createJsonResponse } from "@jderjs/hono/response";
+import { ipLimit } from "@jderstd/hono/ip-limit";
+import { createJsonResponse } from "@jderstd/hono/response";
 import {
     getResponseErrorMessage,
     ResponseErrorCode,
-} from "@jderjs/hono/response/error";
+} from "@jderstd/hono/response/error";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";

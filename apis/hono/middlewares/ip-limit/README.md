@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / middlewares/ip-limit
+[@jderstd/hono](../../README.md) / middlewares/ip-limit
 
 # middlewares/ip-limit
 

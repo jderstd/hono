@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / middlewares/time-limit
+[@jderstd/hono](../../README.md) / middlewares/time-limit
 
 # middlewares/time-limit
 

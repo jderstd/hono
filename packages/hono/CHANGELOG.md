@@ -2,6 +2,7 @@
 
 ### Breaking Changes
 
+- Rename package name from `@jderjs/hono` to `@jderstd/hono`
 - Status code changed in `timeLimit` middleware:
     - `408` -> `504`
 

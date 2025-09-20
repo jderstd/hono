@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / GetIPAddr
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / GetIPAddr
 
 # Type Alias: GetIPAddr
 

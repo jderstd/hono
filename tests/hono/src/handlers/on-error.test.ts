@@ -1,6 +1,6 @@
-import type { JsonResponse } from "@jderjs/hono/response";
+import type { JsonResponse } from "@jderstd/hono/response";
 
-import { onErrorHandler } from "@jderjs/hono/on-error";
+import { onErrorHandler } from "@jderstd/hono/on-error";
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { testClient } from "hono/testing";

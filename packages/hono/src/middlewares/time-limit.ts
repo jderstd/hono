@@ -52,7 +52,7 @@ type TimeLimitOptions = {
  *
  * ```ts
  * import { Hono } from "hono";
- * import { timeLimit } from "@jderjs/hono/time-limit";
+ * import { timeLimit } from "@jderstd/hono/time-limit";
  *
  * const app: Hono = new Hono();
  *
@@ -63,7 +63,7 @@ type TimeLimitOptions = {
  *
  * ```ts
  * import { Hono } from "hono";
- * import { timeLimit } from "@jderjs/hono/time-limit";
+ * import { timeLimit } from "@jderstd/hono/time-limit";
  *
  * const app: Hono = new Hono();
  *

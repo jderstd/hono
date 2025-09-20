@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/time-limit](../README.md) / timeLimit
+[@jderstd/hono](../../../README.md) / [middlewares/time-limit](../README.md) / timeLimit
 
 # Function: timeLimit()
 
@@ -34,7 +34,7 @@ A example of using `timeLimit` middleware:
 
 ```ts
 import { Hono } from "hono";
-import { timeLimit } from "@jderjs/hono/time-limit";
+import { timeLimit } from "@jderstd/hono/time-limit";
 
 const app: Hono = new Hono();
 
@@ -45,7 +45,7 @@ A example of using `timeLimit` middleware with options:
 
 ```ts
 import { Hono } from "hono";
-import { timeLimit } from "@jderjs/hono/time-limit";
+import { timeLimit } from "@jderstd/hono/time-limit";
 
 const app: Hono = new Hono();
 

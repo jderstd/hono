@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / middlewares/body-limit
+[@jderstd/hono](../../README.md) / middlewares/body-limit
 
 # middlewares/body-limit
 

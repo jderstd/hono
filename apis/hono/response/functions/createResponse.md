@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / [response](../README.md) / createResponse
+[@jderstd/hono](../../README.md) / [response](../README.md) / createResponse
 
 # Function: createResponse()
 
@@ -17,7 +17,7 @@ Create a response.
 Example for creating a basic response:
 
 ```ts
-import { createResponse } from "@jderjs/hono/response";
+import { createResponse } from "@jderstd/hono/response";
 
 const route = (): Response => {
     return createResponse();
@@ -27,7 +27,7 @@ const route = (): Response => {
 Example for creating a response with status, headers, and body:
 
 ```ts
-import { createResponse } from "@jderjs/hono/response";
+import { createResponse } from "@jderstd/hono/response";
 
 const route = (): Response => {
     return createResponse({
@@ -90,7 +90,7 @@ Example for creating a basic response:
 ```ts
 import type { Context } from "hono";
 
-import { createResponse } from "@jderjs/hono/response";
+import { createResponse } from "@jderstd/hono/response";
 
 const route = (c: Context): Response => {
     return createResponse(c);
@@ -102,7 +102,7 @@ Example for creating a response with status, headers, and body:
 ```ts
 import type { Context } from "hono";
 
-import { createResponse } from "@jderjs/hono/response";
+import { createResponse } from "@jderstd/hono/response";
 
 const route = (c: Context): Response => {
     return createResponse(c, {

@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/body-limit](../README.md) / bodyLimit
+[@jderstd/hono](../../../README.md) / [middlewares/body-limit](../README.md) / bodyLimit
 
 # Function: bodyLimit()
 
@@ -38,7 +38,7 @@ A example of using `bodyLimit` middleware:
 
 ```ts
 import { Hono } from "hono";
-import { bodyLimit } from "@jderjs/hono/body-limit";
+import { bodyLimit } from "@jderstd/hono/body-limit";
 
 const app: Hono = new Hono();
 
@@ -49,7 +49,7 @@ A example of using `bodyLimit` middleware with options:
 
 ```ts
 import { Hono } from "hono";
-import { bodyLimit } from "@jderjs/hono/body-limit";
+import { bodyLimit } from "@jderstd/hono/body-limit";
 
 const app: Hono = new Hono();
 

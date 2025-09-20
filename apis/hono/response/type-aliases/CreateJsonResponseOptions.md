@@ -1,4 +1,4 @@
-[@jderjs/hono](../../README.md) / [response](../README.md) / CreateJsonResponseOptions
+[@jderstd/hono](../../README.md) / [response](../README.md) / CreateJsonResponseOptions
 
 # Type Alias: CreateJsonResponseOptions\<D\>
 

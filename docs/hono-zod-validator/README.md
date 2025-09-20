@@ -8,23 +8,23 @@ A Zod validator for Hono.
 
 Install this package as a dependency in the project:
 
-> This package requires `hono`, `zod`, and `@jderjs/hono` to be installed.
+> This package requires `hono`, `zod`, and `@jderstd/hono` to be installed.
 
 ```sh
 # npm
-npm i @jderjs/hono-zod-validator
+npm i @jderstd/hono-zod-validator
 
 # Yarn
-yarn add @jderjs/hono-zod-validator
+yarn add @jderstd/hono-zod-validator
 
 # pnpm
-pnpm add @jderjs/hono-zod-validator
+pnpm add @jderstd/hono-zod-validator
 
 # Deno
-deno add npm:@jderjs/hono-zod-validator
+deno add npm:@jderstd/hono-zod-validator
 
 # Bun
-bun add @jderjs/hono-zod-validator
+bun add @jderstd/hono-zod-validator
 ```
 
 ## Validate with Zod
@@ -49,7 +49,7 @@ type Json = z.infer<typeof json>;
 Then, import it into the Zod validator middleware:
 
 ```ts
-import { zValidator } from "@jderjs/hono-zod-validator";
+import { zValidator } from "@jderstd/hono-zod-validator";
 
 zValidator("json", json)
 ```
@@ -89,7 +89,7 @@ A full example:
 ```ts
 import { Hono } from "hono";
 import { z } from "zod";
-import { zValidator } from "@jderjs/hono-zod-validator";
+import { zValidator } from "@jderstd/hono-zod-validator";
 
 const app: Hono = new Hono();
 

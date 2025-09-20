@@ -1,7 +1,7 @@
-import type { JsonResponse } from "@jderjs/hono/response";
+import type { JsonResponse } from "@jderstd/hono/response";
 
-import { createJsonResponse } from "@jderjs/hono/response";
-import { zValidator } from "@jderjs/hono-zod-validator";
+import { createJsonResponse } from "@jderstd/hono/response";
+import { zValidator } from "@jderstd/hono-zod-validator";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest";

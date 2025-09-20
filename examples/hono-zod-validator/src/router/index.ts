@@ -1,7 +1,7 @@
 import type { Context, Env } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
-import { zValidator } from "@jderjs/hono-zod-validator";
+import { createJsonResponse } from "@jderstd/hono/response";
+import { zValidator } from "@jderstd/hono-zod-validator";
 import { Hono } from "hono";
 import { z } from "zod";
 

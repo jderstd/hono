@@ -1,6 +1,6 @@
 import type { Context } from "hono";
 
-import { createJsonResponse } from "@jderjs/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 import { Hono } from "hono";
 
 const router: Hono = new Hono();

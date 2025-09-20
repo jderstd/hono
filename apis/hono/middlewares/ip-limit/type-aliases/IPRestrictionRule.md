@@ -1,4 +1,4 @@
-[@jderjs/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / IPRestrictionRule
+[@jderstd/hono](../../../README.md) / [middlewares/ip-limit](../README.md) / IPRestrictionRule
 
 # Type Alias: IPRestrictionRule
 
