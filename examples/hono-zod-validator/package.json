@@ -9,7 +9,7 @@
         "": ""
     },
     "dependencies": {
-        "@hono/node-server": "^1.19.4",
+        "@hono/node-server": "^1.19.5",
         "@jderstd/hono": "workspace:*",
         "@jderstd/hono-zod-validator": "workspace:*",
         "hono": "catalog:dev",
