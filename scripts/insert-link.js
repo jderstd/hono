@@ -1,4 +1,5 @@
-import * as path from "node:path";
+import * as Path from "node:path";
+import * as Process from "node:process";
 
 import { MarkdownPageEvent } from "typedoc-plugin-markdown";
 
@@ -15,7 +16,7 @@ export const load = (app) => {
  * @returns {string}
  */
 const buildPath = (name) => {
-    return path.resolve(process.cwd(), "..", "..", "apis", name, "README.md");
+    return Path.resolve(Process.cwd(), "..", "..", "apis", name, "README.md");
 };
 
 const list = [
