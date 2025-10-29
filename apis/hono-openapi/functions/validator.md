@@ -1,74 +1,17 @@
-[@jderstd/hono-standard-validator](../README.md) / sValidator
+[@jderstd/hono-openapi](../README.md) / validator
 
-# Function: sValidator()
+# Function: validator()
 
 ```ts
-function sValidator<Target, Schema>(target, schema): MiddlewareHandler<Env, string, {
+function validator<Target, Schema>(target, schema): MiddlewareHandler<Env, string, {
   in: HasUndefined<InferInput<Schema>> extends true ? { [K in keyof ValidationTargets]?: InferInput<Schema> extends ValidationTargets[K] ? InferInput<InferInput<Schema>> : { [K2 in string | number | symbol]?: ValidationTargets[K][K2] } } : { [K in keyof ValidationTargets]: InferInput<Schema> extends ValidationTargets[K] ? InferInput<InferInput<Schema>> : { [K2 in string | number | symbol]: ValidationTargets[K][K2] } };
   out: { [K in keyof ValidationTargets]: InferOutput<Schema> };
 }>;
 ```
 
-Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/f5b12e262138ddfb5fccdd78e3274b708c2b86c1/packages/hono-standard-validator/src/index.ts#L68)
+Defined in: packages/hono-openapi/src/validator.ts:10
 
-Validate the request with validator based on Standard Schema.
-
-Following error may returned if the request is invalid:
-
-```jsonc
-// Status: 400
-{
-    "success": false,
-    "errors": [
-        {
-            "code": "parse",
-            "path": ["xxx"],
-            "message": "xxx"
-        }
-    ]
-}
-```
-
-### Example
-
-```ts
-import type { Context, Env } from "hono";
-
-import { Hono } from "hono";
-import { z } from "zod";
-import { sValidator } from "@jderstd/hono-standard-validator";
-
-const app: Hono = new Hono();
-
-const json = z.object({
-    name: z.string(),
-    age: z.number()
-});
-
-type Json = z.infer<typeof json>;
-
-type RouteContext = Context<
-    Env,
-    "/",
-    {
-        in: {
-            json: Json;
-        },
-        out: {
-            json: Json;
-        },
-    },
->;
-
-app.post(
-    "/",
-    sValidator("json", json),
-    (c: RouteContext): Response => {
-        const data: Json = c.req.valid("json");
-        return c.json(data);
-    }
-);
-```
+Create a validator middleware.
 
 ## Type Parameters
 

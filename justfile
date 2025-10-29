@@ -11,10 +11,12 @@ typedoc := node_bin + "typedoc"
 hono := "./packages/hono"
 sv := "./packages/hono-standard-validator"
 zv := "./packages/hono-zod-validator"
+openapi := "./packages/hono-openapi"
 
 test_hono := "./tests/hono"
 test_sv := "./tests/hono-standard-validator"
 test_zv := "./tests/hono-zod-validator"
+test_openapi := "./tests/hono-openapi"
 
 # Default action
 _:
@@ -39,6 +41,7 @@ lint:
     cd ./{{hono}} && ../../{{tsc}} --noEmit
     cd ./{{sv}} && ../../{{tsc}} --noEmit
     cd ./{{zv}} && ../../{{tsc}} --noEmit
+    cd ./{{openapi}} && ../../{{tsc}} --noEmit
 
 # Format code
 fmt:
@@ -49,28 +52,33 @@ build:
     cd ./{{hono}} && ../../{{tsdown}} -c tsdown.config.ts
     cd ./{{sv}} && ../../{{tsdown}} -c tsdown.config.ts
     cd ./{{zv}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{openapi}} && ../../{{tsdown}} -c tsdown.config.ts
 
 # Run tests
 test:
     cd ./{{test_hono}} && ./{{vitest}} run
     cd ./{{test_sv}} && ./{{vitest}} run
     cd ./{{test_zv}} && ./{{vitest}} run
+    cd ./{{test_openapi}} && ./{{vitest}} run
 
 # Run tests with different runtimes
 test-all:
     cd ./{{test_hono}} && pnpm run test
     cd ./{{test_sv}} && pnpm run test
     cd ./{{test_zv}} && pnpm run test
+    cd ./{{test_openapi}} && pnpm run test
 
     cd ./{{test_hono}} && bun run test
     cd ./{{test_sv}} && bun run test
     cd ./{{test_zv}} && bun run test
+    cd ./{{test_openapi}} && bun run test
 
 # Generate APIs documentation
 api:
     cd ./{{hono}} && ../../{{typedoc}}
     cd ./{{sv}} && ../../{{typedoc}}
     cd ./{{zv}} && ../../{{typedoc}}
+    cd ./{{openapi}} && ../../{{typedoc}}
 
 # Publish hono package as dry-run
 publish-try-hono:
@@ -84,11 +92,16 @@ publish-try-sv:
 publish-try-zv:
     cd ./{{zv}} && pnpm publish --no-git-checks --dry-run
 
+# Publish OpenAPI package as dry-run
+publish-try-openapi:
+    cd ./{{openapi}} && pnpm publish --no-git-checks --dry-run
+
 # Publish all packages as dry-run
 publish-try:
     just publish-try-hono
     just publish-try-sv
     just publish-try-zv
+    just publish-try-openapi
 
 # Publish hono package
 publish-hono:
@@ -102,14 +115,20 @@ publish-sv:
 publish-zv:
     cd ./{{zv}} && pnpm publish
 
+# Publish OpenAPI package
+publish-openapi:
+    cd ./{{openapi}} && pnpm publish
+
 # Publish all packages
 publish:
     just publish-hono
     just publish-sv
     just publish-zv
+    just publish-openapi
 
 # Clean builds
 clean:
+    rm -rf ./{{openapi}}/dist
     rm -rf ./{{zv}}/dist
     rm -rf ./{{sv}}/dist
     rm -rf ./{{hono}}/dist
@@ -118,10 +137,12 @@ clean:
 clean-all:
     just clean
 
+    rm -rf ./{{test_openapi}}/node_modules
     rm -rf ./{{test_sv}}/node_modules
     rm -rf ./{{test_zv}}/node_modules
     rm -rf ./{{test_hono}}/node_modules
 
+    rm -rf ./{{openapi}}/node_modules
     rm -rf ./{{zv}}/node_modules
     rm -rf ./{{sv}}/node_modules
     rm -rf ./{{hono}}/node_modules

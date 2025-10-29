@@ -8,7 +8,7 @@
 function createJsonResponse<D>(options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:66](https://github.com/jderstd/hono/blob/4adf5a0fa92e0c11c2b0bfb46b31cce7391af387/packages/hono/src/response/json/index.ts#L66)
+Defined in: [packages/hono/src/response/json/index.ts:66](https://github.com/jderstd/hono/blob/f5b12e262138ddfb5fccdd78e3274b708c2b86c1/packages/hono/src/response/json/index.ts#L66)
 
 Create a JSON response.
 
@@ -75,7 +75,7 @@ const route = (): Response => {
 function createJsonResponse<D>(context?, options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:120](https://github.com/jderstd/hono/blob/4adf5a0fa92e0c11c2b0bfb46b31cce7391af387/packages/hono/src/response/json/index.ts#L120)
+Defined in: [packages/hono/src/response/json/index.ts:120](https://github.com/jderstd/hono/blob/f5b12e262138ddfb5fccdd78e3274b708c2b86c1/packages/hono/src/response/json/index.ts#L120)
 
 Create a JSON response with context.
 

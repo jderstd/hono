@@ -22,6 +22,7 @@ const list = [
     buildPath("hono"),
     buildPath("hono-standard-validator"),
     buildPath("hono-zod-validator"),
+    buildPath("hono-openapi"),
 ];
 
 /**

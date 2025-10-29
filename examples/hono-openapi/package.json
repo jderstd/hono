@@ -1,0 +1,27 @@
+{
+    "name": "example-hono-openapi",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc --noEmit && vite build",
+        "start": "node ./dist/index.js",
+        "": ""
+    },
+    "dependencies": {
+        "@hono/node-server": "^1.19.5",
+        "@jderstd/hono": "workspace:*",
+        "@jderstd/hono-openapi": "workspace:*",
+        "@scalar/hono-api-reference": "^0.9.22",
+        "hono": "catalog:dev",
+        "zod": "catalog:dev",
+        "zod-openapi": "^4.2.4"
+    },
+    "devDependencies": {
+        "@hono/vite-build": "^1.7.0",
+        "@hono/vite-dev-server": "~0.23.0",
+        "@types/node": "^24.9.1",
+        "vite": "^7.1.12",
+        "vite-tsconfig-paths": "^5.1.4"
+    }
+}

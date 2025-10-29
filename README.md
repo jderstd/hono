@@ -35,6 +35,9 @@ please refer to the [Standard Validator Documentation](./docs/hono-standard-vali
 For Zod validator,
 please refer to the [Zod Validator Documentation](./docs/hono-zod-validator/README.md).
 
+For OpenAPI,
+please refer to the [OpenAPI Documentation](./docs/hono-openapi/README.md).
+
 ## APIs
 
 For Hono package APIs, 
@@ -45,6 +48,9 @@ please refer to the [Standard Validator APIs](./apis/hono-standard-validator/REA
 
 For Zod validator package APIs, 
 please refer to the [Zod Validator APIs](./apis/hono-zod-validator/README.md).
+
+For OpenAPI package APIs, 
+please refer to the [OpenAPI APIs](./apis/hono-openapi/README.md).
 
 ## License
 

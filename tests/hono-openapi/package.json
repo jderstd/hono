@@ -1,0 +1,17 @@
+{
+    "name": "test-hono-openapi",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "vitest run",
+        "": ""
+    },
+    "dependencies": {
+        "@jderstd/hono": "workspace:*",
+        "@jderstd/hono-openapi": "workspace:*",
+        "hono": "catalog:dev",
+        "valibot": "catalog:dev",
+        "vitest": "^4.0.4",
+        "zod": "catalog:dev"
+    }
+}

@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @jderstd/hono-standard-validator v0.6.0
+# @jderstd/hono-standard-validator v0.1.0
 
 ## Functions
 
