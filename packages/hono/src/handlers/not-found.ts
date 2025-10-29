@@ -6,7 +6,7 @@ import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
 /**
  * Not found handler.
  *
- * Following response will be reurned on route not found:
+ * Following response will be returned on route not found:
  *
  * ```jsonc
  * // Status: 404
