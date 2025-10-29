@@ -4,33 +4,29 @@ import { MarkdownPageEvent } from "typedoc-plugin-markdown";
 
 /**
  * @param {import("typedoc-plugin-markdown").MarkdownApplication} app
+ * @returns {void}
  */
 export const load = (app) => {
     app.renderer.on(MarkdownPageEvent.END, insert);
 };
 
+/**
+ * @param {string} name
+ * @returns {string}
+ */
+const buildPath = (name) => {
+    return path.resolve(process.cwd(), "..", "..", "apis", name, "README.md");
+};
+
 const list = [
-    path.resolve(process.cwd(), "..", "..", "apis", "hono", "README.md"),
-    path.resolve(
-        process.cwd(),
-        "..",
-        "..",
-        "apis",
-        "hono-standard-validator",
-        "README.md",
-    ),
-    path.resolve(
-        process.cwd(),
-        "..",
-        "..",
-        "apis",
-        "hono-zod-validator",
-        "README.md",
-    ),
+    buildPath("hono"),
+    buildPath("hono-standard-validator"),
+    buildPath("hono-zod-validator"),
 ];
 
 /**
  * @param {import("typedoc-plugin-markdown").MarkdownPageEvent} page
+ * @returns {void}
  */
 const insert = (page) => {
     if (list.includes(page.filename)) {

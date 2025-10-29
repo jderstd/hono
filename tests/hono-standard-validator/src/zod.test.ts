@@ -1,4 +1,6 @@
-import { createJsonResponse, type JsonResponse } from "@jderstd/hono/response";
+import type { JsonResponse } from "@jderstd/hono/response";
+
+import { createJsonResponse } from "@jderstd/hono/response";
 import { sValidator } from "@jderstd/hono-standard-validator";
 import { Hono } from "hono";
 import { testClient } from "hono/testing";

@@ -8,6 +8,7 @@ catalogs:
         "@standard-schema/spec": ^1.0.0
     dev:
         hono: 4.5.0
+        valibot: 1.1.0
         zod: 3.25.6
     peer:
         hono: ^4.5.0
