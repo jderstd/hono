@@ -1,0 +1,57 @@
+{
+    "name": "@jderstd/hono-standard-validator",
+    "version": "0.1.0",
+    "description": "A standard validator for Hono",
+    "keywords": [
+        "jder",
+        "hono",
+        "validator",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/jderstd/hono",
+    "bugs": "https://github.com/jderstd/hono/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jderstd/hono.git",
+        "directory": "packages/hono-standard-validator"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./hook": {
+            "types": "./dist/hook.d.ts",
+            "import": "./dist/hook.mjs",
+            "require": "./dist/hook.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@hono/standard-validator": "~0.1.5",
+        "@standard-schema/spec": "catalog:dep"
+    },
+    "devDependencies": {
+        "@jderstd/hono": "workspace:*",
+        "hono": "catalog:dev"
+    },
+    "peerDependencies": {
+        "@jderstd/hono": "~0.6.0",
+        "hono": "catalog:peer"
+    }
+}

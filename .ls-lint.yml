@@ -1,7 +1,16 @@
 ls:
-    .dir: kebab-case
-    .js: kebab-case
-    .ts: kebab-case
+    packages:
+        .dir: kebab-case
+        .js: kebab-case
+        .ts: kebab-case
+    tests:
+        .dir: kebab-case
+        .js: kebab-case
+        .ts: kebab-case
+    examples:
+        .dir: kebab-case
+        .js: kebab-case
+        .ts: kebab-case
 
 ignore:
     - .git

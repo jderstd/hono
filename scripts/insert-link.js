@@ -9,29 +9,31 @@ export const load = (app) => {
     app.renderer.on(MarkdownPageEvent.END, insert);
 };
 
-const hono = path.resolve(
-    process.cwd(),
-    "..",
-    "..",
-    "apis",
-    "hono",
-    "README.md",
-);
-
-const zv = path.resolve(
-    process.cwd(),
-    "..",
-    "..",
-    "apis",
-    "hono-zod-validator",
-    "README.md",
-);
+const list = [
+    path.resolve(process.cwd(), "..", "..", "apis", "hono", "README.md"),
+    path.resolve(
+        process.cwd(),
+        "..",
+        "..",
+        "apis",
+        "hono-standard-validator",
+        "README.md",
+    ),
+    path.resolve(
+        process.cwd(),
+        "..",
+        "..",
+        "apis",
+        "hono-zod-validator",
+        "README.md",
+    ),
+];
 
 /**
  * @param {import("typedoc-plugin-markdown").MarkdownPageEvent} page
  */
 const insert = (page) => {
-    if (page.filename === hono || page.filename === zv) {
+    if (list.includes(page.filename)) {
         const head = "[< Back](./../../README.md)\n\n";
         page.contents = head + page.contents;
     }

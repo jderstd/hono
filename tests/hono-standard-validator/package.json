@@ -1,0 +1,16 @@
+{
+    "name": "test-hono-standard-validator",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "vitest run",
+        "": ""
+    },
+    "dependencies": {
+        "@jderstd/hono": "workspace:*",
+        "@jderstd/hono-standard-validator": "workspace:*",
+        "hono": "catalog:dev",
+        "vitest": "^4.0.3",
+        "zod": "catalog:dev"
+    }
+}

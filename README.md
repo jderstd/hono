@@ -29,6 +29,9 @@ And the response will be shown as below:
 For Hono,
 please refer to the [Hono Documentation](./docs/hono/README.md).
 
+For standard validator,
+please refer to the [Standard Validator Documentation](./docs/hono-standard-validator/README.md).
+
 For Zod validator,
 please refer to the [Zod Validator Documentation](./docs/hono-zod-validator/README.md).
 
@@ -36,6 +39,9 @@ please refer to the [Zod Validator Documentation](./docs/hono-zod-validator/READ
 
 For Hono package APIs, 
 please refer to the [Hono APIs](./apis/hono/README.md).
+
+For standard validator package APIs, 
+please refer to the [Standard Validator APIs](./apis/hono-standard-validator/README.md).
 
 For Zod validator package APIs, 
 please refer to the [Zod Validator APIs](./apis/hono-zod-validator/README.md).
