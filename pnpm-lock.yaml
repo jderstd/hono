@@ -19,6 +19,29 @@ catalogs:
     zod:
       specifier: 3.25.6
       version: 3.25.6
+  example:
+    '@hono/node-server':
+      specifier: ^1.19.5
+      version: 1.19.5
+    '@hono/vite-build':
+      specifier: ^1.7.0
+      version: 1.7.0
+    '@hono/vite-dev-server':
+      specifier: ~0.23.0
+      version: 0.23.0
+    '@types/node':
+      specifier: ^24.9.1
+      version: 24.9.1
+    vite:
+      specifier: ^7.1.12
+      version: 7.1.12
+    vite-tsconfig-paths:
+      specifier: ^5.1.4
+      version: 5.1.4
+  test:
+    vitest:
+      specifier: ^4.0.4
+      version: 4.0.4
 
 importers:
 
@@ -49,7 +72,7 @@ importers:
   examples/hono:
     dependencies:
       '@hono/node-server':
-        specifier: ^1.19.5
+        specifier: catalog:example
         version: 1.19.5(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
@@ -59,25 +82,25 @@ importers:
         version: 4.5.0
     devDependencies:
       '@hono/vite-build':
-        specifier: ^1.7.0
+        specifier: catalog:example
         version: 1.7.0(hono@4.5.0)
       '@hono/vite-dev-server':
-        specifier: ~0.23.0
+        specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
       '@types/node':
-        specifier: ^24.9.1
+        specifier: catalog:example
         version: 24.9.1
       vite:
-        specifier: ^7.1.12
+        specifier: catalog:example
         version: 7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       vite-tsconfig-paths:
-        specifier: ^5.1.4
+        specifier: catalog:example
         version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1))
 
   examples/hono-openapi:
     dependencies:
       '@hono/node-server':
-        specifier: ^1.19.5
+        specifier: catalog:example
         version: 1.19.5(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
@@ -99,25 +122,25 @@ importers:
         version: 4.2.4(zod@3.25.6)
     devDependencies:
       '@hono/vite-build':
-        specifier: ^1.7.0
+        specifier: catalog:example
         version: 1.7.0(hono@4.5.0)
       '@hono/vite-dev-server':
-        specifier: ~0.23.0
+        specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
       '@types/node':
-        specifier: ^24.9.1
+        specifier: catalog:example
         version: 24.9.1
       vite:
-        specifier: ^7.1.12
+        specifier: catalog:example
         version: 7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       vite-tsconfig-paths:
-        specifier: ^5.1.4
+        specifier: catalog:example
         version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1))
 
   examples/hono-standard-validator:
     dependencies:
       '@hono/node-server':
-        specifier: ^1.19.5
+        specifier: catalog:example
         version: 1.19.5(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
@@ -133,25 +156,25 @@ importers:
         version: 3.25.6
     devDependencies:
       '@hono/vite-build':
-        specifier: ^1.7.0
+        specifier: catalog:example
         version: 1.7.0(hono@4.5.0)
       '@hono/vite-dev-server':
-        specifier: ~0.23.0
+        specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
       '@types/node':
-        specifier: ^24.9.1
+        specifier: catalog:example
         version: 24.9.1
       vite:
-        specifier: ^7.1.12
+        specifier: catalog:example
         version: 7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       vite-tsconfig-paths:
-        specifier: ^5.1.4
+        specifier: catalog:example
         version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1))
 
   examples/hono-zod-validator:
     dependencies:
       '@hono/node-server':
-        specifier: ^1.19.5
+        specifier: catalog:example
         version: 1.19.5(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
@@ -167,19 +190,19 @@ importers:
         version: 3.25.6
     devDependencies:
       '@hono/vite-build':
-        specifier: ^1.7.0
+        specifier: catalog:example
         version: 1.7.0(hono@4.5.0)
       '@hono/vite-dev-server':
-        specifier: ~0.23.0
+        specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
       '@types/node':
-        specifier: ^24.9.1
+        specifier: catalog:example
         version: 24.9.1
       vite:
-        specifier: ^7.1.12
+        specifier: catalog:example
         version: 7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       vite-tsconfig-paths:
-        specifier: ^5.1.4
+        specifier: catalog:example
         version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1))
 
   packages/hono:
@@ -267,7 +290,7 @@ importers:
         specifier: catalog:dev
         version: 4.5.0
       vitest:
-        specifier: ^4.0.4
+        specifier: catalog:test
         version: 4.0.4(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
 
   tests/hono-openapi:
@@ -285,7 +308,7 @@ importers:
         specifier: catalog:dev
         version: 1.1.0(typescript@5.9.3)
       vitest:
-        specifier: ^4.0.4
+        specifier: catalog:test
         version: 4.0.4(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       zod:
         specifier: catalog:dev
@@ -306,7 +329,7 @@ importers:
         specifier: catalog:dev
         version: 1.1.0(typescript@5.9.3)
       vitest:
-        specifier: ^4.0.3
+        specifier: catalog:test
         version: 4.0.4(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       zod:
         specifier: catalog:dev
@@ -324,7 +347,7 @@ importers:
         specifier: catalog:dev
         version: 4.5.0
       vitest:
-        specifier: ^4.0.4
+        specifier: catalog:test
         version: 4.0.4(@types/node@24.9.1)(jiti@2.6.1)(yaml@2.8.1)
       zod:
         specifier: catalog:dev

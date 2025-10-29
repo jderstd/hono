@@ -9,6 +9,6 @@
     "dependencies": {
         "@jderstd/hono": "workspace:*",
         "hono": "catalog:dev",
-        "vitest": "^4.0.4"
+        "vitest": "catalog:test"
     }
 }

@@ -11,7 +11,7 @@
         "@jderstd/hono-standard-validator": "workspace:*",
         "hono": "catalog:dev",
         "valibot": "catalog:dev",
-        "vitest": "^4.0.3",
+        "vitest": "catalog:test",
         "zod": "catalog:dev"
     }
 }

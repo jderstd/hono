@@ -9,17 +9,17 @@
         "": ""
     },
     "dependencies": {
-        "@hono/node-server": "^1.19.5",
+        "@hono/node-server": "catalog:example",
         "@jderstd/hono": "workspace:*",
         "@jderstd/hono-zod-validator": "workspace:*",
         "hono": "catalog:dev",
         "zod": "catalog:dev"
     },
     "devDependencies": {
-        "@hono/vite-build": "^1.7.0",
-        "@hono/vite-dev-server": "~0.23.0",
-        "@types/node": "^24.9.1",
-        "vite": "^7.1.12",
-        "vite-tsconfig-paths": "^5.1.4"
+        "@hono/vite-build": "catalog:example",
+        "@hono/vite-dev-server": "catalog:example",
+        "@types/node": "catalog:example",
+        "vite": "catalog:example",
+        "vite-tsconfig-paths": "catalog:example"
     }
 }
