@@ -27,7 +27,11 @@ type RouteContext = Context<
     }
 >;
 
-router.get("/", sValidator("json", json), (c: RouteContext): Response => {
+router.get("/", (c: RouteContext): Response => {
+    return createJsonResponse(c);
+});
+
+router.post("/", sValidator("json", json), (c: RouteContext): Response => {
     const data: Json = c.req.valid("json");
 
     return createJsonResponse(c, {

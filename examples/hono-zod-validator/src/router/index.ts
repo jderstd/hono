@@ -27,7 +27,11 @@ type RouteContext = Context<
     }
 >;
 
-router.get("/", zValidator("json", json), (c: RouteContext): Response => {
+router.get("/", (c: RouteContext): Response => {
+    return createJsonResponse(c);
+});
+
+router.post("/", zValidator("json", json), (c: RouteContext): Response => {
     const data: Json = c.req.valid("json");
 
     return createJsonResponse(c, {
