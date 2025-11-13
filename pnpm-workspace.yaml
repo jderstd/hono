@@ -16,7 +16,7 @@ catalogs:
     test:
         vitest: ^4.0.8
     example:
-        "@types/node": ^24.10.0
+        "@types/node": ^24.10.1
         "@hono/node-server": ^1.19.6
         "@hono/vite-dev-server": ~0.23.0
         "@hono/vite-build": ^1.7.0
