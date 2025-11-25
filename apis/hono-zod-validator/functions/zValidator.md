@@ -9,7 +9,7 @@ function zValidator<T, Target>(target, schema): MiddlewareHandler<Env, string, {
 }>;
 ```
 
-Defined in: [packages/hono-zod-validator/src/index.ts:69](https://github.com/jderstd/hono/blob/f5b12e262138ddfb5fccdd78e3274b708c2b86c1/packages/hono-zod-validator/src/index.ts#L69)
+Defined in: [packages/hono-zod-validator/src/index.ts:69](https://github.com/jderstd/hono/blob/e78a7cccf8faae59184755c92cfae98b637d9a2f/packages/hono-zod-validator/src/index.ts#L69)
 
 Validate the request with Zod.
 

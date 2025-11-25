@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @jderstd/hono-openapi v0.1.0
+# @jderstd/hono-openapi v0.1.1
 
 ## Type Aliases
 

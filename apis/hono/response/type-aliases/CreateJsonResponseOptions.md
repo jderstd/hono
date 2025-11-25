@@ -6,7 +6,7 @@
 type CreateJsonResponseOptions<D> = Format<object & Omit<CreateJsonResponseStructOptions<D>, "status">>;
 ```
 
-Defined in: [packages/hono/src/response/json/index.ts:12](https://github.com/jderstd/hono/blob/f5b12e262138ddfb5fccdd78e3274b708c2b86c1/packages/hono/src/response/json/index.ts#L12)
+Defined in: [packages/hono/src/response/json/index.ts:12](https://github.com/jderstd/hono/blob/e78a7cccf8faae59184755c92cfae98b637d9a2f/packages/hono/src/response/json/index.ts#L12)
 
 Options of `createJsonResponse` function.
 

@@ -9,7 +9,7 @@ function sValidator<Target, Schema>(target, schema): MiddlewareHandler<Env, stri
 }>;
 ```
 
-Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/f5b12e262138ddfb5fccdd78e3274b708c2b86c1/packages/hono-standard-validator/src/index.ts#L68)
+Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/e78a7cccf8faae59184755c92cfae98b637d9a2f/packages/hono-standard-validator/src/index.ts#L68)
 
 Validate the request with validator based on Standard Schema.
 
