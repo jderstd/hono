@@ -1,3 +1,9 @@
+## 0.7.0 (2025-11-25)
+
+### What's New
+
+- Add `JderHttpException` class which extends `HttpException` from Hono
+
 ## 0.6.0 (2025-09-20)
 
 ### Breaking Changes

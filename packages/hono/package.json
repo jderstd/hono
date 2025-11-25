@@ -1,6 +1,6 @@
 {
     "name": "@jderstd/hono",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "A response builder for Hono",
     "keywords": [
         "jder",
@@ -30,9 +30,14 @@
             "require": "./dist/response.js"
         },
         "./response/error": {
-            "types": "./dist/response/error.d.ts",
-            "import": "./dist/response/error.mjs",
-            "require": "./dist/response/error.js"
+            "types": "./dist/response/error/index.d.ts",
+            "import": "./dist/response/error/index.mjs",
+            "require": "./dist/response/error/index.js"
+        },
+        "./response/error/http": {
+            "types": "./dist/response/error/http.d.ts",
+            "import": "./dist/response/error/http.mjs",
+            "require": "./dist/response/error/http.js"
         },
         "./body-limit": {
             "types": "./dist/body-limit.d.ts",

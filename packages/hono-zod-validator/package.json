@@ -1,6 +1,6 @@
 {
     "name": "@jderstd/hono-zod-validator",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "A Zod validator for Hono",
     "keywords": [
         "jder",
@@ -52,7 +52,7 @@
         "zod": "catalog:dev"
     },
     "peerDependencies": {
-        "@jderstd/hono": "~0.6.0",
+        "@jderstd/hono": "~0.7.0",
         "hono": "catalog:peer",
         "zod": "catalog:peer"
     }

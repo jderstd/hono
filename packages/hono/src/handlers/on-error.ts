@@ -6,6 +6,7 @@ import { HTTPException } from "hono/http-exception";
 
 import { createJsonResponse } from "#/response";
 import { ResponseErrorCode } from "#/response/error";
+import { JderHttpException } from "#/response/error/http";
 
 /** Options for `onErrorHandler` function. */
 type OnErrorHandlerOptions = {
@@ -73,6 +74,8 @@ const onErrorHandler = (
     options?: OnErrorHandlerOptions,
 ): ((err: Error | HTTPResponseError, c: Context) => Response) => {
     return (err: Error | HTTPResponseError, c: Context): Response => {
+        if (err instanceof JderHttpException) return err.getResponse();
+
         if (err instanceof HTTPException) {
             const res: Response = err.getResponse();
 

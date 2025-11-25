@@ -5,7 +5,7 @@ import type * as v4 from "zod/v4/core";
 
 import { createJsonResponse } from "@jderstd/hono/response";
 import { ResponseErrorCode } from "@jderstd/hono/response/error";
-import { HTTPException } from "hono/http-exception";
+import { JderHttpException } from "@jderstd/hono/response/error/http";
 
 /** Zod schema for both v3 and v4. */
 type ZodSchema = v3.ZodType | v4.$ZodType;
@@ -64,7 +64,7 @@ const zValidatorHook = <
         });
     }
 
-    throw new HTTPException(400, {
+    throw new JderHttpException(400, {
         res: createJsonResponse(c, {
             errors,
         }),

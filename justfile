@@ -80,6 +80,29 @@ api:
     cd ./{{zv}} && ../../{{typedoc}}
     cd ./{{openapi}} && ../../{{typedoc}}
 
+# Publish hono package with dev tag
+publish-dev-hono:
+    cd ./{{hono}} && pnpm publish --no-git-checks --tag dev
+
+# Publish standard validator package with dev tag
+publish-dev-sv:
+    cd ./{{sv}} && pnpm publish --no-git-checks --tag dev
+
+# Publish Zod validator package with dev tag
+publish-dev-zv:
+    cd ./{{zv}} && pnpm publish --no-git-checks --tag dev
+
+# Publish OpenAPI package with dev tag
+publish-dev-openapi:
+    cd ./{{openapi}} && pnpm publish --no-git-checks --tag dev
+
+# Publish all packages with dev tag
+publish-dev:
+    just publish-dev-hono
+    just publish-dev-sv
+    just publish-dev-zv
+    just publish-dev-openapi
+
 # Publish hono package as dry-run
 publish-try-hono:
     cd ./{{hono}} && pnpm publish --no-git-checks --dry-run

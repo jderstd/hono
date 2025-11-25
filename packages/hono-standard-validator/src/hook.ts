@@ -5,7 +5,7 @@ import type { Env, TypedResponse, ValidationTargets } from "hono/types";
 
 import { createJsonResponse } from "@jderstd/hono/response";
 import { ResponseErrorCode } from "@jderstd/hono/response/error";
-import { HTTPException } from "hono/http-exception";
+import { JderHttpException } from "@jderstd/hono/response/error/http";
 
 const sValidatorHook = <
     T,
@@ -59,7 +59,7 @@ const sValidatorHook = <
         });
     }
 
-    throw new HTTPException(400, {
+    throw new JderHttpException(400, {
         res: createJsonResponse(c, {
             errors,
         }),
