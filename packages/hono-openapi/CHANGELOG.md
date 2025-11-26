@@ -1,3 +1,9 @@
+## 0.1.2 (2025-11-26)
+
+### What's Changed
+
+- Add missing dependencies
+
 ## 0.1.1 (2025-11-25)
 
 ### What's Changed
