@@ -3,13 +3,17 @@
 # Function: sValidator()
 
 ```ts
-function sValidator<Target, Schema>(target, schema): MiddlewareHandler<Env, string, {
+function sValidator<Target, Schema>(target, schema): Handler<Env, string, {
   in: HasUndefined<InferInput<Schema>> extends true ? { [K in keyof ValidationTargets]?: InferInput<Schema> extends ValidationTargets[K] ? InferInput<InferInput<Schema>> : { [K2 in string | number | symbol]?: ValidationTargets[K][K2] } } : { [K in keyof ValidationTargets]: InferInput<Schema> extends ValidationTargets[K] ? InferInput<InferInput<Schema>> : { [K2 in string | number | symbol]: ValidationTargets[K][K2] } };
   out: { [K in keyof ValidationTargets]: InferOutput<Schema> };
-}>;
+}, Response & TypedResponse<{
+  data: ValidationTargets[Target];
+  error: readonly Issue[];
+  success: false;
+}, 400, "json">>;
 ```
 
-Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/e78a7cccf8faae59184755c92cfae98b637d9a2f/packages/hono-standard-validator/src/index.ts#L68)
+Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/b7289eeab79174059fbd4658ba039f0cf97c5d74/packages/hono-standard-validator/src/index.ts#L68)
 
 Validate the request with validator based on Standard Schema.
 
@@ -92,7 +96,11 @@ app.post(
 
 ## Returns
 
-`MiddlewareHandler`\<`Env`, `string`, \{
+`Handler`\<`Env`, `string`, \{
   `in`: `HasUndefined`\<`InferInput`\<`Schema`\>\> *extends* `true` ? \{ \[K in keyof ValidationTargets\]?: InferInput\<Schema\> extends ValidationTargets\[K\] ? InferInput\<InferInput\<Schema\>\> : \{ \[K2 in string \| number \| symbol\]?: ValidationTargets\[K\]\[K2\] \} \} : \{ \[K in keyof ValidationTargets\]: InferInput\<Schema\> extends ValidationTargets\[K\] ? InferInput\<InferInput\<Schema\>\> : \{ \[K2 in string \| number \| symbol\]: ValidationTargets\[K\]\[K2\] \} \};
   `out`: `{ [K in keyof ValidationTargets]: InferOutput<Schema> }`;
-\}\>
+\}, `Response` & `TypedResponse`\<\{
+  `data`: `ValidationTargets`\[`Target`\];
+  `error`: readonly `Issue`[];
+  `success`: `false`;
+\}, `400`, `"json"`\>\>

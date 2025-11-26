@@ -9,7 +9,7 @@ function validator<Target, Schema>(target, schema): MiddlewareHandler<Env, strin
 }>;
 ```
 
-Defined in: [packages/hono-openapi/src/validator.ts:10](https://github.com/jderstd/hono/blob/e78a7cccf8faae59184755c92cfae98b637d9a2f/packages/hono-openapi/src/validator.ts#L10)
+Defined in: [packages/hono-openapi/src/validator.ts:10](https://github.com/jderstd/hono/blob/b7289eeab79174059fbd4658ba039f0cf97c5d74/packages/hono-openapi/src/validator.ts#L10)
 
 Create a validator middleware.
 

@@ -6,7 +6,7 @@
 type GenerateSpecOptions = object;
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:154
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:154
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1
 defaultOptions: Partial<Record<AllowedMethods | "ALL", DescribeRouteOptions>>;
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:190
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:190
 
 Default options for `describeRoute` method
 
@@ -30,7 +30,7 @@ documentation: Omit<Partial<OpenAPIV3_1.Document>,
 | "x-express-openapi-validation-strict">;
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:160
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:160
 
 Customize OpenAPI config, refers to Swagger 2.0 config
 
@@ -46,7 +46,7 @@ https://swagger.io/specification/v2/
 exclude: string | RegExp | (string | RegExp)[];
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:178
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:178
 
 Paths to exclude from OpenAPI endpoint
 
@@ -64,7 +64,7 @@ Paths to exclude from OpenAPI endpoint
 excludeMethods: AllowedMethods[];
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:182
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:182
 
 Exclude methods from the specs
 
@@ -76,7 +76,7 @@ Exclude methods from the specs
 excludeStaticFile: boolean;
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:172
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:172
 
 Determine if Swagger should exclude static files.
 
@@ -94,7 +94,7 @@ true
 excludeTags: string[];
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:186
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:186
 
 Exclude tags from OpenAPI
 
@@ -106,7 +106,7 @@ Exclude tags from OpenAPI
 includeEmptyPaths: boolean;
 ```
 
-Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@hono+standard-validator@0.1.5\_@standard-schema+spec@1.0.0\_hono@4.5.\_c912d6f747e7d887b41d5dfc92677410/node\_modules/hono-openapi/dist/index.d.ts:166
+Defined in: node\_modules/.pnpm/hono-openapi@1.1.0\_@standard-community+standard-json@0.3.5\_@standard-schema+spec@1.0.0\_\_5f2c3a73d5963cd70769b36756039d15/node\_modules/hono-openapi/dist/index.d.ts:166
 
 Include paths which don't have the handlers.
 This is useful when you want to document the
