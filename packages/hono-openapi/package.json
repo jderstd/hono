@@ -42,12 +42,13 @@
     ],
     "dependencies": {
         "@jderstd/hono-standard-validator": "workspace:*",
-        "@standard-schema/spec": "catalog:dep",
         "@standard-community/standard-json": "~0.3.5",
         "@standard-community/standard-openapi": "~0.2.8",
+        "@standard-schema/spec": "catalog:dep",
         "@types/json-schema": "^7.0.15",
         "hono-openapi": "^1.1.0",
-        "openapi-types": "^12.1.3"
+        "openapi-types": "^12.1.3",
+        "quansync": "~0.2.11"
     },
     "devDependencies": {
         "@jderstd/hono": "workspace:*",
