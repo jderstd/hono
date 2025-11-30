@@ -27,16 +27,16 @@ And the response will be shown as below:
 ## Documentation
 
 For Hono,
-please refer to the [Hono Documentation](./docs/hono/README.md).
+please refer to the [Hono documentation](./docs/hono/README.md).
 
 For standard validator,
-please refer to the [Standard Validator Documentation](./docs/hono-standard-validator/README.md).
+please refer to the [Standard Validator documentation](./docs/hono-standard-validator/README.md).
 
 For Zod validator,
-please refer to the [Zod Validator Documentation](./docs/hono-zod-validator/README.md).
+please refer to the [Zod Validator documentation](./docs/hono-zod-validator/README.md).
 
 For OpenAPI,
-please refer to the [OpenAPI Documentation](./docs/hono-openapi/README.md).
+please refer to the [OpenAPI documentation](./docs/hono-openapi/README.md).
 
 ## APIs
 
@@ -51,6 +51,10 @@ please refer to the [Zod Validator APIs](./apis/hono-zod-validator/README.md).
 
 For OpenAPI package APIs, 
 please refer to the [OpenAPI APIs](./apis/hono-openapi/README.md).
+
+## Contributing
+
+For contributing, please refer to the [contributing guide](./CONTRIBUTING.md).
 
 ## License
 
