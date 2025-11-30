@@ -6,10 +6,10 @@
 import type { Context, MiddlewareHandler } from "hono";
 import type { StatusCode } from "hono/utils/http-status";
 
-import { HTTPException } from "hono/http-exception";
 import { timeout } from "hono/timeout";
 
 import { getResponseErrorMessage, ResponseErrorCode } from "#/response/error";
+import { JderHttpException } from "#/response/error/http";
 import { createJsonResponse } from "#/response/json";
 
 /** Default maximum time in milliseconds. */
@@ -76,19 +76,22 @@ const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
     const status: StatusCode = 504;
     const code: ResponseErrorCode = ResponseErrorCode.Timeout;
 
-    return timeout(options?.max ?? 5 * 1000, (c: Context): HTTPException => {
-        return new HTTPException(status, {
-            res: createJsonResponse(c, {
-                status,
-                errors: [
-                    {
-                        code,
-                        message: getResponseErrorMessage(code),
-                    },
-                ],
-            }),
-        });
-    });
+    return timeout(
+        options?.max ?? 5 * 1000,
+        (c: Context): JderHttpException => {
+            return new JderHttpException(status, {
+                res: createJsonResponse(c, {
+                    status,
+                    errors: [
+                        {
+                            code,
+                            message: getResponseErrorMessage(code),
+                        },
+                    ],
+                }),
+            });
+        },
+    );
 };
 
 export type { TimeLimitOptions };
