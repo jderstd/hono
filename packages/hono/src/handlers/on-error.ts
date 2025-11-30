@@ -74,8 +74,10 @@ const onErrorHandler = (
     options?: OnErrorHandlerOptions,
 ): ((err: Error | HTTPResponseError, c: Context) => Response) => {
     return (err: Error | HTTPResponseError, c: Context): Response => {
+        // HTTP Exception for JDER format response
         if (err instanceof JderHttpException) return err.getResponse();
 
+        // HTTP Exception
         if (err instanceof HTTPException) {
             const res: Response = err.getResponse();
 
@@ -99,6 +101,7 @@ const onErrorHandler = (
             });
         }
 
+        // Internal server error
         return createJsonResponse(c, {
             status: 500,
             errors: [
