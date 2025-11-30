@@ -1,3 +1,9 @@
+## 0.7.1 (2025-11-30)
+
+### What's Changed
+
+- Update the `HttpException` in `timeLimit` middleware to `JderHttpException`
+
 ## 0.7.0 (2025-11-25)
 
 ### What's New
