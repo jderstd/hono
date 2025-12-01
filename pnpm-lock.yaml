@@ -24,8 +24,8 @@ catalogs:
       specifier: ^1.19.6
       version: 1.19.6
     '@hono/vite-build':
-      specifier: ^1.7.0
-      version: 1.7.0
+      specifier: ^1.8.0
+      version: 1.8.0
     '@hono/vite-dev-server':
       specifier: ~0.23.0
       version: 0.23.0
@@ -83,7 +83,7 @@ importers:
     devDependencies:
       '@hono/vite-build':
         specifier: catalog:example
-        version: 1.7.0(hono@4.5.0)
+        version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
@@ -123,7 +123,7 @@ importers:
     devDependencies:
       '@hono/vite-build':
         specifier: catalog:example
-        version: 1.7.0(hono@4.5.0)
+        version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
@@ -157,7 +157,7 @@ importers:
     devDependencies:
       '@hono/vite-build':
         specifier: catalog:example
-        version: 1.7.0(hono@4.5.0)
+        version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
@@ -191,7 +191,7 @@ importers:
     devDependencies:
       '@hono/vite-build':
         specifier: catalog:example
-        version: 1.7.0(hono@4.5.0)
+        version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
         version: 0.23.0(hono@4.5.0)
@@ -632,8 +632,8 @@ packages:
       '@standard-schema/spec': 1.0.0
       hono: '>=3.9.0'
 
-  '@hono/vite-build@1.7.0':
-    resolution: {integrity: sha512-L73WBed5teC7DHTzXYkho83POYYluD2rTkbT76FJuqpfXPgTW/PsbIa8O0YcCETE3VUoh584fe6vuLAM5ctjww==}
+  '@hono/vite-build@1.8.0':
+    resolution: {integrity: sha512-T/w0Tuv8VV6FgjNnw2aW6LXtRfc5tOhaO54tKCRv4Zqc1tP3w6JyqTFtzJFFDvmY0xTxHS+Pj+ZPLhzFsdiFzQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -1686,7 +1686,7 @@ snapshots:
       '@standard-schema/spec': 1.0.0
       hono: 4.5.0
 
-  '@hono/vite-build@1.7.0(hono@4.5.0)':
+  '@hono/vite-build@1.8.0(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
 
