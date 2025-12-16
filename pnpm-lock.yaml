@@ -36,8 +36,8 @@ catalogs:
       specifier: ^7.2.7
       version: 7.2.7
     vite-tsconfig-paths:
-      specifier: ^5.1.4
-      version: 5.1.4
+      specifier: ^6.0.0
+      version: 6.0.0
   test:
     vitest:
       specifier: ^4.0.15
@@ -95,7 +95,7 @@ importers:
         version: 7.2.7(@types/node@25.0.2)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 5.1.4(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.0(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
 
   examples/hono-openapi:
     dependencies:
@@ -135,7 +135,7 @@ importers:
         version: 7.2.7(@types/node@25.0.2)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 5.1.4(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.0(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
 
   examples/hono-standard-validator:
     dependencies:
@@ -169,7 +169,7 @@ importers:
         version: 7.2.7(@types/node@25.0.2)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 5.1.4(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.0(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
 
   examples/hono-zod-validator:
     dependencies:
@@ -203,7 +203,7 @@ importers:
         version: 7.2.7(@types/node@25.0.2)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 5.1.4(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.0(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1))
 
   packages/hono:
     dependencies:
@@ -1316,6 +1316,7 @@ packages:
   tsdown@0.17.3:
     resolution: {integrity: sha512-bgLgTog+oyadDTr9SZ57jZtb+A4aglCjo3xgJrkCDxbzcQl2l2iDDr4b06XHSQHwyDNIhYFDgPRhuu1wL3pNsw==}
     engines: {node: '>=20.19.0'}
+    deprecated: Including an unexpected breaking change (copy behavior)
     hasBin: true
     peerDependencies:
       '@arethetypeswrong/core': ^0.18.1
@@ -1390,8 +1391,8 @@ packages:
       typescript:
         optional: true
 
-  vite-tsconfig-paths@5.1.4:
-    resolution: {integrity: sha512-cYj0LRuLV2c2sMqhqhGpaO3LretdtMn/BVX4cPLanIZuwwrkVl+lK84E/miEXkCHWXuq65rhNN4rXsBcOB3S4w==}
+  vite-tsconfig-paths@6.0.0:
+    resolution: {integrity: sha512-0lGkM62rud1ShKWLbJpbTHPoJuZIL9QW1ecCueDhqxWrStIRsyHapBQ4eV05tBqrW9z6jkp9ybBVgLSWp+Mv1A==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -2309,7 +2310,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1)):
+  vite-tsconfig-paths@6.0.0(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.2)(yaml@2.8.1)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
