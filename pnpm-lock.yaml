@@ -30,8 +30,8 @@ catalogs:
       specifier: ~0.23.0
       version: 0.23.0
     '@types/node':
-      specifier: ^25.0.2
-      version: 25.0.2
+      specifier: ^25.0.3
+      version: 25.0.3
     vite:
       specifier: ^7.3.0
       version: 7.3.0
@@ -89,13 +89,13 @@ importers:
         version: 0.23.0(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
-        version: 25.0.2
+        version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
 
   examples/hono-openapi:
     dependencies:
@@ -129,13 +129,13 @@ importers:
         version: 0.23.0(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
-        version: 25.0.2
+        version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
 
   examples/hono-standard-validator:
     dependencies:
@@ -163,13 +163,13 @@ importers:
         version: 0.23.0(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
-        version: 25.0.2
+        version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
 
   examples/hono-zod-validator:
     dependencies:
@@ -197,13 +197,13 @@ importers:
         version: 0.23.0(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
-        version: 25.0.2
+        version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1))
+        version: 6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
 
   packages/hono:
     dependencies:
@@ -294,7 +294,7 @@ importers:
         version: 4.5.0
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.2)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
 
   tests/hono-openapi:
     dependencies:
@@ -312,7 +312,7 @@ importers:
         version: 1.1.0(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.2)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -333,7 +333,7 @@ importers:
         version: 1.1.0(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.2)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -351,7 +351,7 @@ importers:
         version: 4.5.0
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.2)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -1002,8 +1002,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@25.0.2':
-    resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
+  '@types/node@25.0.3':
+    resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1907,7 +1907,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@25.0.2':
+  '@types/node@25.0.3':
     dependencies:
       undici-types: 7.16.0
 
@@ -1922,13 +1922,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.16(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.16(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 4.0.16
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
 
   '@vitest/pretty-format@4.0.16':
     dependencies:
@@ -2269,18 +2269,18 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  vite-tsconfig-paths@6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1)):
+  vite-tsconfig-paths@6.0.1(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.5(typescript@5.9.3)
     optionalDependencies:
-      vite: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1):
+  vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1):
     dependencies:
       esbuild: 0.27.1
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2289,14 +2289,14 @@ snapshots:
       rollup: 4.52.5
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.0.2
+      '@types/node': 25.0.3
       fsevents: 2.3.3
       yaml: 2.8.1
 
-  vitest@4.0.16(@types/node@25.0.2)(yaml@2.8.1):
+  vitest@4.0.16(@types/node@25.0.3)(yaml@2.8.1):
     dependencies:
       '@vitest/expect': 4.0.16
-      '@vitest/mocker': 4.0.16(vite@7.3.0(@types/node@25.0.2)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.16(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
       '@vitest/pretty-format': 4.0.16
       '@vitest/runner': 4.0.16
       '@vitest/snapshot': 4.0.16
@@ -2313,10 +2313,10 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.3.0(@types/node@25.0.2)(yaml@2.8.1)
+      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 25.0.2
+      '@types/node': 25.0.3
     transitivePeerDependencies:
       - jiti
       - less
