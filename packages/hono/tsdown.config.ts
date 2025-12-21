@@ -1,42 +1,26 @@
-import type { UserConfig } from "tsdown";
+import { defineConfig } from "@apst/tsdown";
+import { cjsPreset, dtsPreset, esmPreset } from "@apst/tsdown/presets";
 
-import { defineConfig } from "tsdown";
-
-const options: UserConfig = {
-    entry: {
-        response: "./src/response/index.ts",
-        "response/error/index": "./src/response/error/index.ts",
-        "response/error/http": "./src/response/error/http.ts",
-        "body-limit": "./src/middlewares/body-limit.ts",
-        "ip-limit": "./src/middlewares/ip-limit.ts",
-        "time-limit": "./src/middlewares/time-limit.ts",
-        "not-found": "./src/handlers/not-found.ts",
-        "on-error": "./src/handlers/on-error.ts",
-    },
-    dts: false,
-    outDir: "./dist",
-    clean: true,
-    platform: "neutral",
-    treeshake: true,
-    sourcemap: true,
-    minify: false,
-    shims: true,
-    unbundle: true,
-    inputOptions: {
-        experimental: {
-            attachDebugInfo: "none",
+export default defineConfig(
+    {
+        entry: {
+            response: "./src/response/index.ts",
+            "response/error/index": "./src/response/error/index.ts",
+            "response/error/http": "./src/response/error/http.ts",
+            "body-limit": "./src/middlewares/body-limit.ts",
+            "ip-limit": "./src/middlewares/ip-limit.ts",
+            "time-limit": "./src/middlewares/time-limit.ts",
+            "not-found": "./src/handlers/not-found.ts",
+            "on-error": "./src/handlers/on-error.ts",
         },
     },
-};
-
-export default defineConfig([
-    {
-        ...options,
-        format: "esm",
-    },
-    {
-        ...options,
-        dts: true,
-        format: "cjs",
-    },
-]);
+    [
+        esmPreset(),
+        cjsPreset(),
+        dtsPreset({
+            presetOptions: {
+                performanceMode: true,
+            },
+        }),
+    ],
+);

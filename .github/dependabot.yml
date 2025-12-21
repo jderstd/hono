@@ -13,17 +13,22 @@ updates:
       commit-message:
           prefix: "chore"
       allow:
+          # root
           - dependency-name: "@apst/biome"
           - dependency-name: "@apst/tsconfig"
+          - dependency-name: "@apst/tsdown"
           - dependency-name: "@biomejs/biome"
-          - dependency-name: "@hono/node-server"
-          - dependency-name: "@hono/vite-build"
-          - dependency-name: "@hono/vite-dev-server"
-          - dependency-name: "@types/node"
           - dependency-name: "tsdown"
           - dependency-name: "typedoc"
           - dependency-name: "typedoc-plugin-markdown"
           - dependency-name: "typescript"
+          # tests
+          - dependency-name: "vitest"
+          # examples
+          - dependency-name: "@hono/node-server"
+          - dependency-name: "@hono/vite-build"
+          - dependency-name: "@hono/vite-dev-server"
+          - dependency-name: "@scalar/hono-api-reference"
+          - dependency-name: "@types/node"
           - dependency-name: "vite"
           - dependency-name: "vite-tsconfig-paths"
-          - dependency-name: "vitest"

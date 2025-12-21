@@ -12,10 +12,10 @@
         "@hono/node-server": "catalog:example",
         "@jderstd/hono": "workspace:*",
         "@jderstd/hono-openapi": "workspace:*",
-        "@scalar/hono-api-reference": "^0.9.22",
+        "@scalar/hono-api-reference": "^0.9.30",
         "hono": "catalog:dev",
         "zod": "catalog:dev",
-        "zod-openapi": "^4.2.4"
+        "zod-openapi": "^4"
     },
     "devDependencies": {
         "@hono/vite-build": "catalog:example",

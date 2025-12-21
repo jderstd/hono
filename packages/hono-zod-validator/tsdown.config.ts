@@ -1,36 +1,16 @@
-import type { UserConfig } from "tsdown";
+import { defineConfig } from "@apst/tsdown";
+import { cjsPreset, dtsPreset, esmPreset } from "@apst/tsdown/presets";
 
-import { defineConfig } from "tsdown";
-
-const options: UserConfig = {
-    entry: {
-        index: "./src/index.ts",
-        hook: "./src/hook.ts",
-    },
-    dts: false,
-    outDir: "./dist",
-    clean: true,
-    platform: "neutral",
-    treeshake: true,
-    sourcemap: true,
-    minify: false,
-    shims: true,
-    unbundle: true,
-    inputOptions: {
-        experimental: {
-            attachDebugInfo: "none",
+export default defineConfig(
+    {
+        entry: {
+            index: "./src/index.ts",
+            hook: "./src/hook.ts",
         },
     },
-};
-
-export default defineConfig([
-    {
-        ...options,
-        format: "esm",
-    },
-    {
-        ...options,
-        dts: true,
-        format: "cjs",
-    },
-]);
+    [
+        esmPreset(),
+        cjsPreset(),
+        dtsPreset(),
+    ],
+);
