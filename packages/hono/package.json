@@ -74,7 +74,7 @@
     ],
     "dependencies": {
         "@jderstd/core": "~0.4.0",
-        "ts-vista": "~0.2.2"
+        "ts-vista": "~0.2.3"
     },
     "devDependencies": {
         "hono": "catalog:dev"

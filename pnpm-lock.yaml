@@ -214,8 +214,8 @@ importers:
         specifier: ~0.4.0
         version: 0.4.0
       ts-vista:
-        specifier: ~0.2.2
-        version: 0.2.2
+        specifier: ~0.2.3
+        version: 0.2.3
     devDependencies:
       hono:
         specifier: catalog:dev
@@ -1314,8 +1314,8 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
 
-  ts-vista@0.2.2:
-    resolution: {integrity: sha512-QhuUrGs8WwGgHy1iUOfMztvLE0XB3EH4hFjw6rFGpStav5os7keIx9EHfJTBSpaPdlE3MmGBwVFAbTjDjROFuQ==}
+  ts-vista@0.2.3:
+    resolution: {integrity: sha512-aXdjXqE2ReXVauZTVDfA4Dl5StYID/kS9Z+uUBLJIhdU2oNQC/A33aMj9zeVJCd3fn0UtT8Wj+PAMCRASirkwg==}
 
   tsconfck@3.1.5:
     resolution: {integrity: sha512-CLDfGgUp7XPswWnezWwsCRxNmgQjhYq3VXHM0/XIRxhVrKw0M1if9agzryh1QS3nxjCROvV+xWxoJO1YctzzWg==}
@@ -1708,7 +1708,7 @@ snapshots:
 
   '@jderstd/core@0.4.0':
     dependencies:
-      ts-vista: 0.2.2
+      ts-vista: 0.2.3
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -2217,7 +2217,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  ts-vista@0.2.2: {}
+  ts-vista@0.2.3: {}
 
   tsconfck@3.1.5(typescript@5.9.3):
     optionalDependencies:
