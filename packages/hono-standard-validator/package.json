@@ -1,6 +1,6 @@
 {
     "name": "@jderstd/hono-standard-validator",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "A standard validator for Hono",
     "keywords": [
         "jder",
@@ -51,7 +51,7 @@
         "hono": "catalog:dev"
     },
     "peerDependencies": {
-        "@jderstd/hono": "~0.7.0",
+        "@jderstd/hono": "catalog:peer",
         "hono": "catalog:peer"
     }
 }

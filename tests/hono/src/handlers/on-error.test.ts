@@ -31,9 +31,11 @@ describe("On error test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code: "server",
+                    path: [],
                     message: "abc",
                 },
             ],
@@ -47,9 +49,11 @@ describe("On error test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code: "server",
+                    path: [],
                     message: "Internal server error",
                 },
             ],

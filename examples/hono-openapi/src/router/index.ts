@@ -36,16 +36,14 @@ const jsonResponseErrorSchema = z.object({
 const createJsonSuccessResponse = <T extends z.ZodTypeAny>(data?: T) => {
     return z.object({
         success: z.literal(true),
-        ...(data
-            ? {
-                  data,
-              }
-            : {}),
+        data: data ? data : z.null(),
+        errors: z.array(z.unknown()),
     });
 };
 
 const jsonFailureResponseSchema = z.object({
     success: z.literal(false),
+    data: z.null(),
     errors: z.array(jsonResponseErrorSchema),
 });
 

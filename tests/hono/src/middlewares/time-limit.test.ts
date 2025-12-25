@@ -34,6 +34,8 @@ describe("Time limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -46,9 +48,11 @@ describe("Time limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code,
+                    path: [],
                     message: getResponseErrorMessage(code),
                 },
             ],

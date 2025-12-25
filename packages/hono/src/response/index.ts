@@ -6,6 +6,7 @@
 export type {
     JsonResponse,
     JsonResponseError,
+    JsonResponseErrorInput,
 } from "@jderstd/core";
 
 export type { CreateResponseOptions } from "#/response/common";

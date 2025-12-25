@@ -1,6 +1,6 @@
 {
     "name": "@jderstd/hono",
-    "version": "0.7.1",
+    "version": "0.8.0",
     "description": "A response builder for Hono",
     "keywords": [
         "jder",
@@ -73,7 +73,7 @@
         "dist"
     ],
     "dependencies": {
-        "@jderstd/core": "~0.4.0",
+        "@jderstd/core": "0.5.0",
         "ts-vista": "~0.2.3"
     },
     "devDependencies": {

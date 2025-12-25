@@ -62,6 +62,8 @@ describe("Body limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -97,6 +99,7 @@ describe("Body limit test", (): void => {
                 name: "text.txt",
                 size: 9 * 1024 * 1024,
             },
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -130,6 +133,7 @@ describe("Body limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code,

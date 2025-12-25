@@ -211,8 +211,8 @@ importers:
   packages/hono:
     dependencies:
       '@jderstd/core':
-        specifier: ~0.4.0
-        version: 0.4.0
+        specifier: 0.5.0
+        version: 0.5.0
       ts-vista:
         specifier: ~0.2.3
         version: 0.2.3
@@ -668,8 +668,8 @@ packages:
       hono: '>=3.9.0'
       zod: ^3.25.0
 
-  '@jderstd/core@0.4.0':
-    resolution: {integrity: sha512-UNUoYccmouqz5lkHqDfAAJHUn5EtIDSU3NiS4f6kHgoFgljtZYiHr1S7T2zexIQ5b4y81S01VQWug9XaHRcaRw==}
+  '@jderstd/core@0.5.0':
+    resolution: {integrity: sha512-NyVYmkZk+t2S9G0qdgRVO8t6/tCZD6B7NYbld4GQtJmW6P7HPUBTJwSAFb25vEwhfXWlzpGowvdSWe/cPyrCJg==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -1706,7 +1706,7 @@ snapshots:
       hono: 4.5.0
       zod: 3.25.6
 
-  '@jderstd/core@0.4.0':
+  '@jderstd/core@0.5.0':
     dependencies:
       ts-vista: 0.2.3
 

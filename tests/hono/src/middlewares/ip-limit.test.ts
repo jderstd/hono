@@ -52,6 +52,8 @@ describe("IP limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -66,9 +68,12 @@ describe("IP limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code: ResponseErrorCode.Forbidden,
+                    path: [],
+                    message: null,
                 },
             ],
         } satisfies JsonResponse);
@@ -88,6 +93,7 @@ describe("IP limit test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code,

@@ -22,6 +22,8 @@ describe("Not found test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: true,
+            data: null,
+            errors: [],
         } satisfies JsonResponse);
     });
 
@@ -32,9 +34,11 @@ describe("Not found test", (): void => {
 
         expect(await res.json()).toStrictEqual({
             success: false,
+            data: null,
             errors: [
                 {
                     code: "not_found",
+                    path: [],
                     message: "Content not found",
                 },
             ],

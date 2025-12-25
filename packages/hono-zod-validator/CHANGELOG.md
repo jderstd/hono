@@ -1,3 +1,9 @@
+## 0.8.0
+
+### What's Changed
+
+- Upgrade dependencies
+
 ## 0.7.0 (2025-11-25)
 
 ### What's Changed

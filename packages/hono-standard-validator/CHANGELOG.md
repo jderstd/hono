@@ -1,3 +1,9 @@
+## 0.3.0
+
+### What's Changed
+
+- Upgrade dependencies
+
 ## 0.2.0 (2025-11-25)
 
 ### What's Changed
