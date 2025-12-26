@@ -12,6 +12,7 @@ Response module
 | [CreateResponseOptions](type-aliases/CreateResponseOptions.md) | Options of `createResponse` function. |
 | [JsonResponse](type-aliases/JsonResponse.md) | JSON response. |
 | [JsonResponseError](type-aliases/JsonResponseError.md) | JSON response error. |
+| [JsonResponseErrorInput](type-aliases/JsonResponseErrorInput.md) | Input type for JSON response error. |
 
 ## Functions
 

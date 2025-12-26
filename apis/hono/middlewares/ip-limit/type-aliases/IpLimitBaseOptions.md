@@ -6,7 +6,7 @@
 type IpLimitBaseOptions = object;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:24](https://github.com/jderstd/hono/blob/b7289eeab79174059fbd4658ba039f0cf97c5d74/packages/hono/src/middlewares/ip-limit.ts#L24)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:24](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/middlewares/ip-limit.ts#L24)
 
 Base options for `ipLimit` middleware.
 
@@ -18,7 +18,7 @@ Base options for `ipLimit` middleware.
 optional allowList: IPRestrictionRule[];
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:26](https://github.com/jderstd/hono/blob/b7289eeab79174059fbd4658ba039f0cf97c5d74/packages/hono/src/middlewares/ip-limit.ts#L26)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:26](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/middlewares/ip-limit.ts#L26)
 
 Allowed IP addresses.
 
@@ -30,7 +30,7 @@ Allowed IP addresses.
 optional denyList: IPRestrictionRule[];
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:28](https://github.com/jderstd/hono/blob/b7289eeab79174059fbd4658ba039f0cf97c5d74/packages/hono/src/middlewares/ip-limit.ts#L28)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:28](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/middlewares/ip-limit.ts#L28)
 
 Denied IP addresses.
 
@@ -42,7 +42,7 @@ Denied IP addresses.
 optional verbose: boolean;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:33](https://github.com/jderstd/hono/blob/b7289eeab79174059fbd4658ba039f0cf97c5d74/packages/hono/src/middlewares/ip-limit.ts#L33)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:33](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/middlewares/ip-limit.ts#L33)
 
 Whether show more information.
 By default, it's `false`.

@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @jderstd/hono v0.7.0
+# @jderstd/hono v0.8.0
 
 ## Modules
 
