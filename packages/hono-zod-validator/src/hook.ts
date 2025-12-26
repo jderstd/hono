@@ -59,7 +59,7 @@ const zValidatorHook = <
 
         errors.push({
             code: ResponseErrorCode.Parse,
-            path: err.path.map((p): string => p.toString()),
+            path: err.path.map((p: PropertyKey): string => p.toString()),
             message: err.message,
         });
     }

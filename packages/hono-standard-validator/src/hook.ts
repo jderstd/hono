@@ -47,10 +47,12 @@ const sValidatorHook = <
         if (!err) continue;
 
         const path: string[] =
-            err.path?.map((p) => {
-                if (typeof p === "object") return p.key.toString();
-                return p.toString();
-            }) ?? [];
+            err.path?.map(
+                (p: PropertyKey | StandardSchemaV1.PathSegment): string => {
+                    if (typeof p === "object") return p.key.toString();
+                    return p.toString();
+                },
+            ) ?? [];
 
         errors.push({
             code: ResponseErrorCode.Parse,
