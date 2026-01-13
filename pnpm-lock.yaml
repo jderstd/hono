@@ -63,11 +63,11 @@ importers:
         specifier: ~0.18.4
         version: 0.18.4(typescript@5.9.3)
       typedoc:
-        specifier: ~0.28.15
-        version: 0.28.15(typescript@5.9.3)
+        specifier: ~0.28.16
+        version: 0.28.16(typescript@5.9.3)
       typedoc-plugin-markdown:
         specifier: ^4.9.0
-        version: 4.9.0(typedoc@0.28.15(typescript@5.9.3))
+        version: 4.9.0(typedoc@0.28.16(typescript@5.9.3))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -95,10 +95,10 @@ importers:
         version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
+        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2))
 
   examples/hono-openapi:
     dependencies:
@@ -135,10 +135,10 @@ importers:
         version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
+        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2))
 
   examples/hono-standard-validator:
     dependencies:
@@ -169,10 +169,10 @@ importers:
         version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
+        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2))
 
   examples/hono-zod-validator:
     dependencies:
@@ -203,10 +203,10 @@ importers:
         version: 25.0.3
       vite:
         specifier: catalog:example
-        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+        version: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
+        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2))
 
   packages/hono:
     dependencies:
@@ -297,7 +297,7 @@ importers:
         version: 4.5.0
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.2)
 
   tests/hono-openapi:
     dependencies:
@@ -315,7 +315,7 @@ importers:
         version: 1.1.0(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.2)
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -336,7 +336,7 @@ importers:
         version: 1.1.0(typescript@5.9.3)
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.2)
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -354,7 +354,7 @@ importers:
         version: 4.5.0
       vitest:
         specifier: catalog:test
-        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.1)
+        version: 4.0.16(@types/node@25.0.3)(yaml@2.8.2)
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -628,8 +628,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@gerrit0/mini-shiki@3.17.0':
-    resolution: {integrity: sha512-Bpf6WuFar20ZXL6qU6VpVl4bVQfyyYiX+6O4xrns4nkU3Mr8paeupDbS1HENpcLOYj7pN4Rkd/yCaPA0vQwKww==}
+  '@gerrit0/mini-shiki@3.21.0':
+    resolution: {integrity: sha512-9PrsT5DjZA+w3lur/aOIx3FlDeHdyCEFlv9U+fmsVyjPZh61G5SYURQ/1ebe2U63KbDmI2V8IhIUegWb8hjOyg==}
 
   '@hono/node-server@1.19.7':
     resolution: {integrity: sha512-vUcD0uauS7EU2caukW8z5lJKtoGMokxNbJtBiwHgpqxEXokaHCBkQUmCHhjFB1VUTWdqj25QoMkMKzgjq+uhrw==}
@@ -916,17 +916,17 @@ packages:
     resolution: {integrity: sha512-5FNQH/zx3tnERzxfpErscPHfRxLCuhncmhFYiaSz196Xi2iG1YI08BtxTV2slfT6of52epJ/MrKerarplKf9eg==}
     engines: {node: '>=20'}
 
-  '@shikijs/engine-oniguruma@3.17.0':
-    resolution: {integrity: sha512-flSbHZAiOZDNTrEbULY8DLWavu/TyVu/E7RChpLB4WvKX4iHMfj80C6Hi3TjIWaQtHOW0KC6kzMcuB5TO1hZ8Q==}
+  '@shikijs/engine-oniguruma@3.21.0':
+    resolution: {integrity: sha512-OYknTCct6qiwpQDqDdf3iedRdzj6hFlOPv5hMvI+hkWfCKs5mlJ4TXziBG9nyabLwGulrUjHiCq3xCspSzErYQ==}
 
-  '@shikijs/langs@3.17.0':
-    resolution: {integrity: sha512-icmur2n5Ojb+HAiQu6NEcIIJ8oWDFGGEpiqSCe43539Sabpx7Y829WR3QuUW2zjTM4l6V8Sazgb3rrHO2orEAw==}
+  '@shikijs/langs@3.21.0':
+    resolution: {integrity: sha512-g6mn5m+Y6GBJ4wxmBYqalK9Sp0CFkUqfNzUy2pJglUginz6ZpWbaWjDB4fbQ/8SHzFjYbtU6Ddlp1pc+PPNDVA==}
 
-  '@shikijs/themes@3.17.0':
-    resolution: {integrity: sha512-/xEizMHLBmMHwtx4JuOkRf3zwhWD2bmG5BRr0IPjpcWpaq4C3mYEuTk/USAEglN0qPrTwEHwKVpSu/y2jhferA==}
+  '@shikijs/themes@3.21.0':
+    resolution: {integrity: sha512-BAE4cr9EDiZyYzwIHEk7JTBJ9CzlPuM4PchfcA5ao1dWXb25nv6hYsoDiBq2aZK9E3dlt3WB78uI96UESD+8Mw==}
 
-  '@shikijs/types@3.17.0':
-    resolution: {integrity: sha512-wjLVfutYWVUnxAjsWEob98xgyaGv0dTEnMZDruU5mRjVN7szcGOfgO+997W2yR6odp+1PtSBNeSITRRTfUzK/g==}
+  '@shikijs/types@3.21.0':
+    resolution: {integrity: sha512-zGrWOxZ0/+0ovPY7PvBU2gIS9tmhSUUt30jAcNV0Bq0gb2S98gwfjIs1vxlmH5zM7/4YxLamT6ChlqqAJmPPjA==}
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
@@ -1365,8 +1365,8 @@ packages:
     peerDependencies:
       typedoc: 0.28.x
 
-  typedoc@0.28.15:
-    resolution: {integrity: sha512-mw2/2vTL7MlT+BVo43lOsufkkd2CJO4zeOSuWQQsiXoV2VuEn7f6IZp2jsUDPmBMABpgR0R5jlcJ2OGEFYmkyg==}
+  typedoc@0.28.16:
+    resolution: {integrity: sha512-x4xW77QC3i5DUFMBp0qjukOTnr/sSg+oEs86nB3LjDslvAmwe/PUGDWbe3GrIqt59oTqoXK5GRK9tAa0sYMiog==}
     engines: {node: '>= 18', pnpm: '>= 10'}
     hasBin: true
     peerDependencies:
@@ -1491,8 +1491,8 @@ packages:
     engines: {node: '>=8'}
     hasBin: true
 
-  yaml@2.8.1:
-    resolution: {integrity: sha512-lcYcMxX2PO9XMGvAJkJ3OsNMw+/7FKes7/hgerGUYWIoWu5j/+YQqcZr5JnPZWzOsEBgMbSbiSTn/dv/69Mkpw==}
+  yaml@2.8.2:
+    resolution: {integrity: sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A==}
     engines: {node: '>= 14.6'}
     hasBin: true
 
@@ -1674,12 +1674,12 @@ snapshots:
   '@esbuild/win32-x64@0.27.1':
     optional: true
 
-  '@gerrit0/mini-shiki@3.17.0':
+  '@gerrit0/mini-shiki@3.21.0':
     dependencies:
-      '@shikijs/engine-oniguruma': 3.17.0
-      '@shikijs/langs': 3.17.0
-      '@shikijs/themes': 3.17.0
-      '@shikijs/types': 3.17.0
+      '@shikijs/engine-oniguruma': 3.21.0
+      '@shikijs/langs': 3.21.0
+      '@shikijs/themes': 3.21.0
+      '@shikijs/types': 3.21.0
       '@shikijs/vscode-textmate': 10.0.2
 
   '@hono/node-server@1.19.7(hono@4.5.0)':
@@ -1864,20 +1864,20 @@ snapshots:
       type-fest: 5.0.0
       zod: 4.1.11
 
-  '@shikijs/engine-oniguruma@3.17.0':
+  '@shikijs/engine-oniguruma@3.21.0':
     dependencies:
-      '@shikijs/types': 3.17.0
+      '@shikijs/types': 3.21.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@shikijs/langs@3.17.0':
+  '@shikijs/langs@3.21.0':
     dependencies:
-      '@shikijs/types': 3.17.0
+      '@shikijs/types': 3.21.0
 
-  '@shikijs/themes@3.17.0':
+  '@shikijs/themes@3.21.0':
     dependencies:
-      '@shikijs/types': 3.17.0
+      '@shikijs/types': 3.21.0
 
-  '@shikijs/types@3.17.0':
+  '@shikijs/types@3.21.0':
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
@@ -1940,13 +1940,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.16(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.16(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2))':
     dependencies:
       '@vitest/spy': 4.0.16
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
 
   '@vitest/pretty-format@4.0.16':
     dependencies:
@@ -2257,18 +2257,18 @@ snapshots:
     dependencies:
       tagged-tag: 1.0.0
 
-  typedoc-plugin-markdown@4.9.0(typedoc@0.28.15(typescript@5.9.3)):
+  typedoc-plugin-markdown@4.9.0(typedoc@0.28.16(typescript@5.9.3)):
     dependencies:
-      typedoc: 0.28.15(typescript@5.9.3)
+      typedoc: 0.28.16(typescript@5.9.3)
 
-  typedoc@0.28.15(typescript@5.9.3):
+  typedoc@0.28.16(typescript@5.9.3):
     dependencies:
-      '@gerrit0/mini-shiki': 3.17.0
+      '@gerrit0/mini-shiki': 3.21.0
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
       typescript: 5.9.3
-      yaml: 2.8.1
+      yaml: 2.8.2
 
   typescript@5.9.3: {}
 
@@ -2289,18 +2289,18 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  vite-tsconfig-paths@6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1)):
+  vite-tsconfig-paths@6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.5(typescript@5.9.3)
     optionalDependencies:
-      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1):
+  vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2):
     dependencies:
       esbuild: 0.27.1
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2311,12 +2311,12 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.0.3
       fsevents: 2.3.3
-      yaml: 2.8.1
+      yaml: 2.8.2
 
-  vitest@4.0.16(@types/node@25.0.3)(yaml@2.8.1):
+  vitest@4.0.16(@types/node@25.0.3)(yaml@2.8.2):
     dependencies:
       '@vitest/expect': 4.0.16
-      '@vitest/mocker': 4.0.16(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.16(vite@7.3.0(@types/node@25.0.3)(yaml@2.8.2))
       '@vitest/pretty-format': 4.0.16
       '@vitest/runner': 4.0.16
       '@vitest/snapshot': 4.0.16
@@ -2333,7 +2333,7 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.1)
+      vite: 7.3.0(@types/node@25.0.3)(yaml@2.8.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.0.3
@@ -2355,7 +2355,7 @@ snapshots:
       siginfo: 2.0.0
       stackback: 0.0.2
 
-  yaml@2.8.1: {}
+  yaml@2.8.2: {}
 
   zod-openapi@4.2.4(zod@3.25.6):
     dependencies:
