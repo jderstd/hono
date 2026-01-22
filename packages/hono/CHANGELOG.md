@@ -1,3 +1,9 @@
+## 0.8.2
+
+### What's Changed
+
+- export `ResponseErrorMessage` enum 
+
 ## 0.8.1 (2026-01-22)
 
 ### What's Changed

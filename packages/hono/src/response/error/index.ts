@@ -52,32 +52,82 @@ enum ResponseErrorCode {
 }
 
 /**
+ * Response error message.
+ */
+enum ResponseErrorMessage {
+    /**
+     * Request body is too large.
+     *
+     * For `bodyLimit` middleware.
+     */
+    TooLarge = "Request body is too large",
+    /**
+     * Forbidden access.
+     *
+     * For `ipLimit` middleware.
+     */
+    Forbidden = "Forbidden IP address",
+    /**
+     * Request timeout.
+     *
+     * For `timeLimit` middleware.
+     */
+    Timeout = "Gateway timeout",
+    /**
+     * Content not found.
+     *
+     * For `notFoundHandler` function.
+     */
+    NotFound = "Content not found",
+    /**
+     * Bad request.
+     *
+     * For `onErrorHandler` function.
+     */
+    BadRequest = "Bad request",
+    /**
+     * Internal server error.
+     *
+     * For `onErrorHandler` function.
+     */
+    Server = "Internal server error",
+    /**
+     * Validation error.
+     *
+     * For validator package.
+     */
+    Parse = "Failed to parse the request",
+}
+
+/**
  * Get response error message by code.
  */
-const getResponseErrorMessage = (code: ResponseErrorCode): string => {
+const getResponseErrorMessage = (
+    code: ResponseErrorCode,
+): ResponseErrorMessage => {
     switch (code) {
         case ResponseErrorCode.TooLarge: {
-            return "Request body is too large";
+            return ResponseErrorMessage.TooLarge;
         }
         case ResponseErrorCode.Forbidden: {
-            return "Forbidden IP address";
+            return ResponseErrorMessage.Forbidden;
         }
         case ResponseErrorCode.Timeout: {
-            return "Gateway timeout";
+            return ResponseErrorMessage.Timeout;
         }
         case ResponseErrorCode.NotFound: {
-            return "Content not found";
+            return ResponseErrorMessage.NotFound;
         }
         case ResponseErrorCode.BadRequest: {
-            return "Bad request";
+            return ResponseErrorMessage.BadRequest;
         }
         case ResponseErrorCode.Server: {
-            return "Internal server error";
+            return ResponseErrorMessage.Server;
         }
         case ResponseErrorCode.Parse: {
-            return "Failed to parse the request";
+            return ResponseErrorMessage.Parse;
         }
     }
 };
 
-export { ResponseErrorCode, getResponseErrorMessage };
+export { ResponseErrorCode, ResponseErrorMessage, getResponseErrorMessage };
