@@ -1,4 +1,9 @@
 /**
+ * Response error module
+ * @module response/error
+ */
+
+/**
  * Response error code.
  */
 enum ResponseErrorCode {

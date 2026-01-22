@@ -13,7 +13,7 @@ function sValidator<Target, Schema>(target, schema): Handler<Env, string, {
 }, 400, "json">>;
 ```
 
-Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono-standard-validator/src/index.ts#L68)
+Defined in: [packages/hono-standard-validator/src/index.ts:68](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono-standard-validator/src/index.ts#L68)
 
 Validate the request with validator based on Standard Schema.
 

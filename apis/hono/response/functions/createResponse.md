@@ -8,7 +8,7 @@
 function createResponse<B>(options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/common/index.ts:52](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/response/common/index.ts#L52)
+Defined in: [packages/hono/src/response/common/index.ts:52](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/common/index.ts#L52)
 
 Create a response.
 
@@ -79,7 +79,7 @@ By default, it is `200` for success and `400` for failure.
 function createResponse<B>(context?, options?): Response;
 ```
 
-Defined in: [packages/hono/src/response/common/index.ts:91](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/response/common/index.ts#L91)
+Defined in: [packages/hono/src/response/common/index.ts:91](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/common/index.ts#L91)
 
 Create a response with context.
 

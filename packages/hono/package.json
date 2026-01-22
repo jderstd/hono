@@ -1,6 +1,6 @@
 {
     "name": "@jderstd/hono",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "description": "A response builder for Hono",
     "keywords": [
         "jder",

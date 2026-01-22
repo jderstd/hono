@@ -1,3 +1,8 @@
+/**
+ * Not found handler module
+ * @module handlers/not-found
+ */
+
 import type { Context } from "hono";
 
 import { createJsonResponse } from "#/response";

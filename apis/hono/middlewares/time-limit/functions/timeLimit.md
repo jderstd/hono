@@ -6,7 +6,7 @@
 function timeLimit(options?): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/time-limit.ts:75](https://github.com/jderstd/hono/blob/10173369a7700312748d63dc86e2fdd569cbb103/packages/hono/src/middlewares/time-limit.ts#L75)
+Defined in: [packages/hono/src/middlewares/time-limit.ts:75](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/middlewares/time-limit.ts#L75)
 
 Time limit middleware.
 

@@ -1,3 +1,8 @@
+/**
+ * On error handler module
+ * @module handlers/on-error
+ */
+
 import type { Context } from "hono";
 import type { HTTPResponseError } from "hono/types";
 import type { StatusCode } from "hono/utils/http-status";

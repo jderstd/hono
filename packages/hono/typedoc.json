@@ -2,9 +2,13 @@
     "$schema": "https://typedoc-plugin-markdown.org/schema.json",
     "entryPoints": [
         "./src/response/index.ts",
+        "./src/response/error/index.ts",
+        "./src/response/error/http.ts",
         "./src/middlewares/body-limit.ts",
         "./src/middlewares/ip-limit.ts",
-        "./src/middlewares/time-limit.ts"
+        "./src/middlewares/time-limit.ts",
+        "./src/handlers/not-found.ts",
+        "./src/handlers/on-error.ts"
     ],
     "includeVersion": true,
     "out": "./../../apis/hono",
