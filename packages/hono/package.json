@@ -73,7 +73,7 @@
         "dist"
     ],
     "dependencies": {
-        "@jderstd/core": "0.5.0",
+        "@jderstd/core": "~0.5.0",
         "ts-vista": "~0.2.3"
     },
     "devDependencies": {
