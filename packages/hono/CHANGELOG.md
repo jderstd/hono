@@ -1,3 +1,10 @@
+## 0.8.1
+
+### What's Changed
+
+- update `@jderjs/core` version range
+- export `OnErrorHandlerOptions` type
+
 ## 0.8.0 (2025-12-26)
 
 ### Breaking Changes
