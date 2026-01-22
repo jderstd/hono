@@ -116,4 +116,5 @@ const onErrorHandler = (
     };
 };
 
+export type { OnErrorHandlerOptions };
 export { onErrorHandler };
