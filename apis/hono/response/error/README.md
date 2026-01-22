@@ -9,6 +9,7 @@ Response error module
 | Enumeration | Description |
 | ------ | ------ |
 | [ResponseErrorCode](enumerations/ResponseErrorCode.md) | Response error code. |
+| [ResponseErrorMessage](enumerations/ResponseErrorMessage.md) | Response error message. |
 
 ## Functions
 

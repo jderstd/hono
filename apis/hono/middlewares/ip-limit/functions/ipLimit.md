@@ -8,7 +8,7 @@
 function ipLimit(options): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:106](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/middlewares/ip-limit.ts#L106)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:106](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/middlewares/ip-limit.ts#L106)
 
 IP limit middleware.
 
@@ -110,7 +110,7 @@ By default, it's `false`.
 function ipLimit(getConnInfo, options?): MiddlewareHandler;
 ```
 
-Defined in: [packages/hono/src/middlewares/ip-limit.ts:119](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/middlewares/ip-limit.ts#L119)
+Defined in: [packages/hono/src/middlewares/ip-limit.ts:119](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/middlewares/ip-limit.ts#L119)
 
 IP limit middleware for compatibility with `hono/ip-restriction`.
 

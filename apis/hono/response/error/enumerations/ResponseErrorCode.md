@@ -2,7 +2,7 @@
 
 # Enumeration: ResponseErrorCode
 
-Defined in: [packages/hono/src/response/error/index.ts:9](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L9)
+Defined in: [packages/hono/src/response/error/index.ts:9](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L9)
 
 Response error code.
 
@@ -14,7 +14,7 @@ Response error code.
 BadRequest: "bad_request";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:39](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L39)
+Defined in: [packages/hono/src/response/error/index.ts:39](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L39)
 
 Bad request.
 
@@ -28,7 +28,7 @@ For `onErrorHandler` function.
 Forbidden: "forbidden";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:21](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L21)
+Defined in: [packages/hono/src/response/error/index.ts:21](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L21)
 
 Forbidden access.
 
@@ -42,7 +42,7 @@ For `ipLimit` middleware.
 NotFound: "not_found";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:33](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L33)
+Defined in: [packages/hono/src/response/error/index.ts:33](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L33)
 
 Content not found.
 
@@ -56,7 +56,7 @@ For `notFoundHandler` function.
 Parse: "parse";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:51](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L51)
+Defined in: [packages/hono/src/response/error/index.ts:51](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L51)
 
 Validation error.
 
@@ -70,7 +70,7 @@ For validator package.
 Server: "server";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:45](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L45)
+Defined in: [packages/hono/src/response/error/index.ts:45](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L45)
 
 Internal server error.
 
@@ -84,7 +84,7 @@ For `onErrorHandler` function.
 Timeout: "timeout";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:27](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L27)
+Defined in: [packages/hono/src/response/error/index.ts:27](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L27)
 
 Request timeout.
 
@@ -98,7 +98,7 @@ For `timeLimit` middleware.
 TooLarge: "too_large";
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:15](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L15)
+Defined in: [packages/hono/src/response/error/index.ts:15](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L15)
 
 Request body is too large.
 

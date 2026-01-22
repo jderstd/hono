@@ -3,10 +3,10 @@
 # Function: getResponseErrorMessage()
 
 ```ts
-function getResponseErrorMessage(code): string;
+function getResponseErrorMessage(code): ResponseErrorMessage;
 ```
 
-Defined in: [packages/hono/src/response/error/index.ts:57](https://github.com/jderstd/hono/blob/ba30227bcc4bce6293ba3d93b1a6b057cd7c8a51/packages/hono/src/response/error/index.ts#L57)
+Defined in: [packages/hono/src/response/error/index.ts:105](https://github.com/jderstd/hono/blob/9b33b7a2db9d95365aa7ce18087da7a31e14229a/packages/hono/src/response/error/index.ts#L105)
 
 Get response error message by code.
 
@@ -18,4 +18,4 @@ Get response error message by code.
 
 ## Returns
 
-`string`
+[`ResponseErrorMessage`](../enumerations/ResponseErrorMessage.md)
