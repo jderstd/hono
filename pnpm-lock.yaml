@@ -211,7 +211,7 @@ importers:
   packages/hono:
     dependencies:
       '@jderstd/core':
-        specifier: 0.5.0
+        specifier: ~0.5.0
         version: 0.5.0
       ts-vista:
         specifier: ~0.2.3
