@@ -1,12 +1,14 @@
 set shell := ["bash", "-cu"]
 set windows-shell := ["pwsh", "-Command"]
 
-tsc := "pnpm exec tsc"
+tsc := "pnpm exec tsgo"
 biome := "pnpm exec biome"
 tsdown := "pnpm exec tsdown"
 vitest := "pnpm exec vitest"
 typedoc := "pnpm exec typedoc"
 publish := "pnpm publish"
+
+lsl_cfg := "-config ../../.ls-lint.yaml"
 
 hono := "./packages/hono"
 sv := "./packages/hono-standard-validator"
@@ -29,14 +31,30 @@ _:
 i:
     pnpm install
 
-# Lint code
-lint:
-    ls-lint -config .ls-lint.yaml
-    typos
+# Lint code with ls-lint
+lslint:
+    cd ./{{hono}} && ls-lint {{lsl_cfg}}
+    cd ./{{sv}} && ls-lint {{lsl_cfg}}
+    cd ./{{zv}} && ls-lint {{lsl_cfg}}
+    cd ./{{openapi}} && ls-lint {{lsl_cfg}}
+
+    cd ./{{test_hono}} && ls-lint {{lsl_cfg}}
+    cd ./{{test_sv}} && ls-lint {{lsl_cfg}}
+    cd ./{{test_zv}} && ls-lint {{lsl_cfg}}
+    cd ./{{test_openapi}} && ls-lint {{lsl_cfg}}
+
+# Lint code with TypeScript Compiler
+tsc:
     cd ./{{hono}} && {{tsc}} --noEmit
     cd ./{{sv}} && {{tsc}} --noEmit
     cd ./{{zv}} && {{tsc}} --noEmit
     cd ./{{openapi}} && {{tsc}} --noEmit
+
+# Lint code
+lint:
+    just lslint
+    typos
+    just tsc
 
 # Lint code with Biome
 lint-biome:
