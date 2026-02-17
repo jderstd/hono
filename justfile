@@ -1,12 +1,12 @@
 set shell := ["bash", "-cu"]
-set windows-shell := ["powershell"]
+set windows-shell := ["pwsh", "-Command"]
 
-node_bin := "./node_modules/.bin/"
-tsc := node_bin + "tsc"
-biome := node_bin + "biome"
-tsdown := node_bin + "tsdown"
-vitest := node_bin + "vitest"
-typedoc := node_bin + "typedoc"
+tsc := "pnpm exec tsc"
+biome := "pnpm exec biome"
+tsdown := "pnpm exec tsdown"
+vitest := "pnpm exec vitest"
+typedoc := "pnpm exec typedoc"
+publish := "pnpm publish"
 
 hono := "./packages/hono"
 sv := "./packages/hono-standard-validator"
@@ -31,65 +31,57 @@ i:
 
 # Lint code
 lint:
-    ls-lint
+    ls-lint -config .ls-lint.yaml
     typos
-    cd ./{{hono}} && ../../{{tsc}} --noEmit
-    cd ./{{sv}} && ../../{{tsc}} --noEmit
-    cd ./{{zv}} && ../../{{tsc}} --noEmit
-    cd ./{{openapi}} && ../../{{tsc}} --noEmit
+    cd ./{{hono}} && {{tsc}} --noEmit
+    cd ./{{sv}} && {{tsc}} --noEmit
+    cd ./{{zv}} && {{tsc}} --noEmit
+    cd ./{{openapi}} && {{tsc}} --noEmit
+
+# Lint code with Biome
+lint-biome:
+    {{biome}} lint .
 
 # Format code
 fmt:
-    ./{{biome}} check --write .
+    {{biome}} check --write .
 
 # Build package
 build:
-    cd ./{{hono}} && ../../{{tsdown}} -c tsdown.config.ts
-    cd ./{{sv}} && ../../{{tsdown}} -c tsdown.config.ts
-    cd ./{{zv}} && ../../{{tsdown}} -c tsdown.config.ts
-    cd ./{{openapi}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{hono}} && {{tsdown}} -c tsdown.config.ts
+    cd ./{{sv}} && {{tsdown}} -c tsdown.config.ts
+    cd ./{{zv}} && {{tsdown}} -c tsdown.config.ts
+    cd ./{{openapi}} && {{tsdown}} -c tsdown.config.ts
 
 # Run tests
 test:
-    cd ./{{test_hono}} && ./{{vitest}} run
-    cd ./{{test_sv}} && ./{{vitest}} run
-    cd ./{{test_zv}} && ./{{vitest}} run
-    cd ./{{test_openapi}} && ./{{vitest}} run
-
-# Run tests with different runtimes
-test-all:
-    cd ./{{test_hono}} && pnpm run test
-    cd ./{{test_sv}} && pnpm run test
-    cd ./{{test_zv}} && pnpm run test
-    cd ./{{test_openapi}} && pnpm run test
-
-    cd ./{{test_hono}} && bun run test
-    cd ./{{test_sv}} && bun run test
-    cd ./{{test_zv}} && bun run test
-    cd ./{{test_openapi}} && bun run test
+    cd ./{{test_hono}} && {{vitest}} run
+    cd ./{{test_sv}} && {{vitest}} run
+    cd ./{{test_zv}} && {{vitest}} run
+    cd ./{{test_openapi}} && {{vitest}} run
 
 # Generate APIs documentation
 api:
-    cd ./{{hono}} && ../../{{typedoc}}
-    cd ./{{sv}} && ../../{{typedoc}}
-    cd ./{{zv}} && ../../{{typedoc}}
-    cd ./{{openapi}} && ../../{{typedoc}}
+    cd ./{{hono}} && {{typedoc}}
+    cd ./{{sv}} && {{typedoc}}
+    cd ./{{zv}} && {{typedoc}}
+    cd ./{{openapi}} && {{typedoc}}
 
 # Publish hono package with dev tag
 publish-dev-hono:
-    cd ./{{hono}} && pnpm publish --no-git-checks --tag dev
+    cd ./{{hono}} && {{publish}} --no-git-checks --tag dev
 
 # Publish standard validator package with dev tag
 publish-dev-sv:
-    cd ./{{sv}} && pnpm publish --no-git-checks --tag dev
+    cd ./{{sv}} && {{publish}} --no-git-checks --tag dev
 
 # Publish Zod validator package with dev tag
 publish-dev-zv:
-    cd ./{{zv}} && pnpm publish --no-git-checks --tag dev
+    cd ./{{zv}} && {{publish}} --no-git-checks --tag dev
 
 # Publish OpenAPI package with dev tag
 publish-dev-openapi:
-    cd ./{{openapi}} && pnpm publish --no-git-checks --tag dev
+    cd ./{{openapi}} && {{publish}} --no-git-checks --tag dev
 
 # Publish all packages with dev tag
 publish-dev:
@@ -100,19 +92,19 @@ publish-dev:
 
 # Publish hono package as dry-run
 publish-try-hono:
-    cd ./{{hono}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{hono}} && {{publish}} --no-git-checks --dry-run
 
 # Publish standard validator package as dry-run
 publish-try-sv:
-    cd ./{{sv}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{sv}} && {{publish}} --no-git-checks --dry-run
 
 # Publish Zod validator package as dry-run
 publish-try-zv:
-    cd ./{{zv}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{zv}} && {{publish}} --no-git-checks --dry-run
 
 # Publish OpenAPI package as dry-run
 publish-try-openapi:
-    cd ./{{openapi}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{openapi}} && {{publish}} --no-git-checks --dry-run
 
 # Publish all packages as dry-run
 publish-try:
@@ -123,19 +115,19 @@ publish-try:
 
 # Publish hono package
 publish-hono:
-    cd ./{{hono}} && pnpm publish
+    cd ./{{hono}} && {{publish}}
 
 # Publish standard validator package
 publish-sv:
-    cd ./{{sv}} && pnpm publish
+    cd ./{{sv}} && {{publish}}
 
 # Publish Zod validator package
 publish-zv:
-    cd ./{{zv}} && pnpm publish
+    cd ./{{zv}} && {{publish}}
 
 # Publish OpenAPI package
 publish-openapi:
-    cd ./{{openapi}} && pnpm publish
+    cd ./{{openapi}} && {{publish}}
 
 # Publish all packages
 publish:
@@ -146,23 +138,14 @@ publish:
 
 # Clean builds
 clean:
-    rm -rf ./{{openapi}}/dist
-    rm -rf ./{{zv}}/dist
-    rm -rf ./{{sv}}/dist
-    rm -rf ./{{hono}}/dist
+    rm -rf ./packages/*/dist
 
 # Clean everything
 clean-all:
     just clean
 
-    rm -rf ./{{test_openapi}}/node_modules
-    rm -rf ./{{test_sv}}/node_modules
-    rm -rf ./{{test_zv}}/node_modules
-    rm -rf ./{{test_hono}}/node_modules
+    rm -rf ./tests/*/node_modules
 
-    rm -rf ./{{openapi}}/node_modules
-    rm -rf ./{{zv}}/node_modules
-    rm -rf ./{{sv}}/node_modules
-    rm -rf ./{{hono}}/node_modules
+    rm -rf ./packages/*/node_modules
 
     rm -rf ./node_modules
