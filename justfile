@@ -8,7 +8,7 @@ vitest := "pnpm exec vitest"
 typedoc := "pnpm exec typedoc"
 publish := "pnpm publish"
 
-lsl_cfg := "-config ../../.ls-lint.yaml"
+lsl_cfg := "-config ../../../.ls-lint.yaml"
 
 hono := "./packages/hono"
 sv := "./packages/hono-standard-validator"
@@ -19,6 +19,11 @@ test_hono := "./tests/hono"
 test_sv := "./tests/hono-standard-validator"
 test_zv := "./tests/hono-zod-validator"
 test_openapi := "./tests/hono-openapi"
+
+exp_hono := "./examples/hono"
+exp_sv := "./examples/hono-standard-validator"
+exp_zv := "./examples/hono-zod-validator"
+exp_openapi := "./examples/hono-openapi"
 
 # Default action
 _:
@@ -33,15 +38,20 @@ i:
 
 # Lint code with ls-lint
 lslint:
-    cd ./{{hono}} && ls-lint {{lsl_cfg}}
-    cd ./{{sv}} && ls-lint {{lsl_cfg}}
-    cd ./{{zv}} && ls-lint {{lsl_cfg}}
-    cd ./{{openapi}} && ls-lint {{lsl_cfg}}
+    cd ./{{hono}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{sv}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{zv}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{openapi}}/src && ls-lint {{lsl_cfg}}
 
-    cd ./{{test_hono}} && ls-lint {{lsl_cfg}}
-    cd ./{{test_sv}} && ls-lint {{lsl_cfg}}
-    cd ./{{test_zv}} && ls-lint {{lsl_cfg}}
-    cd ./{{test_openapi}} && ls-lint {{lsl_cfg}}
+    cd ./{{test_hono}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{test_sv}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{test_zv}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{test_openapi}}/src && ls-lint {{lsl_cfg}}
+
+    cd ./{{exp_hono}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{exp_sv}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{exp_zv}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{exp_openapi}}/src && ls-lint {{lsl_cfg}}
 
 # Lint code with TypeScript Compiler
 tsc:
