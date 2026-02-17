@@ -12,7 +12,7 @@
         "@hono/node-server": "catalog:example",
         "@jderstd/hono": "workspace:*",
         "@jderstd/hono-openapi": "workspace:*",
-        "@scalar/hono-api-reference": "^0.9.40",
+        "@scalar/hono-api-reference": "^0.9.41",
         "hono": "catalog:dev",
         "zod": "catalog:dev",
         "zod-openapi": "^4"
