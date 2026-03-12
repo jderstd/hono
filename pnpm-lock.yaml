@@ -27,8 +27,8 @@ catalogs:
       specifier: ^1
       version: 1.8.0
     '@hono/vite-dev-server':
-      specifier: ~0.25.0
-      version: 0.25.0
+      specifier: ~0.25.1
+      version: 0.25.1
     '@types/node':
       specifier: ^25
       version: 25.0.3
@@ -92,7 +92,7 @@ importers:
         version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
-        version: 0.25.0(hono@4.5.0)
+        version: 0.25.1(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.0.3
@@ -132,7 +132,7 @@ importers:
         version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
-        version: 0.25.0(hono@4.5.0)
+        version: 0.25.1(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.0.3
@@ -166,7 +166,7 @@ importers:
         version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
-        version: 0.25.0(hono@4.5.0)
+        version: 0.25.1(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.0.3
@@ -200,7 +200,7 @@ importers:
         version: 1.8.0(hono@4.5.0)
       '@hono/vite-dev-server':
         specifier: catalog:example
-        version: 0.25.0(hono@4.5.0)
+        version: 0.25.1(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.0.3
@@ -634,6 +634,12 @@ packages:
   '@gerrit0/mini-shiki@3.22.0':
     resolution: {integrity: sha512-jMpciqEVUBKE1QwU64S4saNMzpsSza6diNCk4MWAeCxO2+LFi2FIFmL2S0VDLzEJCxuvCbU783xi8Hp/gkM5CQ==}
 
+  '@hono/node-server@1.19.11':
+    resolution: {integrity: sha512-dr8/3zEaB+p0D2n/IUrlPF1HZm586qgJNXK1a9fhg/PzdtkK7Ksd5l312tJX2yBuALqDYBlG20QEbayqPyxn+g==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: ^4
+
   '@hono/node-server@1.19.7':
     resolution: {integrity: sha512-vUcD0uauS7EU2caukW8z5lJKtoGMokxNbJtBiwHgpqxEXokaHCBkQUmCHhjFB1VUTWdqj25QoMkMKzgjq+uhrw==}
     engines: {node: '>=18.14.1'}
@@ -652,8 +658,8 @@ packages:
     peerDependencies:
       hono: '*'
 
-  '@hono/vite-dev-server@0.25.0':
-    resolution: {integrity: sha512-4j5rs7yUTOObU2/yCEHeWbf3C8m95SD9lhdUUE6CJ462Emp9vS94yiza2dsA8+ly5pdaIQW0cd4nhNVcwYL5tA==}
+  '@hono/vite-dev-server@0.25.1':
+    resolution: {integrity: sha512-H6EqoPtCV+uH1fu8nKyRy5Wh3LU012QxloEYMlUcyMjjEfVFiRXPjHx/0TQiiRi140Vu8San5A4XQWyElKFKaw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -1745,6 +1751,10 @@ snapshots:
       '@shikijs/types': 3.22.0
       '@shikijs/vscode-textmate': 10.0.2
 
+  '@hono/node-server@1.19.11(hono@4.5.0)':
+    dependencies:
+      hono: 4.5.0
+
   '@hono/node-server@1.19.7(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
@@ -1758,9 +1768,9 @@ snapshots:
     dependencies:
       hono: 4.5.0
 
-  '@hono/vite-dev-server@0.25.0(hono@4.5.0)':
+  '@hono/vite-dev-server@0.25.1(hono@4.5.0)':
     dependencies:
-      '@hono/node-server': 1.19.7(hono@4.5.0)
+      '@hono/node-server': 1.19.11(hono@4.5.0)
       hono: 4.5.0
       minimatch: 9.0.5
 
