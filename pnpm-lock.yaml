@@ -21,8 +21,8 @@ catalogs:
       version: 3.25.6
   example:
     '@hono/node-server':
-      specifier: ^1
-      version: 1.19.7
+      specifier: ^2
+      version: 2.0.0
     '@hono/vite-build':
       specifier: ^1
       version: 1.8.0
@@ -79,7 +79,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 1.19.7(hono@4.5.0)
+        version: 2.0.0(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -107,7 +107,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 1.19.7(hono@4.5.0)
+        version: 2.0.0(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -147,7 +147,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 1.19.7(hono@4.5.0)
+        version: 2.0.0(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -181,7 +181,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 1.19.7(hono@4.5.0)
+        version: 2.0.0(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -649,9 +649,9 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hono/node-server@1.19.7':
-    resolution: {integrity: sha512-vUcD0uauS7EU2caukW8z5lJKtoGMokxNbJtBiwHgpqxEXokaHCBkQUmCHhjFB1VUTWdqj25QoMkMKzgjq+uhrw==}
-    engines: {node: '>=18.14.1'}
+  '@hono/node-server@2.0.0':
+    resolution: {integrity: sha512-n3GfHwwCvHCkGmOwKfxUPOlbfzuO64Sbc5XC4NGPIXxkuOnJrdgExdRKmHfF924r914WRJPT397GdqLvdYTeyQ==}
+    engines: {node: '>=20'}
     peerDependencies:
       hono: ^4
 
@@ -2045,7 +2045,7 @@ snapshots:
     dependencies:
       hono: 4.5.0
 
-  '@hono/node-server@1.19.7(hono@4.5.0)':
+  '@hono/node-server@2.0.0(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
 
