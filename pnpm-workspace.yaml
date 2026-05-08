@@ -3,6 +3,9 @@ packages:
     - ./tests/*
     - ./examples/*
 
+autoInstallPeers: false
+strictPeerDependencies: false
+
 catalogs:
     dep:
         "@standard-schema/spec": ^1.0.0
