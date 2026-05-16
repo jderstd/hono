@@ -167,11 +167,12 @@ function ipLimit(
 
 export type {
     AddressType,
-    NetAddrInfo,
     ConnInfo,
     GetConnInfo,
     GetIPAddr,
     IPRestrictionRule,
+    IpLimitBaseOptions,
+    IpLimitOptions,
+    NetAddrInfo,
 };
-export type { IpLimitBaseOptions, IpLimitOptions };
 export { ipLimit };

@@ -98,4 +98,4 @@ const bodyLimit = (options?: BodyLimitOptions): MiddlewareHandler => {
 };
 
 export type { BodyLimitOptions };
-export { bodyLimit, BODY_LIMIT_MAX_DEFAULT };
+export { BODY_LIMIT_MAX_DEFAULT, bodyLimit };

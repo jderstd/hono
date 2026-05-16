@@ -130,4 +130,4 @@ const getResponseErrorMessage = (
     }
 };
 
-export { ResponseErrorCode, ResponseErrorMessage, getResponseErrorMessage };
+export { getResponseErrorMessage, ResponseErrorCode, ResponseErrorMessage };

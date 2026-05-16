@@ -71,5 +71,5 @@ const zValidatorHook = <
     });
 };
 
-export type { ZodSchema, ZodError };
+export type { ZodError, ZodSchema };
 export { zValidatorHook };

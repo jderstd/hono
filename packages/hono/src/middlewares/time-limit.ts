@@ -95,4 +95,4 @@ const timeLimit = (options?: TimeLimitOptions): MiddlewareHandler => {
 };
 
 export type { TimeLimitOptions };
-export { timeLimit, TIME_LIMIT_MAX_DEFAULT };
+export { TIME_LIMIT_MAX_DEFAULT, timeLimit };
