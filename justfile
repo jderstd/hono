@@ -27,10 +27,7 @@ exp_openapi := "./examples/hono-openapi"
 
 # Default action
 _:
-    just lint
-    just fmt
-    just build
-    just test
+    just --list -u
 
 # Install
 i:
@@ -53,6 +50,10 @@ lslint:
     cd ./{{exp_zv}}/src && ls-lint {{lsl_cfg}}
     cd ./{{exp_openapi}}/src && ls-lint {{lsl_cfg}}
 
+# Lint code with typos-cli
+typos:
+    typos
+
 # Lint code with TypeScript Compiler
 tsc:
     cd ./{{hono}} && {{tsc}} --noEmit
@@ -63,7 +64,7 @@ tsc:
 # Lint code
 lint:
     just lslint
-    typos
+    just typos
     just tsc
 
 # Lint code with Biome
@@ -87,6 +88,13 @@ test:
     cd ./{{test_sv}} && {{vitest}} run
     cd ./{{test_zv}} && {{vitest}} run
     cd ./{{test_openapi}} && {{vitest}} run
+
+# Check code
+check:
+    just build
+    just lint
+    just fmt
+    just test
 
 # Generate APIs documentation
 api:
@@ -164,12 +172,24 @@ publish:
     just publish-zv
     just publish-openapi
 
-# Clean builds
-clean:
+# Clean builds (Linux)
+clean-linux:
     rm -rf ./packages/*/dist
 
-# Clean everything
-clean-all:
+# Clean builds (macOS)
+clean-macos:
+    just clean-linux
+
+# Clean builds (Windows)
+clean-windows:
+    Remove-Item -Recurse -Force ./packaegs/*/dist
+
+# Clean
+clean:
+    just clean-{{os()}}
+
+# Clean everything (Linux)
+clean-all-linux:
     just clean
 
     rm -rf ./tests/*/node_modules
@@ -177,3 +197,21 @@ clean-all:
     rm -rf ./packages/*/node_modules
 
     rm -rf ./node_modules
+
+# Clean everything (macOS)
+clean-all-macos:
+    just clean-all-linux
+
+# Clean everything (Windows)
+clean-all-windows:
+    just clean
+
+    Remove-Item -Recurse -Force ./tests/*/node_modules
+
+    Remove-Item -Recurse -Force ./packages/*/node_modules
+
+    Remove-Item -Recurse -Force ./node_modules
+
+# Clean everything
+clean-all:
+    just clean-all-{{os()}}
