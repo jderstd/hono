@@ -27,7 +27,7 @@ catalogs:
         "@hono/node-server": ^2.0.2
         "@hono/vite-dev-server": ~0.25.3
         "@hono/vite-build": ^1.11.1
-        "vite": ^8.0.12
+        "vite": ^8.0.13
         "vite-tsconfig-paths": ^6.1.1
 
 minimumReleaseAge: 1440
