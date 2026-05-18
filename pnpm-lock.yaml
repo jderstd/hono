@@ -43,6 +43,28 @@ catalogs:
       specifier: ^4.1
       version: 4.1.5
 
+overrides:
+  '@hono/node-server@<1.19.13': '>=1.19.13'
+  brace-expansion@>=2.0.0 <2.0.3: '>=2.0.3'
+  hono@<4.10.3: '>=4.10.3'
+  hono@<4.11.10: '>=4.11.10'
+  hono@<4.11.4: '>=4.11.4'
+  hono@<4.11.7: '>=4.11.7'
+  hono@<4.12.12: '>=4.12.12'
+  hono@<4.12.14: '>=4.12.14'
+  hono@<4.12.16: '>=4.12.16'
+  hono@<4.12.18: '>=4.12.18'
+  hono@<4.12.4: '>=4.12.4'
+  hono@<4.12.7: '>=4.12.7'
+  hono@<4.5.8: '>=4.5.8'
+  hono@<4.6.5: '>=4.6.5'
+  hono@<4.9.7: '>=4.9.7'
+  hono@>=1.1.0 <4.10.2: '>=4.10.2'
+  hono@>=4.0.0 <=4.12.11: '>=4.12.12'
+  minimatch@>=9.0.0 <9.0.6: '>=9.0.6'
+  minimatch@>=9.0.0 <9.0.7: '>=9.0.7'
+  valibot@>=0.31.0 <1.2.0: '>=1.2.0'
+
 importers:
 
   .:
@@ -231,10 +253,10 @@ importers:
         version: link:../hono-standard-validator
       '@standard-community/standard-json':
         specifier: ~0.3.5
-        version: 0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3)
+        version: 0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3)
       '@standard-community/standard-openapi':
         specifier: ~0.2.8
-        version: 0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(valibot@1.1.0(typescript@6.0.3))(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3)
+        version: 0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3)
       '@standard-schema/spec':
         specifier: catalog:dep
         version: 1.0.0
@@ -243,7 +265,7 @@ importers:
         version: 7.0.15
       hono-openapi:
         specifier: ^1.1.0
-        version: 1.1.0(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-community/standard-openapi@0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(valibot@1.1.0(typescript@6.0.3))(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3))(@types/json-schema@7.0.15)(hono@4.5.0)(openapi-types@12.1.3)
+        version: 1.1.0(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-community/standard-openapi@0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3))(@types/json-schema@7.0.15)(hono@4.5.0)(openapi-types@12.1.3)
       openapi-types:
         specifier: ^12.1.3
         version: 12.1.3
@@ -478,35 +500,29 @@ packages:
   '@gerrit0/mini-shiki@3.23.0':
     resolution: {integrity: sha512-bEMORlG0cqdjVyCEuU0cDQbORWX+kYCeo0kV1lbxF5bt4r7SID2l9bqsxJEM0zndaxpOUT7riCyIVEuqq/Ynxg==}
 
-  '@hono/node-server@1.19.11':
-    resolution: {integrity: sha512-dr8/3zEaB+p0D2n/IUrlPF1HZm586qgJNXK1a9fhg/PzdtkK7Ksd5l312tJX2yBuALqDYBlG20QEbayqPyxn+g==}
-    engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: ^4
-
   '@hono/node-server@2.0.2':
     resolution: {integrity: sha512-tXlTi1h/4V7sDe7i97IVP+9re9ZU7wXZZggnR5ucCRclf1+AX6YhGStrR5w8bLj+3Mlyl0pKfBh9gqTqqnGKfQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      hono: ^4
+      hono: '>=4.12.12'
 
   '@hono/standard-validator@0.2.0':
     resolution: {integrity: sha512-pFq0UVAnjzXcDAgqFpDeVL3MOUPrlIh/kPqBDvbCYoThVhhS+Vf37VcdsakdOFFGiqoiYVxp3LifXFhGhp/rgQ==}
     peerDependencies:
       '@standard-schema/spec': 1.0.0
-      hono: '>=3.9.0'
+      hono: '>=4.12.12'
 
   '@hono/vite-build@1.11.1':
     resolution: {integrity: sha512-EQJmFL7G+71MXZQ/mmywNl4qW6DSyjTdC30cq7mlDS451a1/jE86old0M2DCWzNGCO50sv7CzQDYkz4L5dq5VQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      hono: '*'
+      hono: '>=4.12.12'
 
   '@hono/vite-dev-server@0.25.3':
     resolution: {integrity: sha512-w3uQ0KQF0i/SDcJ6+d5njEFTr6pbolajrt/GxV0pliYL+4ywiBqiOFRWSpwW3mTuZ80boww7+ZxJTGTBIzyBQg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      hono: '*'
+      hono: '>=4.12.12'
       miniflare: '*'
       wrangler: '*'
     peerDependenciesMeta:
@@ -518,7 +534,7 @@ packages:
   '@hono/zod-validator@0.7.0':
     resolution: {integrity: sha512-qe2ZE6sHFE98dcUrbYMtS3bAV8hqcCOflykvZga2S7XhmNSZzT+dIz4OuMILsjLHkJw9JMn912/dB7dQOmuPvg==}
     peerDependencies:
-      hono: '>=3.9.0'
+      hono: '>=4.12.12'
       zod: ^3.25.0
 
   '@jderstd/core@0.5.0':
@@ -757,7 +773,7 @@ packages:
     resolution: {integrity: sha512-pllMIMZUXrTcbn1IeOhS5WHgpkw2kdtS3kFojz04DOdJptq3MawjHEunPhvydyMlIFlb1rhjieRllhPwt/y9Lw==}
     engines: {node: '>=22'}
     peerDependencies:
-      hono: ^4.12.5
+      hono: '>=4.12.12'
 
   '@scalar/schemas@0.2.0':
     resolution: {integrity: sha512-FOpNecNoEKo8SogHEsdWlVRN4Q4PH3dzuOBWMA5tGt1xLZu5iFnPG2X/h6+Z/mOR34c7iW+hiKTqdUZoDgT9CA==}
@@ -797,7 +813,7 @@ packages:
       quansync: ^0.2.11
       sury: ^10.0.0
       typebox: ^1.0.17
-      valibot: ^1.1.0
+      valibot: '>=1.2.0'
       zod: ^3.25.0 || ^4.0.0
       zod-to-json-schema: ^3.24.5
     peerDependenciesMeta:
@@ -828,7 +844,7 @@ packages:
       openapi-types: ^12.1.3
       sury: ^10.0.0
       typebox: ^1.0.0
-      valibot: ^1.1.0
+      valibot: '>=1.2.0'
       zod: ^3.25.0 || ^4.0.0
       zod-openapi: ^4
     peerDependenciesMeta:
@@ -971,18 +987,12 @@ packages:
     resolution: {integrity: sha512-trmleAnZ2PxN/loHWVhhx1qeOHSRXq4TDsBBxq3GqeJitfk3+jTQ+v/C1km/KYq9M7wKqCewMh+/NAvVH7m+bw==}
     engines: {node: '>=20.19.0'}
 
-  balanced-match@1.0.2:
-    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
-
   balanced-match@4.0.4:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
   birpc@4.0.0:
     resolution: {integrity: sha512-LShSxJP0KTmd101b6DRyGBj57LZxSDYWKitQNW/mi8GRMvZb078Uf9+pveax1DrVL89vm7mWe+TovdI/UDOuPw==}
-
-  brace-expansion@2.0.2:
-    resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
 
   brace-expansion@5.0.5:
     resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
@@ -1073,7 +1083,7 @@ packages:
       '@standard-community/standard-json': ^0.3.5
       '@standard-community/standard-openapi': ^0.2.8
       '@types/json-schema': ^7.0.15
-      hono: ^4.8.3
+      hono: '>=4.12.12'
       openapi-types: ^12.1.3
     peerDependenciesMeta:
       '@hono/standard-validator':
@@ -1190,10 +1200,6 @@ packages:
   minimatch@10.2.5:
     resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
     engines: {node: 18 || 20 || >=22}
-
-  minimatch@9.0.5:
-    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
-    engines: {node: '>=16 || 14 >=14.17'}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -1611,10 +1617,6 @@ snapshots:
       '@shikijs/types': 3.23.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.19.11(hono@4.5.0)':
-    dependencies:
-      hono: 4.5.0
-
   '@hono/node-server@2.0.2(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
@@ -1630,9 +1632,9 @@ snapshots:
 
   '@hono/vite-dev-server@0.25.3(hono@4.5.0)':
     dependencies:
-      '@hono/node-server': 1.19.11(hono@4.5.0)
+      '@hono/node-server': 2.0.2(hono@4.5.0)
       hono: 4.5.0
-      minimatch: 9.0.5
+      minimatch: 10.2.5
 
   '@hono/zod-validator@0.7.0(hono@4.5.0)(zod@3.25.6)':
     dependencies:
@@ -1818,22 +1820,20 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3)':
+  '@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3)':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@types/json-schema': 7.0.15
       quansync: 0.2.11
     optionalDependencies:
-      valibot: 1.1.0(typescript@6.0.3)
       zod: 4.4.3
 
-  '@standard-community/standard-openapi@0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(valibot@1.1.0(typescript@6.0.3))(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3)':
+  '@standard-community/standard-openapi@0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3)':
     dependencies:
-      '@standard-community/standard-json': 0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3)
+      '@standard-community/standard-json': 0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3)
       '@standard-schema/spec': 1.0.0
       openapi-types: 12.1.3
     optionalDependencies:
-      valibot: 1.1.0(typescript@6.0.3)
       zod: 4.4.3
       zod-openapi: 4.2.4(zod@4.4.3)
 
@@ -1953,15 +1953,9 @@ snapshots:
       estree-walker: 3.0.3
       pathe: 2.0.3
 
-  balanced-match@1.0.2: {}
-
   balanced-match@4.0.4: {}
 
   birpc@4.0.0: {}
-
-  brace-expansion@2.0.2:
-    dependencies:
-      balanced-match: 1.0.2
 
   brace-expansion@5.0.5:
     dependencies:
@@ -2010,10 +2004,10 @@ snapshots:
 
   globrex@0.1.2: {}
 
-  hono-openapi@1.1.0(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-community/standard-openapi@0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(valibot@1.1.0(typescript@6.0.3))(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3))(@types/json-schema@7.0.15)(hono@4.5.0)(openapi-types@12.1.3):
+  hono-openapi@1.1.0(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-community/standard-openapi@0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3))(@types/json-schema@7.0.15)(hono@4.5.0)(openapi-types@12.1.3):
     dependencies:
-      '@standard-community/standard-json': 0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3)
-      '@standard-community/standard-openapi': 0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(valibot@1.1.0(typescript@6.0.3))(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(valibot@1.1.0(typescript@6.0.3))(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3)
+      '@standard-community/standard-json': 0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3)
+      '@standard-community/standard-openapi': 0.2.8(@standard-community/standard-json@0.3.5(@standard-schema/spec@1.0.0)(@types/json-schema@7.0.15)(quansync@0.2.11)(zod@4.4.3))(@standard-schema/spec@1.0.0)(openapi-types@12.1.3)(zod-openapi@4.2.4(zod@4.4.3))(zod@4.4.3)
       '@types/json-schema': 7.0.15
       openapi-types: 12.1.3
     optionalDependencies:
@@ -2100,10 +2094,6 @@ snapshots:
   minimatch@10.2.5:
     dependencies:
       brace-expansion: 5.0.5
-
-  minimatch@9.0.5:
-    dependencies:
-      brace-expansion: 2.0.2
 
   ms@2.1.3: {}
 
