@@ -21,8 +21,8 @@ catalogs:
       version: 3.25.6
   example:
     '@hono/node-server':
-      specifier: ^2.0.2
-      version: 2.0.2
+      specifier: ^2.0.3
+      version: 2.0.3
     '@hono/vite-build':
       specifier: ^1.11.1
       version: 1.11.1
@@ -79,7 +79,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.2(hono@4.5.0)
+        version: 2.0.3(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -107,7 +107,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.2(hono@4.5.0)
+        version: 2.0.3(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -147,7 +147,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.2(hono@4.5.0)
+        version: 2.0.3(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -181,7 +181,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.2(hono@4.5.0)
+        version: 2.0.3(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -484,8 +484,8 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hono/node-server@2.0.2':
-    resolution: {integrity: sha512-tXlTi1h/4V7sDe7i97IVP+9re9ZU7wXZZggnR5ucCRclf1+AX6YhGStrR5w8bLj+3Mlyl0pKfBh9gqTqqnGKfQ==}
+  '@hono/node-server@2.0.3':
+    resolution: {integrity: sha512-a0jV+/HRe3G5zjFID3zObAQFdkl6zpxTuqktdDDXS3MJKcrZIkB8OkLpNBlY/WXFqv2HF4a0takPej+aNFczWA==}
     engines: {node: '>=20'}
     peerDependencies:
       hono: ^4
@@ -1615,7 +1615,7 @@ snapshots:
     dependencies:
       hono: 4.5.0
 
-  '@hono/node-server@2.0.2(hono@4.5.0)':
+  '@hono/node-server@2.0.3(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
 
