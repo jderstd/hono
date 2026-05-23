@@ -14,12 +14,11 @@
         "@jderstd/hono-openapi": "workspace:*",
         "@scalar/hono-api-reference": "^0.10.16",
         "hono": "catalog:dev",
+        "vitend": "catalog:example",
         "zod": "catalog:dev",
         "zod-openapi": "^4"
     },
     "devDependencies": {
-        "@hono/vite-build": "catalog:example",
-        "@hono/vite-dev-server": "catalog:example",
         "@types/node": "catalog:example",
         "vite": "catalog:example",
         "vite-tsconfig-paths": "catalog:example"

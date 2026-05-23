@@ -13,11 +13,10 @@
         "@jderstd/hono": "workspace:*",
         "@jderstd/hono-zod-validator": "workspace:*",
         "hono": "catalog:dev",
+        "vitend": "catalog:example",
         "zod": "catalog:dev"
     },
     "devDependencies": {
-        "@hono/vite-build": "catalog:example",
-        "@hono/vite-dev-server": "catalog:example",
         "@types/node": "catalog:example",
         "vite": "catalog:example",
         "vite-tsconfig-paths": "catalog:example"

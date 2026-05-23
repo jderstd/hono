@@ -11,11 +11,10 @@
     "dependencies": {
         "@hono/node-server": "catalog:example",
         "@jderstd/hono": "workspace:*",
-        "hono": "catalog:dev"
+        "hono": "catalog:dev",
+        "vitend": "catalog:example"
     },
     "devDependencies": {
-        "@hono/vite-build": "catalog:example",
-        "@hono/vite-dev-server": "catalog:example",
         "@types/node": "catalog:example",
         "vite": "catalog:example",
         "vite-tsconfig-paths": "catalog:example"

@@ -174,6 +174,8 @@ publish:
 
 # Clean builds (Linux)
 clean-linux:
+    rm -rf ./examples/*/dist
+
     rm -rf ./packages/*/dist
 
 # Clean builds (macOS)
@@ -182,6 +184,8 @@ clean-macos:
 
 # Clean builds (Windows)
 clean-windows:
+    Remove-Item -Recurse -Force ./examples/*/dist
+
     Remove-Item -Recurse -Force ./packaegs/*/dist
 
 # Clean
@@ -191,6 +195,8 @@ clean:
 # Clean everything (Linux)
 clean-all-linux:
     just clean
+
+    rm -rf ./examples/*/node_modules
 
     rm -rf ./tests/*/node_modules
 
@@ -205,6 +211,8 @@ clean-all-macos:
 # Clean everything (Windows)
 clean-all-windows:
     just clean
+
+    Remove-Item -Recurse -Force ./examples/*/node_modules
 
     Remove-Item -Recurse -Force ./tests/*/node_modules
 

@@ -23,12 +23,6 @@ catalogs:
     '@hono/node-server':
       specifier: ^2.0.3
       version: 2.0.3
-    '@hono/vite-build':
-      specifier: ^1.11.1
-      version: 1.11.1
-    '@hono/vite-dev-server':
-      specifier: ~0.25.3
-      version: 0.25.3
     '@types/node':
       specifier: ^25.9.1
       version: 25.9.1
@@ -38,6 +32,9 @@ catalogs:
     vite-tsconfig-paths:
       specifier: ^6.1.1
       version: 6.1.1
+    vitend:
+      specifier: ~0.4.0
+      version: 0.4.0
   test:
     vitest:
       specifier: ^4.1
@@ -86,13 +83,10 @@ importers:
       hono:
         specifier: catalog:dev
         version: 4.5.0
+      vitend:
+        specifier: catalog:example
+        version: 0.4.0(@types/node@25.9.1)(rolldown@1.0.1)(vite@8.0.13(@types/node@25.9.1)(yaml@2.8.3))
     devDependencies:
-      '@hono/vite-build':
-        specifier: catalog:example
-        version: 1.11.1(hono@4.5.0)
-      '@hono/vite-dev-server':
-        specifier: catalog:example
-        version: 0.25.3(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.9.1
@@ -120,6 +114,9 @@ importers:
       hono:
         specifier: catalog:dev
         version: 4.5.0
+      vitend:
+        specifier: catalog:example
+        version: 0.4.0(@types/node@25.9.1)(rolldown@1.0.1)(vite@8.0.13(@types/node@25.9.1)(yaml@2.8.3))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -127,12 +124,6 @@ importers:
         specifier: ^4
         version: 4.2.4(zod@3.25.6)
     devDependencies:
-      '@hono/vite-build':
-        specifier: catalog:example
-        version: 1.11.1(hono@4.5.0)
-      '@hono/vite-dev-server':
-        specifier: catalog:example
-        version: 0.25.3(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.9.1
@@ -157,16 +148,13 @@ importers:
       hono:
         specifier: catalog:dev
         version: 4.5.0
+      vitend:
+        specifier: catalog:example
+        version: 0.4.0(@types/node@25.9.1)(rolldown@1.0.1)(vite@8.0.13(@types/node@25.9.1)(yaml@2.8.3))
       zod:
         specifier: catalog:dev
         version: 3.25.6
     devDependencies:
-      '@hono/vite-build':
-        specifier: catalog:example
-        version: 1.11.1(hono@4.5.0)
-      '@hono/vite-dev-server':
-        specifier: catalog:example
-        version: 0.25.3(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.9.1
@@ -191,16 +179,13 @@ importers:
       hono:
         specifier: catalog:dev
         version: 4.5.0
+      vitend:
+        specifier: catalog:example
+        version: 0.4.0(@types/node@25.9.1)(rolldown@1.0.1)(vite@8.0.13(@types/node@25.9.1)(yaml@2.8.3))
       zod:
         specifier: catalog:dev
         version: 3.25.6
     devDependencies:
-      '@hono/vite-build':
-        specifier: catalog:example
-        version: 1.11.1(hono@4.5.0)
-      '@hono/vite-dev-server':
-        specifier: catalog:example
-        version: 0.25.3(hono@4.5.0)
       '@types/node':
         specifier: catalog:example
         version: 25.9.1
@@ -478,12 +463,6 @@ packages:
   '@gerrit0/mini-shiki@3.23.0':
     resolution: {integrity: sha512-bEMORlG0cqdjVyCEuU0cDQbORWX+kYCeo0kV1lbxF5bt4r7SID2l9bqsxJEM0zndaxpOUT7riCyIVEuqq/Ynxg==}
 
-  '@hono/node-server@1.19.11':
-    resolution: {integrity: sha512-dr8/3zEaB+p0D2n/IUrlPF1HZm586qgJNXK1a9fhg/PzdtkK7Ksd5l312tJX2yBuALqDYBlG20QEbayqPyxn+g==}
-    engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: ^4
-
   '@hono/node-server@2.0.3':
     resolution: {integrity: sha512-a0jV+/HRe3G5zjFID3zObAQFdkl6zpxTuqktdDDXS3MJKcrZIkB8OkLpNBlY/WXFqv2HF4a0takPej+aNFczWA==}
     engines: {node: '>=20'}
@@ -495,25 +474,6 @@ packages:
     peerDependencies:
       '@standard-schema/spec': 1.0.0
       hono: '>=3.9.0'
-
-  '@hono/vite-build@1.11.1':
-    resolution: {integrity: sha512-EQJmFL7G+71MXZQ/mmywNl4qW6DSyjTdC30cq7mlDS451a1/jE86old0M2DCWzNGCO50sv7CzQDYkz4L5dq5VQ==}
-    engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: '*'
-
-  '@hono/vite-dev-server@0.25.3':
-    resolution: {integrity: sha512-w3uQ0KQF0i/SDcJ6+d5njEFTr6pbolajrt/GxV0pliYL+4ywiBqiOFRWSpwW3mTuZ80boww7+ZxJTGTBIzyBQg==}
-    engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: '*'
-      miniflare: '*'
-      wrangler: '*'
-    peerDependenciesMeta:
-      miniflare:
-        optional: true
-      wrangler:
-        optional: true
 
   '@hono/zod-validator@0.7.0':
     resolution: {integrity: sha512-qe2ZE6sHFE98dcUrbYMtS3bAV8hqcCOflykvZga2S7XhmNSZzT+dIz4OuMILsjLHkJw9JMn912/dB7dQOmuPvg==}
@@ -971,18 +931,12 @@ packages:
     resolution: {integrity: sha512-trmleAnZ2PxN/loHWVhhx1qeOHSRXq4TDsBBxq3GqeJitfk3+jTQ+v/C1km/KYq9M7wKqCewMh+/NAvVH7m+bw==}
     engines: {node: '>=20.19.0'}
 
-  balanced-match@1.0.2:
-    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
-
   balanced-match@4.0.4:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
   birpc@4.0.0:
     resolution: {integrity: sha512-LShSxJP0KTmd101b6DRyGBj57LZxSDYWKitQNW/mi8GRMvZb078Uf9+pveax1DrVL89vm7mWe+TovdI/UDOuPw==}
-
-  brace-expansion@2.0.2:
-    resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
 
   brace-expansion@5.0.5:
     resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
@@ -995,6 +949,10 @@ packages:
   chai@6.2.2:
     resolution: {integrity: sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==}
     engines: {node: '>=18'}
+
+  consola@3.4.2:
+    resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
+    engines: {node: ^14.18.0 || >=16.10.0}
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -1191,10 +1149,6 @@ packages:
     resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
     engines: {node: 18 || 20 || >=22}
 
-  minimatch@9.0.5:
-    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
-    engines: {node: '>=16 || 14 >=14.17'}
-
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -1241,6 +1195,17 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
+  rolldown-plugin-copy@0.2.0:
+    resolution: {integrity: sha512-YptSdYzY0FGk4lPzfS3pzIVUbLec3qa+F7xrR6Cj6acg7Qvwn0Q5ayeYjNlRrULm4i86fZ2KEq9VxWp4yx//BQ==}
+    peerDependencies:
+      '@types/node': '*'
+      rolldown: ^1.0.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      rolldown:
+        optional: true
+
   rolldown-plugin-dts@0.25.0:
     resolution: {integrity: sha512-GE3uDZgUuA9l6g+1u928TRmadd5IVhaWiwpWast2kCyLv9tYJJCC6E5HHkV0HGmwC5ZL73xh12/PRZI+KZ2vdQ==}
     engines: {node: ^22.18.0 || >=24.0.0}
@@ -1281,6 +1246,11 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  srvx@0.11.15:
+    resolution: {integrity: sha512-iXsux0UcOjdvs0LCMa2Ws3WwcDUozA3JN3BquNXkaFPP7TpRqgunKdEgoZ/uwb1J6xaYHfxtz9Twlh6yzwM6Tg==}
+    engines: {node: '>=20.16.0'}
+    hasBin: true
 
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
@@ -1452,6 +1422,11 @@ packages:
       yaml:
         optional: true
 
+  vitend@0.4.0:
+    resolution: {integrity: sha512-bgUrKt2NAgJJn0fPrqucfeErlpAXHJEpUtMiCGP6sNfThFmZW80S3Sdjy9Nroi/Dq3M/sSUsmUgApbR1cHkzBg==}
+    peerDependencies:
+      vite: ^7.0.0 || ^8.0.0
+
   vitest@4.1.5:
     resolution: {integrity: sha512-9Xx1v3/ih3m9hN+SbfkUyy0JAs72ap3r7joc87XL6jwF0jGg6mFBvQ1SrwaX+h8BlkX6Hz9shdd1uo6AF+ZGpg==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -1611,10 +1586,6 @@ snapshots:
       '@shikijs/types': 3.23.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.19.11(hono@4.5.0)':
-    dependencies:
-      hono: 4.5.0
-
   '@hono/node-server@2.0.3(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
@@ -1623,16 +1594,6 @@ snapshots:
     dependencies:
       '@standard-schema/spec': 1.0.0
       hono: 4.5.0
-
-  '@hono/vite-build@1.11.1(hono@4.5.0)':
-    dependencies:
-      hono: 4.5.0
-
-  '@hono/vite-dev-server@0.25.3(hono@4.5.0)':
-    dependencies:
-      '@hono/node-server': 1.19.11(hono@4.5.0)
-      hono: 4.5.0
-      minimatch: 9.0.5
 
   '@hono/zod-validator@0.7.0(hono@4.5.0)(zod@3.25.6)':
     dependencies:
@@ -1953,15 +1914,9 @@ snapshots:
       estree-walker: 3.0.3
       pathe: 2.0.3
 
-  balanced-match@1.0.2: {}
-
   balanced-match@4.0.4: {}
 
   birpc@4.0.0: {}
-
-  brace-expansion@2.0.2:
-    dependencies:
-      balanced-match: 1.0.2
 
   brace-expansion@5.0.5:
     dependencies:
@@ -1970,6 +1925,8 @@ snapshots:
   cac@7.0.0: {}
 
   chai@6.2.2: {}
+
+  consola@3.4.2: {}
 
   convert-source-map@2.0.0: {}
 
@@ -2101,10 +2058,6 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.5
 
-  minimatch@9.0.5:
-    dependencies:
-      brace-expansion: 2.0.2
-
   ms@2.1.3: {}
 
   nanoid@3.3.11: {}
@@ -2134,6 +2087,16 @@ snapshots:
   quansync@1.0.0: {}
 
   resolve-pkg-maps@1.0.0: {}
+
+  rolldown-plugin-copy@0.2.0(@types/node@25.9.1)(rolldown@1.0.1):
+    dependencies:
+      consola: 3.4.2
+      es-toolkit: 1.46.1
+      tinyglobby: 0.2.16
+      ts-vista: 0.2.3
+    optionalDependencies:
+      '@types/node': 25.9.1
+      rolldown: 1.0.1
 
   rolldown-plugin-dts@0.25.0(@typescript/native-preview@7.0.0-dev.20260519.1)(rolldown@1.0.0)(typescript@6.0.3):
     dependencies:
@@ -2199,6 +2162,8 @@ snapshots:
   siginfo@2.0.0: {}
 
   source-map-js@1.2.1: {}
+
+  srvx@0.11.15: {}
 
   stackback@0.0.2: {}
 
@@ -2308,6 +2273,18 @@ snapshots:
       '@types/node': 25.9.1
       fsevents: 2.3.3
       yaml: 2.8.3
+
+  vitend@0.4.0(@types/node@25.9.1)(rolldown@1.0.1)(vite@8.0.13(@types/node@25.9.1)(yaml@2.8.3)):
+    dependencies:
+      consola: 3.4.2
+      es-toolkit: 1.46.1
+      rolldown-plugin-copy: 0.2.0(@types/node@25.9.1)(rolldown@1.0.1)
+      srvx: 0.11.15
+      ts-vista: 0.2.3
+      vite: 8.0.13(@types/node@25.9.1)(yaml@2.8.3)
+    transitivePeerDependencies:
+      - '@types/node'
+      - rolldown
 
   vitest@4.1.5(@types/node@25.9.1)(yaml@2.8.3):
     dependencies:
