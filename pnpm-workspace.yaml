@@ -24,7 +24,7 @@ catalogs:
         vitest: ^4.1.7
     example:
         "@types/node": ^25.9.1
-        "@hono/node-server": ^2.0.3
+        "@hono/node-server": ^2.0.4
         vite: ^8.0.14
         vite-tsconfig-paths: ^6.1.1
         vitend: ~0.4.0
