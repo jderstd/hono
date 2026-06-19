@@ -1,5 +1,7 @@
+import type { JsonResponse } from "@jderstd/hono/response";
+
 import { bodyLimit } from "@jderstd/hono/body-limit";
-import { createJsonResponse, type JsonResponse } from "@jderstd/hono/response";
+import { createJsonResponse } from "@jderstd/hono/response";
 import {
     getResponseErrorMessage,
     ResponseErrorCode,
