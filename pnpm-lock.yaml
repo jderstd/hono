@@ -21,8 +21,8 @@ catalogs:
       version: 3.25.6
   example:
     '@hono/node-server':
-      specifier: ^2.0.10
-      version: 2.0.10
+      specifier: ^2.0.11
+      version: 2.0.11
     '@types/node':
       specifier: ^26.1.1
       version: 26.1.1
@@ -76,7 +76,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.10(hono@4.5.0)
+        version: 2.0.11(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -101,7 +101,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.10(hono@4.5.0)
+        version: 2.0.11(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -138,7 +138,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.10(hono@4.5.0)
+        version: 2.0.11(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -169,7 +169,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:example
-        version: 2.0.10(hono@4.5.0)
+        version: 2.0.11(hono@4.5.0)
       '@jderstd/hono':
         specifier: workspace:*
         version: link:../../packages/hono
@@ -448,8 +448,8 @@ packages:
   '@gerrit0/mini-shiki@3.23.0':
     resolution: {integrity: sha512-bEMORlG0cqdjVyCEuU0cDQbORWX+kYCeo0kV1lbxF5bt4r7SID2l9bqsxJEM0zndaxpOUT7riCyIVEuqq/Ynxg==}
 
-  '@hono/node-server@2.0.10':
-    resolution: {integrity: sha512-ZcnNVhKTmyDJeg0UlnZjvM73JBsTAuhrH/J4fjwGOw59PwOW51r4J+p6CsKZWXdKSme4MFqU62CZMOsdDrU4CA==}
+  '@hono/node-server@2.0.11':
+    resolution: {integrity: sha512-bjD221KPLoJTWUwso1J6fGKiTXEUFedG/s0visavY4zakFPkeGURMRNly+FhBHs7T8Dz4qHaZIMX9ZoJHSJtKA==}
     engines: {node: '>=20'}
     peerDependencies:
       hono: ^4
@@ -1724,7 +1724,7 @@ snapshots:
       '@shikijs/types': 3.23.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@2.0.10(hono@4.5.0)':
+  '@hono/node-server@2.0.11(hono@4.5.0)':
     dependencies:
       hono: 4.5.0
 
