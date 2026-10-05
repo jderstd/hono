@@ -27,8 +27,8 @@ catalogs:
       specifier: ^26.6.3
       version: 26.6.3
     vite:
-      specifier: ^8.3.1
-      version: 8.3.1
+      specifier: ^8.3.2
+      version: 8.3.2
     vite-tsconfig-paths:
       specifier: ^6.1.1
       version: 6.1.1
@@ -85,17 +85,17 @@ importers:
         version: 4.5.0
       vitend:
         specifier: catalog:example
-        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
     devDependencies:
       '@types/node':
         specifier: catalog:example
         version: 26.6.3
       vite:
         specifier: catalog:example
-        version: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+        version: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.1.1(typescript@6.0.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 6.1.1(typescript@6.0.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
 
   examples/hono-openapi:
     dependencies:
@@ -116,7 +116,7 @@ importers:
         version: 4.5.0
       vitend:
         specifier: catalog:example
-        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -129,10 +129,10 @@ importers:
         version: 26.6.3
       vite:
         specifier: catalog:example
-        version: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+        version: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.1.1(typescript@6.0.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 6.1.1(typescript@6.0.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
 
   examples/hono-standard-validator:
     dependencies:
@@ -150,7 +150,7 @@ importers:
         version: 4.5.0
       vitend:
         specifier: catalog:example
-        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -160,10 +160,10 @@ importers:
         version: 26.6.3
       vite:
         specifier: catalog:example
-        version: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+        version: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.1.1(typescript@6.0.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 6.1.1(typescript@6.0.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
 
   examples/hono-zod-validator:
     dependencies:
@@ -181,7 +181,7 @@ importers:
         version: 4.5.0
       vitend:
         specifier: catalog:example
-        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -191,10 +191,10 @@ importers:
         version: 26.6.3
       vite:
         specifier: catalog:example
-        version: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+        version: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
       vite-tsconfig-paths:
         specifier: catalog:example
-        version: 6.1.1(typescript@6.0.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 6.1.1(typescript@6.0.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
 
   packages/hono:
     dependencies:
@@ -285,7 +285,7 @@ importers:
         version: 4.5.0
       vitest:
         specifier: catalog:test
-        version: 5.0.3(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 5.0.3(@types/node@26.6.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
 
   tests/hono-openapi:
     dependencies:
@@ -303,7 +303,7 @@ importers:
         version: 1.1.0(typescript@6.0.3)
       vitest:
         specifier: catalog:test
-        version: 5.0.3(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 5.0.3(@types/node@26.6.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -324,7 +324,7 @@ importers:
         version: 1.1.0(typescript@6.0.3)
       vitest:
         specifier: catalog:test
-        version: 5.0.3(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 5.0.3(@types/node@26.6.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -342,7 +342,7 @@ importers:
         version: 4.5.0
       vitest:
         specifier: catalog:test
-        version: 5.0.3(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+        version: 5.0.3(@types/node@26.6.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       zod:
         specifier: catalog:dev
         version: 3.25.6
@@ -876,123 +876,145 @@ packages:
     resolution: {integrity: sha512-7cSJH6PaKLRBdCfiB4pM6EukvgOk5xV4tyuLOIOEqrHsbnV7brtyff7CjhZbeGozdIHoOnKOi5R7rrmCWN3QSw==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-x64@0.8.0':
     resolution: {integrity: sha512-mhooLL+L5ytMxgz4ueXCIirU796X2xj97d4KSQW1HxZGzX6h8wOk5bIAhGqcmOL2bqAmMZ+UkBTbPC9VpzKb/g==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-freebsd-x64@0.8.0':
     resolution: {integrity: sha512-MHLOAlgGhdOh0ZfnWWnno4ljlFB04/Lox/7MIGYIvISMKFvejfC9Atb1t9G7pTVBvy+l5uqxzHGBSJUsDOOkTA==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-gnu@0.8.0':
     resolution: {integrity: sha512-Ur3Awo45Sc5/Fglr8WN5XIf4IwAsq8wLd917Du8ow6mStxsBTHqFiH+tT7d5jV0FqcJnwy8EHVczmgde0zTo1A==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-musl@0.8.0':
     resolution: {integrity: sha512-FIy7Ttx8oeUCd/8Y6IjnOsu+lRc6En+V/H67BlVphOeCySZAo5LU8VWrb4tv0DvjaSOzdm3DmdmRzmzN7NCqWQ==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-gnu@0.8.0':
     resolution: {integrity: sha512-s+25wl1TLvf+7LzasPEi1RR1sDfVAU0i1QH601mn3vj+HudFYBYNZtUBKFaZvl645QR6vcaDaGHnOaMZhBR3ig==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-musl@0.8.0':
     resolution: {integrity: sha512-pRha3Cjm4AnA5wEuhpg+8XXoGfwz5X61/9a/VNxeau47+kH6xjJspkEloIy/HbHgUnvVRqVHoEHczdGZT2J9NA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-gnu@0.8.0':
     resolution: {integrity: sha512-GySXmiw5Dw99Ba3GMV2ExQVckihuangnrIpSJagPx8RFUNtwfmzpr2ibf8k31eEAE4YUofV7mEfJN5tN6+POnQ==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-musl@0.8.0':
     resolution: {integrity: sha512-8YFfcPZz44v8YyekWVKkNz/cD4t6DW62/dr03OVtMfwUtHfmo/8wpby0JKMleAOXbgWItSGw81LtwqM4I9oS0A==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-arm64@0.8.0':
     resolution: {integrity: sha512-YhENbgkuzjsil+zDNV35oU3PQMDg2RXh8BPt915WCNAbIIHcqgYupHJF3564206+DbPkZtcDvcoa34Wb5B8tbQ==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-x64@0.8.0':
     resolution: {integrity: sha512-qvzSRABXe6/ndubx+RNwgbFVbs7Pqroz/q/UR6vm++xsmfcpkMF43B23jgNl2xi2IUrEt8C/L1bBslXp+LtgnA==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-parser/binding-darwin-arm64@0.8.0':
     resolution: {integrity: sha512-04AakSJhI4mPrqhZzXdFyaEDh0YkfeqbnyYY3aCrmxeWfR/Xr8+kFn5sh+wZYN/5HatPniELKHixJuUCUyfBvg==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-x64@0.8.0':
     resolution: {integrity: sha512-BQJGI9bDeyb/X2rwhtXoBTQ9EtbkJtteX6C7cZ9jow0pqqmoOufgHPP2+m65GLk2eVNCBcfl3xlTGpJ7RFcviw==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-freebsd-x64@0.8.0':
     resolution: {integrity: sha512-04hmgnU152wya88raI+RQhxZPgwXcHbfdNZLu3x5ggKnJVHLD8xZZLcWIKSs59CiEXL6PKVX1/cx8GoTYlaCaQ==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-gnu@0.8.0':
     resolution: {integrity: sha512-+cuJWUK13lwce721XGRjz7izSr2Q1U0RlHkDzdkohWpRWlttTqRdxNnaW13nDc47GBDrNsXMHx+KLcebeOeeGg==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-musl@0.8.0':
     resolution: {integrity: sha512-rOVPRqt9cm1YP/wPV+yyZh0FYr6UR/wm/BXslvLuge0LDewVvDrm/AxcDrwWuPAu61Nzdg2rMVfcNnrplCbC1w==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-gnu@0.8.0':
     resolution: {integrity: sha512-pAoIozKr6E+ptpaQz4CZv1O7cay2f4m7kbd+DSQug5MKdUBTZZ18GdWSPvq0fwQYraH9hZlyLqrMaeP5W/ncrA==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-musl@0.8.0':
     resolution: {integrity: sha512-JCAg50ahXuYlrsIi1jmymX9X/9B0JYBRroAHnYttN44tAvCo1PFqukHrw1up6HvEOoLA0OjlM0Zwh60u3Gc/Zg==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-gnu@0.8.0':
     resolution: {integrity: sha512-tEeVQ14etp7lpUqXzq+X5AlQzFH+m3TVDiCKIq17zxnxJ117DOVvoveWSkSMt/lj68z48SvZUMHe7xLvqtO1lg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-musl@0.8.0':
     resolution: {integrity: sha512-+UGRYnF37nnbZNMsMjSGDXKUTIxYUmbbk3Lzib88sLK7kg2y80vjchYYoYsDUK9kAgqPWyA9hKGURHy/Kk9Few==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-arm64@0.8.0':
     resolution: {integrity: sha512-l+7Va9/sX1ccRjzjJj6MR0arKsvHB5b419+pKbwzn+/18A/xfccWqmxXrn0C0NyVLlbEb3AV9Is+AbF72O85yA==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-x64@0.8.0':
     resolution: {integrity: sha512-dolKDTJv2xrWowDBEkvSaDvCsVFZOA7DCUuD+7DatglS68WbuxS4LudU5bzSeAOL5vgPpyGm82469cMLnL+6vQ==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-toolchain/types@0.8.0':
     resolution: {integrity: sha512-hL/raFM5V9UT2lVE/lIWDTWvANqSB8TvMVp+PgICehBa96KhTl/UpGm370JXaacukR+QnaHM2Yv6O/UcrzAFGg==}
@@ -1441,8 +1463,8 @@ packages:
     peerDependencies:
       vite: '*'
 
-  vite@8.3.1:
-    resolution: {integrity: sha512-/bvH9E9tmCXRGp2uXY3WbOldqpTwFkbha/8ANaEQ6VkxhH60KyqLwgZq6lG2y+4uT55x9+9eUHMpQ7uGnOCKjA==}
+  vite@8.3.2:
+    resolution: {integrity: sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1900,14 +1922,14 @@ snapshots:
       '@typescript/native-preview-win32-arm64': 7.0.0-dev.20260707.2
       '@typescript/native-preview-win32-x64': 7.0.0-dev.20260707.2
 
-  '@vitest/mocker@5.0.3(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))':
+  '@vitest/mocker@5.0.3(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@vitest/spy': 5.0.3
       estree-walker: 3.0.3
       magic-string: 1.2.3
     optionalDependencies:
-      vite: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+      vite: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
 
   '@vitest/spy@5.0.3': {}
 
@@ -2311,17 +2333,17 @@ snapshots:
 
   verkit@0.3.0: {}
 
-  vite-tsconfig-paths@6.1.1(typescript@6.0.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0)):
+  vite-tsconfig-paths@6.1.1(typescript@6.0.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.5(typescript@6.0.3)
-      vite: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+      vite: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0):
+  vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -2333,22 +2355,22 @@ snapshots:
       fsevents: 2.3.3
       yaml: 2.9.0
 
-  vitend@0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0)):
+  vitend@0.4.0(@types/node@26.6.3)(rolldown@1.2.11)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0)):
     dependencies:
       consola: 3.4.2
       es-toolkit: 1.46.1
       rolldown-plugin-copy: 0.2.0(@types/node@26.6.3)(rolldown@1.2.11)
       srvx: 0.11.15
       ts-vista: 0.2.3
-      vite: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+      vite: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
     transitivePeerDependencies:
       - '@types/node'
       - rolldown
 
-  vitest@5.0.3(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0)):
+  vitest@5.0.3(@types/node@26.6.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0)):
     dependencies:
       '@types/chai': 5.2.3
-      '@vitest/mocker': 5.0.3(vite@8.3.1(@types/node@26.6.3)(yaml@2.9.0))
+      '@vitest/mocker': 5.0.3(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.0))
       chai: 6.2.2
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
@@ -2359,7 +2381,7 @@ snapshots:
       tinybench: 6.1.4
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
-      vite: 8.3.1(@types/node@26.6.3)(yaml@2.9.0)
+      vite: 8.3.2(@types/node@26.6.3)(yaml@2.9.0)
       why-is-node-running: 3.2.1
     optionalDependencies:
       '@types/node': 26.6.3
